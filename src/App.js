@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styled from 'styled-components';
+import ComponentFive from './components/componentFive/componentFive';
+import ComponentFour from './components/componentFour/componentFour';
+import ComponentOne from './components/componentOne/componentOne';
+import ComponentSix from './components/componentSix/componentSix';
+import ComponentThree from './components/componentThree/componentThree';
+import ComponentTwo from './components/componentTwo/componentTwo';
+import Header from './components/header/header';
+import Intro from './components/intro/intro';
+
+// import { Container } from './styles';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <>
+    <Header />
+    <Intro />
+    <ComponentOne />
+    <ComponentTwo />
+    <ComponentThree />
+    <ComponentFour />
+    <ComponentFive />
+    <ComponentSix />
+  </>;
 }
 
 export default App;
