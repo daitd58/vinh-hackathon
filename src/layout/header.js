@@ -43,8 +43,7 @@ const SearchContent = styled.div`
   display: flex;
   align-items: center;
   background: #fff;
-  height: 50px;
-  width: 220px;
+  padding: 10px 30px;
   justify-content: center;
   border-radius: 30px;
   box-sizing: border-box;
@@ -55,7 +54,7 @@ const Header = () => {
   return (
     <Nav>
       <Logo_Dark>
-        <img src={logo_dark} preview={false} alt={""} />
+        <img src={logo_dark} alt={""} />
         <Menu>
           <MenuItem href="#">CITIES</MenuItem>
           <MenuItem href="#">VENTURES</MenuItem>
