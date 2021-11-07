@@ -4,16 +4,17 @@ import logo_dark from "../asset/img/logo-dark.png";
 
 const Nav = styled.div`
   display: flex;
-  background: #0e2c51;
+  background: #0E2C51CC;
   width: 100%;
   height: 90px;
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  z-index: 1;
 `;
 const Logo_Dark = styled.div`
   display: flex;
-  gap: 50px;
+  gap: 44px;
   justify-content: center;
   align-items: center;
   padding-left: 40px;
@@ -26,10 +27,10 @@ const MenuItem = styled.div`
   border-left: 1px solid #ffffff;
   color: #fff;
   padding: 0 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Gothic A1", sans-serif;
   font-size: 12px;
   line-height: 22px;
+  opacity: 70%;
 `;
 const Search = styled.div`
   padding-right: 40px;

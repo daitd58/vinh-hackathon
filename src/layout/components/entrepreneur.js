@@ -13,7 +13,7 @@ const TitleHeader = styled.div`
   line-height: 60px;
   text-align: center;
   font-weight: 500;
-  padding: 130px 0 150px;
+  padding: 150px 0 100px;
 `;
 const NetworkContent = styled.div`
   display: flex;
@@ -43,17 +43,20 @@ const HeaderContent = styled.div`
   line-height: 20px;
   font-weight: 700;
   color: #232327;
+  padding-bottom: 24px;
 `;
 const ContentNetwork = styled.div`
   font-size: 16px;
   line-height: 26px;
   color: rgba(35, 35, 39, 0.7);
   padding-right: 225px;
+  padding-bottom: 24px;
 `;
 const Item = styled.li`
   font-size: 14px;
   line-height: 22px;
   color: #232327;
+  padding-bottom: 16px;
 `;
 
 const Entrepreneur = () => {

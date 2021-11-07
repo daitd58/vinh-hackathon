@@ -14,7 +14,7 @@ const HeaderContent = styled.div`
   line-height: 20px;
   font-weight: 700;
   color: #232327;
-  padding-left: 100px;
+  padding-bottom: 24px;
 `;
 
 const CommunityContent = styled.div`
@@ -44,7 +44,6 @@ const ContentCommunity = styled.div`
   line-height: 26px;
   color: #232327;
   padding-right: 225px;
-  padding-left: 100px;
 `;
 const BtnClick = styled.button`
   width: 156px;
@@ -52,18 +51,19 @@ const BtnClick = styled.button`
   background: #204370;
   border-radius: 40px;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 16px;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
+  border: 0;
 `;
 const Btn = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
 `;
 
 const Community = () => {
@@ -75,14 +75,14 @@ const Community = () => {
         </ContentLeftCommunity>
         <ContentRightCommunity>
           <HeaderContent>ENTREPRENEURS JOIN THE DEN COMMUNITY</HeaderContent>
-          <ContentCommunity>
+          <ContentCommunity style={{paddingBottom: '16px'}}>
             Our members and their supporters include: founders and teams;
             mentors and advisors; remote workers and service providers; and
             angel investors and venture capitalists from around the world.
           </ContentCommunity>
           <ContentCommunity>
-            Our members and theiAs a DEN member, you can build a market-ready
-            company much faster than ever before.
+            As a DEN member, you can build a market-ready company much faster
+            than ever before.
           </ContentCommunity>
         </ContentRightCommunity>
       </CommunityContent>

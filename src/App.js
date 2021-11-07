@@ -8,6 +8,8 @@ import Community from './layout/components/community';
 import HowDenWork from './layout/components/howDenWork';
 import ButFirst from './layout/components/butfirst';
 import WhatPeople from './layout/components/whatpeople';
+import Upcoming from './layout/components/upcoming';
+import Footer from './layout/components/footer';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <HowDenWork />
       <ButFirst />
       <WhatPeople />
+      <Upcoming />
+      <Footer />
     </div>
   );
 }

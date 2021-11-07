@@ -15,13 +15,13 @@ const TitleHeader = styled.div`
   font-size: 60px;
   line-height: 60px;
   font-weight: 500;
-  padding: 100px 0 50px 100px;
+  padding: 135px 0 50px 130px;
 `;
 
 const Box = styled.div`
   display: flex;
   gap: 75px;
-  padding: 0 100px;
+  padding: 0 130px;
 `;
 const BoxItem = styled.div`
   width: 100%;

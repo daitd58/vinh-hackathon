@@ -6,22 +6,24 @@ import albertflores from "../../asset/img/albertflores.png";
 import arrow from "../../asset/img/arrow.png";
 
 const TitleContent =
-  "Ornare massa eget egestas purus viverrasan in nisl. Sit amet luctus venenatis lectus magna fring ut venenatis tellus in metus vulputate eu scelerisque felis. Felis done. Felis donec et odio pellentesque di scelerisque felis. Ornare massa eget egest.";
+  "Ornare massa eget egestas purus viverrasan in nisl. Sit amet luctus venenatis lectus magna fring ut venenatis tellus in metus vulputate eu scelerisque felis. Felis done.";
+const TitleContentLast =
+  "Felis donec et odio pellentesque di scelerisque felis. Ornare massa eget egest.";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   background: rgba(244, 246, 248, 1);
+  position: relative;
 `;
 const HeaderBox = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 120px;
-  padding-top: 100px;
+  padding: 100px 130px 0;
   align-items: center;
 `;
 const ContentBox = styled.div`
   display: flex;
-  padding: 100px 120px 0;
+  padding: 100px 130px 280px;
   gap: 30px;
 `;
 const TitleHeader = styled.div`
@@ -46,6 +48,9 @@ const ListItem = styled.div`
 `;
 const HeaderItem = styled.div`
   display: flex;
+  align-items: flex-end;
+  padding-bottom: 40px;
+  justify-content: space-between;
   & img {
     left: 30px;
     bottom: 43px;
@@ -69,14 +74,51 @@ const ViewItem = styled.div`
   font-size: 16px;
   line-height: 26px;
   color: rgba(35, 35, 39, 0.9);
+  padding-bottom: 20px;
 `;
 const LearnMore = styled.a`
   font-weight: Bold;
   font-size: 16px;
   line-height: 26px;
   color: #204370;
+  padding-bottom: 40px;
 `;
-
+const FooterBox = styled.div`
+  position: absolute;
+  top: 89%;
+  width: 100%;
+`;
+const ListFooter = styled.div`
+  margin: 0 130px;
+  background: rgba(32, 67, 112, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+`;
+const FooterTitle = styled.div`
+  font-family: "Gothic A1", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 58px 150px 0 150px;
+`;
+const LastFooterTitle = styled.div`
+  font-family: "Gothic A1", sans-serif;
+  display: flex;
+  gap: 15px;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0 180px 58px 120px;
+`;
+const TitleOne = styled.div``;
+const TitleTwo = styled.div``;
+const TitleThree = styled.div``;
 const WhatPeople = () => {
   return (
     <Container>
@@ -98,6 +140,7 @@ const WhatPeople = () => {
             </BoxTitle>
           </HeaderItem>
           <ViewItem>{TitleContent}</ViewItem>
+          <ViewItem>{TitleContentLast}</ViewItem>
           <LearnMore href="#">Learn more</LearnMore>
         </ListItem>
         <ListItem>
@@ -109,6 +152,7 @@ const WhatPeople = () => {
             </BoxTitle>
           </HeaderItem>
           <ViewItem>{TitleContent}</ViewItem>
+          <ViewItem>{TitleContentLast}</ViewItem>
           <LearnMore href="#">Learn more</LearnMore>
         </ListItem>
         <ListItem>
@@ -120,9 +164,23 @@ const WhatPeople = () => {
             </BoxTitle>
           </HeaderItem>
           <ViewItem>{TitleContent}</ViewItem>
+          <ViewItem>{TitleContentLast}</ViewItem>
+
           <LearnMore href="#">Learn more</LearnMore>
         </ListItem>
       </ContentBox>
+      <FooterBox>
+        <ListFooter>
+          <FooterTitle>
+            Draper Startup House is on a mission to enable
+          </FooterTitle>
+          <LastFooterTitle>
+            <TitleOne>ONE million </TitleOne>
+            <TitleTwo>entrepreneurs worldwide by</TitleTwo>
+            <TitleThree>2023</TitleThree>
+          </LastFooterTitle>
+        </ListFooter>
+      </FooterBox>
     </Container>
   );
 };

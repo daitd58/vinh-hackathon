@@ -13,12 +13,14 @@ const HeaderContent = styled.div`
   line-height: 20px;
   font-weight: 700;
   color: #232327;
+  padding-bottom: 24px;
 `;
 
 const Item = styled.li`
   font-size: 14px;
-  line-height: 22px;
+  line-height: 14px;
   color: #232327;
+  padding-bottom: 16px;
 `;
 
 const ExpertsContent = styled.div`
@@ -30,7 +32,7 @@ const ContentLeftExperts = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  margin-left: 120px;
+  margin-left: 130px;
 `;
 const ContentRightExperts = styled.div`
   width: 50%;
@@ -45,8 +47,10 @@ const ContentRightExperts = styled.div`
 `;
 const ContentExperts = styled.div`
   font-size: 16px;
-  line-height: 26px;
+  line-height: 16px;
   color: rgba(35, 35, 39, 0.7);
+  padding-bottom: 24px;
+  padding-right: 220px;
 `;
 
 const Experts = () => {

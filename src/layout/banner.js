@@ -39,13 +39,17 @@ const TitleContent = styled.div`
   text-align: center;
   padding: 0 555px;
 `;
+const BtnTitle = styled.div`
+  display: flex;
+  padding-bottom: 100px;
+`;
 const BtnClick = styled.button`
   width: 156px;
   height: 65px;
   background: #204370;
   border-radius: 40px;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 16px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -58,15 +62,16 @@ const Banner = () => {
   return (
     <Container>
       <Logo_Den>
-        <img src={Den} preview={false} alt={""} />
+        <img src={Den} alt={""} />
       </Logo_Den>
       <TitleHeader>global network for mentorship and support</TitleHeader>
       <TitleContent>
         Get all the support and education you need to achieve full potential as
         an entrepreneur.
       </TitleContent>
-      .
-      <BtnClick>Join Den</BtnClick>
+      <BtnTitle>
+        <BtnClick>Join Den</BtnClick>
+      </BtnTitle>
     </Container>
   );
 };
