@@ -2,24 +2,31 @@ import styled from "styled-components";
 import logo from "../img/logo.png";
 
 const Wrapper = styled.div`
+  height: 90px;
+  background-color: #0e2c51;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #0e2c51;
-  padding: 10px 30px 10px 30px;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 99999;
 `;
 
 const LeftBlock = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  padding: 0 30px;
+`;
+
+const RightBlock = styled.div`
+  padding: 0 30px;
 `;
 
 const Logo = styled.div`
-  padding: 10px 20px;
+   padding: 0 45px 0 10px;
 `;
 const Menu = styled.div`
   display: flex;
@@ -34,16 +41,17 @@ const TextTitle = styled.div`
   padding: 5px;
   line-height: 8px;
 `;
-const Input = styled.div`
-  display: flex;
-  background: #ffffff;
-  border-radius: 30px;
-  width: 220px;
+const StyledButton = styled.button`
   height: 50px;
-  font-weight: 500;
-  align-items: center;
-  font-size: 17px;
-  justify-content: center;
+  max-width: max-content;
+  padding: 0 35px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #2a2a2a;
+  border: 1px solid #204370;
+  box-sizing: border-box;
+  border-radius: 25px;
 `;
 
 function Header() {
@@ -62,7 +70,9 @@ function Header() {
           <TextTitle>ABOUT US</TextTitle>
         </Menu>
       </LeftBlock>
-      <Input>Join our community</Input>
+      <RightBlock>
+        <StyledButton>Join our community</StyledButton>
+      </RightBlock>
     </Wrapper>
   );
 }

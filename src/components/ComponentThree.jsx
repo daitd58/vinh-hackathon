@@ -4,6 +4,7 @@ import image from "../img/imgFour.png";
 const Wrapper = styled.div`
   padding: 50px 0 50px 0;
   background: #f4f6f8;
+  width: 100%;
 `;
 
 const Block = styled.div`
@@ -13,60 +14,68 @@ const Block = styled.div`
 `;
 
 const LeftBlock = styled.div`
-  background: #ffcc00;
-  position: relative;
-  width: 125%;
-  height: 375px;
-`;
-
-const Image = styled.img`
-  position: absolute;
-  width: 100%;
-  left: 50px;
-  top: -30px;
+  display: flex;
+  padding-left: 40px;
+  & img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    box-shadow: -50px 45px 0 rgb(41, 97, 161);
+  }
 `;
 
 const RightBlock = styled.div`
-  padding-left: 50px;
+  width: 50%;
+  padding: 0 40px;
 `;
 const TextTitle = styled.div`
-  font-weight: 700;
-  text-align: left;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
   color: #232327;
-  font-size: 25px;
-  white-space: nowrap;
+  margin-bottom: 24px;
+  font-family: "Pathway Gothic One", sans-serif;
 `;
 
 const TextDescription = styled.div`
-  padding-top: 30px;
-  color: #232327b2;
-  text-align: left;
-  font-size: 18px;
+  font-family: Oxygen;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(35, 35, 39, 0.7);
+  margin-bottom: 24px;
 `;
-const Btn = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
+const StyleButton = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding-bottom: 100px;
+`;
 
 const Button = styled.button`
-  display: flex;
-  margin-top: 30px;
+  max-width: max-content;
+  height: 65px;
   background: #204370;
-  border-radius: 20px;
-  width: 140px;
-  height: 50px;
-  font-weight: 500;
+  border-radius: 40px;
+  font-family: Oxygen;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
   color: #ffffff;
-  align-items: center;
-  justify-content: center;
+  padding: 0 45px;
+  z-index: 1;
+  border: none;
 `;
 function ComponentThree() {
   return (
     <Wrapper>
       <Block>
         <LeftBlock>
-          <Image src={image} alt={""} />
+          <img src={image} alt={""} />
         </LeftBlock>
         <RightBlock>
           <TextTitle>ENTREPRENEURS JOIN THE DEN COMMUNITY</TextTitle>
@@ -81,9 +90,9 @@ function ComponentThree() {
           </TextDescription>
         </RightBlock>
       </Block>
-      <Btn>
+      <StyleButton>
         <Button>join DEN</Button>
-      </Btn>
+      </StyleButton>
     </Wrapper>
   );
 }

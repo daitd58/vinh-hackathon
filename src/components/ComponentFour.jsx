@@ -4,13 +4,16 @@ import iconTwo from "../img/iconTwo.png";
 import iconThree from "../img/iconThree.png";
 import iconFour from "../img/iconFour.png";
 const Wrapper = styled.div`
-  padding: 50px 50px;
+  padding: 137px 130px;
 `;
 const TextContent = styled.div`
-  text-align: left;
-  color: #204370;
-  font-size: 45px;
   font-weight: 500;
+  font-size: 80px;
+  line-height: 80px;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  color: #204370;
+  font-family: "Pathway Gothic One", sans-serif;
 `;
 
 const Container = styled.div`
@@ -22,8 +25,8 @@ const Container = styled.div`
 const Box = styled.div`
   background: #f4f6f8;
   width: 50%;
-  height: 180px;
-  padding: 20px;
+  height: 200px;
+  padding: 5px 10px 30px 40px;
 `;
 
 const HeaderBox = styled.div`
@@ -33,7 +36,7 @@ const HeaderBox = styled.div`
   align-items: center;
 `;
 const Icon = styled.img`
-  width: 15%;
+  width: 18%;
 `;
 const Number = styled.p`
   color: #1729401a;
@@ -44,15 +47,18 @@ const Number = styled.p`
 
 const ContentBox = styled.div`
   display: flex;
-  width: 70%;
   justify-content: center;
   align-items: center;
 `;
 
-const TexTextDescription = styled.div`
-  text-align: left;
-  font-weight: 500;
+const TextDescription = styled.div`
+  font-family: Oxygen;
+  font-weight: bold;
   font-size: 16px;
+  line-height: 28px;
+  color: #232327;
+  text-align: left;
+  padding-right: 34px;
 `;
 
 function ComponentFour() {
@@ -66,9 +72,9 @@ function ComponentFour() {
             <Number>01</Number>
           </HeaderBox>
           <ContentBox>
-            <TexTextDescription>
+            <TextDescription>
               Say hello and interact on the DEN Slack channel
-            </TexTextDescription>
+            </TextDescription>
           </ContentBox>
         </Box>
         <Box>
@@ -77,9 +83,9 @@ function ComponentFour() {
             <Number>02</Number>
           </HeaderBox>
           <ContentBox>
-            <TexTextDescription>
+            <TextDescription>
               Explore free high-quality on-demand learning content
-            </TexTextDescription>
+            </TextDescription>
           </ContentBox>
         </Box>
         <Box>
@@ -88,9 +94,9 @@ function ComponentFour() {
             <Number>03</Number>
           </HeaderBox>
           <ContentBox>
-            <TexTextDescription>
+            <TextDescription>
               Meet co-founders, advisors, partners, customers, and investors
-            </TexTextDescription>
+            </TextDescription>
           </ContentBox>
         </Box>
         <Box>
@@ -99,9 +105,9 @@ function ComponentFour() {
             <Number>04</Number>
           </HeaderBox>
           <ContentBox>
-            <TexTextDescription>
+            <TextDescription>
               Find opportunities in the global Draper ecosystem
-            </TexTextDescription>
+            </TextDescription>
           </ContentBox>
         </Box>
       </Container>
