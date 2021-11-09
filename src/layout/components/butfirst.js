@@ -18,6 +18,7 @@ const LeftBox = styled.div`
 const RightBox = styled.div`
   flex: 50%;
   padding-right: 130px;
+  padding-bottom: 160px;
 `;
 const TitleHeader = styled.div`
   font-family: Alternate;

@@ -9,7 +9,6 @@ const Container = styled.div`
 `;
 const ViewFooter = styled.div`
   display: flex;
-  justify-content: space-between;
   padding: 100px 40px 40px;
 `;
 const LeftViewFooter = styled.div`
@@ -92,25 +91,42 @@ const TitleRight = styled.div`
   color: rgba(23, 41, 64, 1);
   padding-bottom: 25px;
 `;
-const ListTitleRight = styled.div`
+const ListTitleRightOne = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-const ListItemRight = styled.div`
+const ListItemRightOne = styled.div`
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 32px;
   letter-spacing: 0em;
   text-align: left;
   color: rgba(23, 41, 64, 0, 9);
-  width: 25%;
+  width: 100%;
 `;
-const ListItem = styled.div`
-  display: flex;
-  justify-content: space-between;
+const ListItemOne = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, auto);
 `;
-const Search = styled.div``;
+const ListTitleRightTwo = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+`;
+const ListItemRightTwo = styled.div`
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(23, 41, 64, 0, 9);
+  width: 100%;
+`;
+const Search = styled.div`
+  position: absolute;
+  right: 40px;
+`;
 const SearchContent = styled.div`
   font-size: 16px;
   line-height: 26px;
@@ -163,36 +179,83 @@ const Footer = () => {
         <RightViewFooter>
           <TopViewRight>
             <TitleRight>What We Do</TitleRight>
-            <ListTitleRight>
-              <ListItem>
-                <ListItemRight>Community - DEN Ventures</ListItemRight>
-                <ListItemRight>Academy Services</ListItemRight>
-                <ListItemRight>Partnerships Location Partners</ListItemRight>
-              </ListItem>
+            <ListTitleRightOne>
+              <ListItemOne>
+                <ListItemRightOne>
+                  Community - DEN
+                  <br /> Ventures
+                </ListItemRightOne>
+                <ListItemRightOne style={{ paddingLeft: "53px" }}>
+                  Academy
+                  <br />
+                  Services
+                </ListItemRightOne>
+                <ListItemRightOne style={{ paddingLeft: "105px" }}>
+                  Partnerships
+                  <br />
+                  Location Partners
+                </ListItemRightOne>
+              </ListItemOne>
               <Search>
                 <SearchContent style={{ background: "rgba(32, 67, 112, 1)" }}>
                   Join our community
                 </SearchContent>
               </Search>
-            </ListTitleRight>
+            </ListTitleRightOne>
           </TopViewRight>
           <BottomViewRight>
             <TitleRight>How far do you want to go today?</TitleRight>
-            <ListTitleRight>
-              <ListItem>
-                <ListItemRight>
-                  Bali Bangalore Buenos Aires Singapore Lisbon
-                </ListItemRight>
-                <ListItemRight>
-                  Canary Islands Chiang Mai Da Nang Valencia
-                </ListItemRight>
-                <ListItemRight>
-                  Lisbon Manila Penang Canary Islands Valencia
-                </ListItemRight>
-                <ListItemRight>Lisbon Manila Penang Bangalore</ListItemRight>
-                <ListItemRight>Lisbon Manila Penang Bangalore</ListItemRight>
-              </ListItem>
-            </ListTitleRight>
+            <ListTitleRightTwo>
+              <ListItemRightTwo>
+                Bali
+                <br />
+                Bangalore
+                <br />
+                Buenos Aires
+                <br />
+                Singapore
+                <br />
+                Lisbon
+              </ListItemRightTwo>
+              <ListItemRightTwo style={{ paddingLeft: "87px" }}>
+                Canary Islands
+                <br />
+                Chiang Mai
+                <br />
+                Da Nang
+                <br />
+                Valencia
+              </ListItemRightTwo>
+              <ListItemRightTwo style={{ paddingLeft: "76px" }}>
+                Lisbon
+                <br />
+                Manila
+                <br />
+                Penang
+                <br />
+                Canary Islands
+                <br />
+                Valencia
+              </ListItemRightTwo>
+              <ListItemRightTwo style={{ paddingLeft: "76px" }}>
+                Lisbon
+                <br />
+                Manila
+                <br />
+                Penang
+                <br />
+                Bangalore
+              </ListItemRightTwo>
+              <ListItemRightTwo style={{ paddingLeft: "95px" }}>
+                Lisbon
+                <br />
+                Manila
+                <br />
+                Penang
+                <br />
+                Bangalore
+              </ListItemRightTwo>
+            </ListTitleRightTwo>
           </BottomViewRight>
         </RightViewFooter>
       </ViewFooter>

@@ -4,6 +4,7 @@ import simon from "../../asset/img/simon.png";
 import janecooper from "../../asset/img/janecooper.png";
 import albertflores from "../../asset/img/albertflores.png";
 import arrow from "../../asset/img/arrow.png";
+import Icon from "../../asset/img/Icon.png";
 
 const TitleContent =
   "Ornare massa eget egestas purus viverrasan in nisl. Sit amet luctus venenatis lectus magna fring ut venenatis tellus in metus vulputate eu scelerisque felis. Felis done.";
@@ -50,13 +51,15 @@ const HeaderItem = styled.div`
   display: flex;
   align-items: flex-end;
   padding-bottom: 40px;
-  justify-content: space-between;
+  gap: 30px;
   & img {
-    left: 30px;
-    bottom: 43px;
+    margin-top: -50px;
   }
 `;
 const BoxTitle = styled.div``;
+const ImageIcon = styled.img`
+  margin-bottom: 20px;
+`;
 const TitleName = styled.div`
   font-weight: Bold;
   font-size: 20px;
@@ -135,6 +138,7 @@ const WhatPeople = () => {
           <HeaderItem>
             <img src={simon} alt={""} />
             <BoxTitle>
+              <ImageIcon src={Icon} alt={""} />
               <TitleName>Simon JD</TitleName>
               <TitleWork>Co-Founder and CEO, Travelio</TitleWork>
             </BoxTitle>
@@ -147,6 +151,7 @@ const WhatPeople = () => {
           <HeaderItem>
             <img src={janecooper} alt={""} />
             <BoxTitle>
+              <ImageIcon src={Icon} alt={""} />
               <TitleName>Simon JD</TitleName>
               <TitleWork>Co-Founder and CEO, Travelio</TitleWork>
             </BoxTitle>
@@ -159,13 +164,13 @@ const WhatPeople = () => {
           <HeaderItem>
             <img src={albertflores} alt={""} />
             <BoxTitle>
-              <TitleName>Simon JD</TitleName>
+              <ImageIcon src={Icon} alt={""} />
+              <TitleName>Albert Flores</TitleName>
               <TitleWork>Marketing Coordinator, Gillette </TitleWork>
             </BoxTitle>
           </HeaderItem>
           <ViewItem>{TitleContent}</ViewItem>
           <ViewItem>{TitleContentLast}</ViewItem>
-
           <LearnMore href="#">Learn more</LearnMore>
         </ListItem>
       </ContentBox>
