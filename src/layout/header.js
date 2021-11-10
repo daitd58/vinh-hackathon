@@ -51,17 +51,41 @@ const MenuItem = styled.div`
   :hover {
     cursor: pointer;
   }
+  @media screen and (max-width: 1300px) {
+    padding: 0 20px;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 0 12px;
+  }
+  @media screen and (max-width: 820px) {
+    padding: 0 8px;
+  }
+  @media screen and (max-width: 820px) {
+    display: none;
+  }
 `;
 const MenuIcon = styled.img`
   display: none;
-  @media screen and (max-width: 376px) {
+  @media screen and (max-width: 820px) {
     display: block;
+  }
+  @media screen and (max-width: 820px) {
     padding-right: 28px;
+  }
+  @media screen and (max-width: 280px) {
+    display: none;
   }
 `;
 const Search = styled.div`
   padding-right: 30px;
-  @media screen and (max-width: 376px) {
+  @media screen and (max-width: 1140px) {
+    display: none;
+  }
+  @media screen and (max-width: 820px) {
+    display: block;
+    padding-right: 28px;
+  }
+  @media screen and (max-width: 550px) {
     display: none;
   }
 `;

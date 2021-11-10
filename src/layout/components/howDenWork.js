@@ -6,7 +6,13 @@ import slack from "../../asset/img/slack.png";
 import Global from "../../asset/img/Global.png";
 
 const Container = styled.div`
-  padding-bottom: 130px;
+  padding: 0 130px 130px;
+  @media screen and (max-width: 1200px) {
+    padding: 80px 80px;
+  }
+  @media screen and (max-width: 890px) {
+    padding: 80px 40px;
+  }
   @media screen and (max-width: 768px) {
     padding: 80px 20px;
   }
@@ -19,7 +25,7 @@ const TitleHeader = styled.div`
   font-size: 50px;
   line-height: 60px;
   font-weight: 700;
-  padding: 135px 0 50px 130px;
+  padding: 135px 0 50px 0;
   font-style: normal;
   letter-spacing: -0.015em;
   @media screen and (max-width: 768px) {
@@ -30,23 +36,40 @@ const TitleHeader = styled.div`
 `;
 
 const Box = styled.div`
-  display: flex;
-  gap: 75px;
-  padding: 0 130px;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 60px;
+  @media screen and (max-width: 1435px) {
+    grid-gap: 30px;
+  }
+  @media screen and (max-width: 1356px) {
+    grid-gap: 15px;
+  }
+  @media screen and (max-width: 1050px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 810px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
     padding: 0;
-    gap: 20px;
+  }
+  @media screen and (max-width: 550px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 const BoxItem = styled.div`
   width: 100%;
-  height: 160px;
+  height: 100%;
   background: #f4f6f8;
-  padding: 20px 30px 50px 40px;
+  padding: 20px 30px 20px 40px;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  border: 0;
+  box-sizing: border-box;
+  @media screen and (max-width: 1310px) {
+    padding: 10px 10px 30px 20px;
+  }
   @media screen and (max-width: 768px) {
     padding: 20px 20px 40px 30px;
     gap: 36px;
@@ -61,9 +84,12 @@ const Title = styled.div`
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
-  @media screen and (max-width: 768px) {
-    font-size: 22px;
+  /* @media screen and (max-width: 1050px) {
+    font-size: 16px;
   }
+  @media screen and (max-width: 810px) {
+    font-size: 22px;
+  } */
 `;
 const Image = styled.img`
   width: 40px;

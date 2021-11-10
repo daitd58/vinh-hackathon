@@ -12,13 +12,25 @@ const ContentExperts = styled.div`
   font-size: 16px;
   line-height: 26px;
   color: rgba(35, 35, 39, 0.7);
-  padding-right: 220px;
+  width: 65%;
   padding-bottom: 24px;
   font-weight: 400;
   letter-spacing: 0em;
   text-align: left;
-  @media screen and (max-width: 768px) {
-    padding-right: 0;
+  @media screen and (max-width: 1370px) {
+    width: 75%;
+  }
+  @media screen and (max-width: 1280px) {
+    width: 82%;
+  }
+  @media screen and (max-width: 1195px) {
+    width: 85%;
+  }
+  @media screen and (max-width: 1099px) {
+    width: 92%;
+  }
+  @media screen and (max-width: 970px) {
+    width: 95%;
   }
 `;
 const HeaderContent = styled.div`
@@ -58,6 +70,7 @@ const ExpertsContent = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
     padding-bottom: 60px;
+    align-items: center;
   }
 `;
 const ContentLeftExperts = styled.div`
@@ -65,10 +78,19 @@ const ContentLeftExperts = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 130px;
+  @media screen and (max-width: 1200px) {
+    margin-left: 80px;
+  }
+  @media screen and (max-width: 950px) {
+    margin-left: 30px;
+  }
+  @media screen and (max-width: 790px) {
+    margin-left: 20px;
+  }
   @media screen and (max-width: 768px) {
-    width: 100%;
+    width: 90%;
     margin: 0;
-    padding: 66px 20px 0;
+    padding: 66px 0 0;
   }
 `;
 const ContentRightExperts = styled.div`
@@ -81,11 +103,29 @@ const ContentRightExperts = styled.div`
     height: auto;
     box-shadow: 41px 54px 0 rgba(92, 198, 143, 1);
   }
-  @media screen and (max-width: 768px) {
-    width: 90%;
-    padding: 0 20px;
+  @media screen and (max-width: 1100px) {
+    padding: 0 30px;
     & img {
+      box-shadow: 30px 36px 0 rgba(92, 198, 143, 1);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    width: 100%;
+    & img {
+      width: 95%;
+      margin-left: 20px;
       box-shadow: 20px 26px 0 rgba(92, 198, 143, 1);
+    }
+  }
+  @media screen and (max-width: 620px) {
+    & img {
+      width: 93%;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    & img {
+      width: 90%;
     }
   }
 `;

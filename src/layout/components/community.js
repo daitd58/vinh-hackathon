@@ -30,6 +30,7 @@ const CommunityContent = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     padding-bottom: 40px;
+    align-items: center;
   }
 `;
 const ContentLeftCommunity = styled.div`
@@ -42,11 +43,29 @@ const ContentLeftCommunity = styled.div`
     height: auto;
     box-shadow: -41px 54px 0 rgba(255, 204, 0, 1);
   }
-  @media screen and (max-width: 768px) {
-    width: 90%;
-    padding: 0 20px;
+  @media screen and (max-width: 1100px) {
+    padding: 0 30px;
     & img {
-      box-shadow: -20px 26px 0 rgba(76, 143, 204, 1);
+      box-shadow: -30px 36px 0 rgba(255, 204, 0, 1);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    width: 100%;
+    & img {
+      width: 95%;
+      margin-left: 20px;
+      box-shadow: -20px 26px 0 rgba(255, 204, 0, 1);
+    }
+  }
+  @media screen and (max-width: 620px) {
+    & img {
+      width: 93%;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    & img {
+      width: 90%;
     }
   }
 `;
@@ -55,10 +74,22 @@ const ContentRightCommunity = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 140px;
+  @media screen and (max-width: 1200px) {
+    margin-left: 80px;
+  }
+  @media screen and (max-width: 950px) {
+    margin-left: 30px;
+  }
+  @media screen and (max-width: 850px) {
+    margin-left: 0px;
+  }
+  @media screen and (max-width: 790px) {
+    margin-left: -10px;
+  }
   @media screen and (max-width: 768px) {
-    width: 100%;
+    width: 90%;
     margin: 0;
-    padding: 66px 20px 0;
+    padding: 66px 0 0;
   }
 `;
 const ContentCommunity = styled.div`
@@ -66,12 +97,24 @@ const ContentCommunity = styled.div`
   font-size: 16px;
   line-height: 26px;
   color: rgba(35, 35, 39, 1);
-  padding-right: 225px;
+  width: 65%;
   font-weight: 400;
   letter-spacing: 0em;
   text-align: left;
-  @media screen and (max-width: 768px) {
-    padding-right: 0;
+  @media screen and (max-width: 1370px) {
+    width: 75%;
+  }
+  @media screen and (max-width: 1280px) {
+    width: 82%;
+  }
+  @media screen and (max-width: 1195px) {
+    width: 85%;
+  }
+  @media screen and (max-width: 1099px) {
+    width: 92%;
+  }
+  @media screen and (max-width: 970px) {
+    width: 95%;
   }
 `;
 const BtnClick = styled.button`

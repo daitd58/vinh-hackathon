@@ -4,6 +4,19 @@ import Entrepreneurs from "../../asset/img/Entrepreneurs.png";
 
 const Container = styled.div`
   display: flex;
+  padding: 0 130px;
+  @media screen and (max-width: 970px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 80px 80px 0 80px;
+  }
+  @media screen and (max-width: 890px) {
+    padding: 80px 40px 0 40px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 80px 20px 0 20px;
+  }
 `;
 
 const LeftBox = styled.div`
@@ -11,14 +24,18 @@ const LeftBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 130px;
   gap: 24px;
 `;
 
 const RightBox = styled.div`
   flex: 50%;
-  padding-right: 130px;
   padding-bottom: 165px;
+  @media screen and (max-width: 970px) {
+    padding: 60px 0;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 40px 0;
+  }
 `;
 const TitleHeader = styled.div`
   text-transform: uppercase;
@@ -29,6 +46,10 @@ const TitleHeader = styled.div`
   font-weight: 700;
   font-style: normal;
   letter-spacing: -0.015em;
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 `;
 const TitleContent = styled.div`
   font-style: normal;
@@ -41,11 +62,28 @@ const TitleContent = styled.div`
   letter-spacing: 0em;
   text-align: left;
 `;
+const ViewDesktop = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @media screen and (max-width: 970px) {
+    display: none;
+  }
+`;
 const BtnTitle = styled.div`
   display: flex;
   padding-bottom: 100px;
 `;
-const Image = styled.img``;
+const Image = styled.img`
+  @media screen and (max-width: 1270px) {
+    width: 90%;
+    padding-left: 10%;
+  }
+  @media screen and (max-width: 970px) {
+    width: 100%;
+    padding: 0;
+  }
+`;
 const BtnClick = styled.button`
   font-family: "Oxygen", sans-serif;
   width: 156px;
@@ -64,24 +102,56 @@ const BtnClick = styled.button`
     cursor: pointer;
   }
 `;
+const ViewMobile = styled.div`
+  display: none;
+  @media screen and (max-width: 970px) {
+    flex-direction: column;
+    display: flex;
+    gap: 32px;
+    padding: 0 80px;
+  }
+  @media screen and (max-width: 890px) {
+    padding: 0 40px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+`;
+const BtnTitleMobile = styled.div`
+  display: flex;
+  padding-bottom: 100px;
+  justify-content: center;
+`;
 
 const ButFirst = () => {
   return (
-    <Container>
-      <LeftBox>
-        <TitleHeader>
-          But First... <br />
-          you Have to Join
-        </TitleHeader>
+    <div>
+      <Container>
+        <LeftBox>
+          <TitleHeader>
+            But First... <br />
+            you Have to Join
+          </TitleHeader>
+          <ViewDesktop>
+            <TitleContent>
+              What are you waiting for? Join DEN today.
+            </TitleContent>
+            <BtnTitle>
+              <BtnClick>Join Den</BtnClick>
+            </BtnTitle>
+          </ViewDesktop>
+        </LeftBox>
+        <RightBox>
+          <Image src={Entrepreneurs} preview={false} alt={""} />
+        </RightBox>
+      </Container>
+      <ViewMobile>
         <TitleContent>What are you waiting for? Join DEN today.</TitleContent>
-        <BtnTitle>
+        <BtnTitleMobile>
           <BtnClick>Join Den</BtnClick>
-        </BtnTitle>
-      </LeftBox>
-      <RightBox>
-        <Image src={Entrepreneurs} preview={false} alt={""} />
-      </RightBox>
-    </Container>
+        </BtnTitleMobile>
+      </ViewMobile>
+    </div>
   );
 };
 

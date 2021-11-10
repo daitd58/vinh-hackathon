@@ -21,9 +21,9 @@ function App() {
       <Community />
       <HowDenWork />
       <ButFirst />
-      <WhatPeople />
-      <Upcoming />
-      <Footer />
+      {/* <WhatPeople /> */}
+      {/* <Upcoming /> */}
+      {/* <Footer /> */}
     </div>
   );
 }

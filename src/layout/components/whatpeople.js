@@ -27,7 +27,7 @@ const HeaderBox = styled.div`
 `;
 const ContentBox = styled.div`
   display: flex;
-  padding: 90px 20px 120px;
+  padding: 90px 130px 120px;
   gap: 30px;
 `;
 const TitleHeader = styled.div`
