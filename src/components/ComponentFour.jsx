@@ -4,8 +4,17 @@ import iconTwo from "../img/iconTwo.png";
 import iconThree from "../img/iconThree.png";
 import iconFour from "../img/iconFour.png";
 const Wrapper = styled.div`
-  padding: 130px 130px 100px 130px;
+  padding: 100px;
   background: #ffffff;
+  @media screen and (max-width: 1024px) {
+    padding: 80px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 50px;
+  }
+  @media screen and (max-width: 375px) {
+    padding: 35px;
+  }
 `;
 const TextContent = styled.div`
   font-weight: 700;
@@ -13,20 +22,38 @@ const TextContent = styled.div`
   line-height: 80px;
   letter-spacing: -0.015em;
   text-transform: uppercase;
+  white-space: nowrap;
   color: #204370;
   font-family: "Pathway Gothic One", sans-serif;
+  @media screen and (max-width: 375px) {
+    font-size: 50px;
+  }
 `;
 
 const Container = styled.div`
   margin-top: 50px;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+  @media screen and (max-width: 376px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 const Box = styled.div`
   background: #f4f6f8;
   width: 20%;
   height: 200px;
-  padding: 5px 10px 30px 40px;
+  padding: 5px 10px 30px 30px;
+  @media screen and (max-width: 1024px) {
+    padding: 0 5px 0 30px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 18%;
+  }
+  @media screen and (max-width: 376px) {
+    width: 90%;
+  }
 `;
 
 const HeaderBox = styled.div`
@@ -37,6 +64,12 @@ const HeaderBox = styled.div`
 `;
 const Icon = styled.img`
   width: 18%;
+  @media screen and (max-width: 768px) {
+    width: 25%;
+  }
+  @media screen and (max-width: 376px) {
+    width: 15%;
+  }
 `;
 const Number = styled.p`
   color: #1729401a;
@@ -52,13 +85,20 @@ const ContentBox = styled.div`
 `;
 
 const TextDescription = styled.div`
-  font-family: Oxygen;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 28px;
-  color: #232327;
-  text-align: left;
-  padding-right: 34px;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  width: 170px;
+  @media screen and (max-width: 1024px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 376px) {
+    font-size: 16px;
+  }
 `;
 
 function ComponentFour() {

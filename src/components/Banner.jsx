@@ -83,6 +83,9 @@ const Button = styled.button`
   justify-content: center;
   border: none;
   font-family: "Oxygen", sans-serif;
+  @media screen and (max-width: 376px) {
+    width: 150px;
+  }
 `;
 
 function Banner() {

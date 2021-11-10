@@ -14,11 +14,11 @@ function App() {
     <>
       <Header />
       <Banner />
-      {/* <ComponentOne />
+      <ComponentOne />
       <ComponentTwo />
       <ComponentThree />
       <ComponentFour />
-      <ComponentFive />
+      {/* <ComponentFive />
       <ComponentSix />
       <ComponentSeven />
       <ComponentEight /> */}
