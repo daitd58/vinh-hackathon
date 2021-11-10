@@ -1,18 +1,26 @@
 import styled from "styled-components";
-import background from "../img/background.png";
+import banner from "../img/background-desktop.png";
+import bannerMobile from "../img/background-mobile.png";
 import imgOne from "../img/imgOne.png";
 const Wrapper = styled.div`
-  background-image: url(${background});
+  background-image: url(${banner});
   background-size: cover;
-  background-position: right;
+  background-position: center;
   object-fit: cover;
   width: 100%;
   height: 100%;
+  @media screen and (max-width: 376px) {
+    background: url(${bannerMobile}) no-repeat;
+    background-size: cover;
+    width: auto;
+  }
 `;
 const Image = styled.img`
-  margin-top: 25px;
-  width: 183px;
-  height: 73px;
+  margin-top: 70px;
+  width: 180px;
+  @media screen and (max-width: 376px) {
+    margin-top: 45px;
+  }
 `;
 const Content = styled.div`
   height: 100%;
@@ -24,44 +32,57 @@ const Content = styled.div`
 `;
 
 const TextTitle = styled.div`
-  margin-top: 28px;
+  margin-top: 22px;
   font-weight: 500;
+  font-style: normal;
   color: #ffffff;
-  font-size: 56px;
-  line-height: 56px;
+  font-size: 48px;
+  line-height: 50px;
   text-align: center;
   width: 450px;
   font-family: "Pathway Gothic One", sans-serif;
+  @media screen and (max-width: 376px) {
+    width: 350px;
+    margin-top: 25px;
+    font-size: 30px;
+    line-height: 30px;
+  }
 `;
 
 const TextDescription = styled.div`
-  margin-top: 24px;
-  font-size: 20px;
+  margin-top: 25px;
+  font-size: 16px;
   font-weight: 500;
+  font-style: normal;
   color: #ffffff;
   text-align: center;
-  line-height: 25px;
-  width: 320px;
-  letter-spacing: 0.5px;
-  gap: 5px;
-  font-family: "Oxygen Mono", monospace;
-  font-family: "Pathway Gothic One", sans-serif;
+  line-height: 22px;
+  width: 400px;
+  letter-spacing: 1.7px;
+  font-family: "Oxygen", sans-serif;
+  @media screen and (max-width: 376px) {
+    margin-top: 28px;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    width: 350px;
+  }
 `;
 
 const Button = styled.button`
   display: flex;
-  margin-top: 30px;
+  margin-top: 50px;
   background: #204370;
+  font-style: normal;
   border-radius: 30px;
   width: 180px;
   height: 60px;
-  font-size: 23px;
+  font-size: 16px;
   font-weight: 500;
   color: #ffffff;
   align-items: center;
   justify-content: center;
   border: none;
-  font-family: "Pathway Gothic One", sans-serif;
+  font-family: "Oxygen", sans-serif;
 `;
 
 function Banner() {

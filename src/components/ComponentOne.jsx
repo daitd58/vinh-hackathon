@@ -21,12 +21,14 @@ const TextContent = styled.div`
 const Block = styled.div`
   padding-top: 80px;
   display: flex;
+  justify-content: space-between;
   gap: 80px;
 `;
 
 const LeftBlock = styled.div`
   display: flex;
   padding-left: 40px;
+  width: 50%;
   & img {
     width: 100%;
     height: auto;

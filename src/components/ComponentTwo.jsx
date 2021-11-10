@@ -10,14 +10,16 @@ const Wrapper = styled.div`
 const Block = styled.div`
   padding-top: 30px;
   display: flex;
+  justify-content: space-between;
   gap: 80px;
 `;
 
 const LeftBlock = styled.div`
   width: 50%;
-  padding: 0 40px;
+  margin-left: 80px;
 `;
 const RightBlock = styled.div`
+  width: 50%;
   display: flex;
   padding-right: 40px;
   & img {

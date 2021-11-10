@@ -4,11 +4,12 @@ import iconTwo from "../img/iconTwo.png";
 import iconThree from "../img/iconThree.png";
 import iconFour from "../img/iconFour.png";
 const Wrapper = styled.div`
-  padding: 137px 130px;
+  padding: 130px 130px 100px 130px;
+  background: #ffffff;
 `;
 const TextContent = styled.div`
-  font-weight: 500;
-  font-size: 80px;
+  font-weight: 700;
+  font-size: 60px;
   line-height: 80px;
   letter-spacing: -0.015em;
   text-transform: uppercase;
@@ -19,12 +20,11 @@ const TextContent = styled.div`
 const Container = styled.div`
   margin-top: 50px;
   display: flex;
-  flex-direction: row;
-  gap: 40px;
+  gap: 20px;
 `;
 const Box = styled.div`
   background: #f4f6f8;
-  width: 50%;
+  width: 20%;
   height: 200px;
   padding: 5px 10px 30px 40px;
 `;
@@ -64,7 +64,7 @@ const TextDescription = styled.div`
 function ComponentFour() {
   return (
     <Wrapper>
-      <TextContent>How Den works</TextContent>
+      <TextContent>How Den Works</TextContent>
       <Container>
         <Box>
           <HeaderBox>
