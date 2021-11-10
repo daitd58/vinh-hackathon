@@ -18,28 +18,37 @@ const HeaderContent = styled.div`
 `;
 const ViewContent = styled.div`
   padding-top: 65px;
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  column-gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 `;
 const TitleHeader = styled.div`
-  font-style: normal;
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 500;
-  letter-spacing: -0.015em;
   text-transform: uppercase;
   color: #204370;
-  width: 44%;
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.015em;
+  width: 35%;
 `;
 const TitleContent = styled.div`
   font-size: 16px;
   line-height: 26px;
   color: rgba(35, 35, 39, 0.8);
   width: 28%;
+  font-family: "Oxygen", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
 `;
-const ListItem = styled.div``;
+const ListItem = styled.div`
+  width: 30%;
+`;
 const TitleDate = styled.div`
+  font-family: "Oxygen", sans-serif;
   color: rgba(32, 67, 112, 1);
   font-size: 16px;
   font-style: normal;
@@ -50,9 +59,10 @@ const TitleDate = styled.div`
   padding: 24px 0 16px;
 `;
 const TitleList = styled.div`
+  font-family: "Didact Gothic", sans-serif;
   font-size: 20px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 20px;
   letter-spacing: -0.015em;
   text-align: left;
@@ -73,6 +83,26 @@ const BtnClick = styled.button`
   color: rgba(35, 35, 39, 1);
   font-weight: 700;
   border: 0;
+  :hover {
+    cursor: pointer;
+  }
+`;
+const BtnClickSeeAll = styled.button`
+  border-radius: 25px;
+  padding: 7px 35px;
+  background: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(35, 35, 39, 1);
+  font-weight: 700;
+  border: 2px solid #e5e5e5;
+  font-family: "Oxygen", sans-serif;
+  font-style: normal;
+  letter-spacing: 0em;
+  text-align: center;
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const Upcoming = () => {
@@ -85,7 +115,7 @@ const Upcoming = () => {
           here.
         </TitleContent>
         <BtnTitle>
-          <BtnClick>See all upcoming events</BtnClick>
+          <BtnClickSeeAll>See all upcoming events</BtnClickSeeAll>
         </BtnTitle>
       </HeaderContent>
       <ViewContent>
@@ -135,6 +165,7 @@ const Upcoming = () => {
             <BtnClick>Register</BtnClick>
           </BtnTitle>
         </ListItem>
+        <ListItem />
       </ViewContent>
     </Container>
   );

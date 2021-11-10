@@ -6,9 +6,9 @@ const HeaderFooter = styled.div`
 `;
 const TitleHeader = styled.div`
   font-family: "Gothic A1", sans-serif;
-  font-size: 36px;
-  line-height: 56px;
-  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 500;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -0.015em;
@@ -22,6 +22,9 @@ const BtnTitle = styled.div`
   padding-bottom: 80px;
 `;
 const BtnClick = styled.button`
+font-family: "Oxygen", sans-serif;
+  font-style: normal;
+  letter-spacing: 0em;
   width: 156px;
   height: 65px;
   background: rgba(255, 204, 0, 1);
@@ -32,8 +35,11 @@ const BtnClick = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #000;
   border: 0;
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const Connected = () => {

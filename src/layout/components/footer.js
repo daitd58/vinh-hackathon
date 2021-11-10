@@ -10,11 +10,19 @@ const Container = styled.div`
 const ViewFooter = styled.div`
   display: flex;
   padding: 100px 40px 40px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 60px 0 22px;
+  }
 `;
 const LeftViewFooter = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 30px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const RightViewFooter = styled.div`
   display: flex;
@@ -22,11 +30,18 @@ const RightViewFooter = styled.div`
 `;
 const Logo = styled.img`
   position: absolute;
+  @media screen and (max-width: 768px) {
+    position: relative;
+  }
 `;
 const ViewAddress = styled.div`
   padding-left: 90px;
+  @media screen and (max-width: 768px) {
+    padding: 0 44px;
+  }
 `;
 const Title = styled.div`
+  font-family: "Oxygen", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -34,17 +49,25 @@ const Title = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: rgba(35, 35, 39, 1);
-  width: 60%;
+  width: 55%;
   padding-bottom: 8px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 const Border = styled.div`
   border-bottom: 3px solid rgba(35, 35, 39, 0.1);
   width: 15%;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const Address = styled.div`
   padding-top: 8px;
 `;
 const TitleAddress = styled.div`
+  font-family: "Oxygen", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -52,8 +75,12 @@ const TitleAddress = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: rgba(23, 41, 64, 1);
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 `;
 const NameAddress = styled.div`
+  font-family: "Oxygen", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -61,10 +88,15 @@ const NameAddress = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: rgba(23, 41, 64, 0, 9);
-  width: 60%;
+  width: 40%;
   padding: 8px 0;
+  @media screen and (max-width: 768px) {
+    width: 70%;
+    text-align: center;
+  }
 `;
 const EmailAddress = styled.a`
+  font-family: "Oxygen", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -73,6 +105,9 @@ const EmailAddress = styled.a`
   text-align: left;
   color: rgba(76, 143, 204, 1);
   text-decoration: none;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 `;
 const TopViewRight = styled.div`
   padding-bottom: 40px;
@@ -82,6 +117,7 @@ const BottomViewRight = styled.div`
   padding-top: 30px;
 `;
 const TitleRight = styled.div`
+  font-family: "Gothic A1", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 500;
@@ -96,6 +132,7 @@ const ListTitleRightOne = styled.div`
   justify-content: space-between;
 `;
 const ListItemRightOne = styled.div`
+  font-family: "Oxygen", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -114,6 +151,7 @@ const ListTitleRightTwo = styled.div`
   grid-template-columns: repeat(5, auto);
 `;
 const ListItemRightTwo = styled.div`
+  font-family: "Oxygen", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -122,15 +160,76 @@ const ListItemRightTwo = styled.div`
   text-align: left;
   color: rgba(23, 41, 64, 0, 9);
   width: 100%;
+  padding-left: 53px;
+`;
+const ListItemRightThree = styled.div`
+  font-family: "Oxygen", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(23, 41, 64, 0, 9);
+  width: 100%;
+  padding-left: 105px;
+`;
+const ListItemRightFour = styled.div`
+  font-family: "Oxygen", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(23, 41, 64, 0, 9);
+  width: 100%;
+  padding-left: 87px;
+`;
+const ListItemRightFive = styled.div`
+  font-family: "Oxygen", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(23, 41, 64, 0, 9);
+  width: 100%;
+  padding-left: 76px;
+`;
+const ListItemRightSix = styled.div`
+  font-family: "Oxygen", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(23, 41, 64, 0, 9);
+  width: 100%;
+  padding-left: 76px;
+`;
+const ListItemRightSeven = styled.div`
+  font-family: "Oxygen", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(23, 41, 64, 0, 9);
+  width: 100%;
+  padding-left: 95px;
 `;
 const Search = styled.div`
   position: absolute;
   right: 40px;
 `;
 const SearchContent = styled.div`
+  font-family: "Oxygen", sans-serif;
   font-size: 16px;
   line-height: 26px;
-  font-weight: bold;
   color: #fff;
   display: flex;
   align-items: center;
@@ -140,6 +239,14 @@ const SearchContent = styled.div`
   border-radius: 30px;
   box-sizing: border-box;
   border: 1px solid #204370;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: center;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 const BorderFooter = styled.div`
   padding: 0 40px 0 130px;
@@ -185,16 +292,16 @@ const Footer = () => {
                   Community - DEN
                   <br /> Ventures
                 </ListItemRightOne>
-                <ListItemRightOne style={{ paddingLeft: "53px" }}>
+                <ListItemRightTwo>
                   Academy
                   <br />
                   Services
-                </ListItemRightOne>
-                <ListItemRightOne style={{ paddingLeft: "105px" }}>
+                </ListItemRightTwo>
+                <ListItemRightThree>
                   Partnerships
                   <br />
                   Location Partners
-                </ListItemRightOne>
+                </ListItemRightThree>
               </ListItemOne>
               <Search>
                 <SearchContent style={{ background: "rgba(32, 67, 112, 1)" }}>
@@ -206,7 +313,7 @@ const Footer = () => {
           <BottomViewRight>
             <TitleRight>How far do you want to go today?</TitleRight>
             <ListTitleRightTwo>
-              <ListItemRightTwo>
+              <ListItemRightOne>
                 Bali
                 <br />
                 Bangalore
@@ -216,8 +323,8 @@ const Footer = () => {
                 Singapore
                 <br />
                 Lisbon
-              </ListItemRightTwo>
-              <ListItemRightTwo style={{ paddingLeft: "87px" }}>
+              </ListItemRightOne>
+              <ListItemRightFour>
                 Canary Islands
                 <br />
                 Chiang Mai
@@ -225,8 +332,8 @@ const Footer = () => {
                 Da Nang
                 <br />
                 Valencia
-              </ListItemRightTwo>
-              <ListItemRightTwo style={{ paddingLeft: "76px" }}>
+              </ListItemRightFour>
+              <ListItemRightFive>
                 Lisbon
                 <br />
                 Manila
@@ -236,8 +343,8 @@ const Footer = () => {
                 Canary Islands
                 <br />
                 Valencia
-              </ListItemRightTwo>
-              <ListItemRightTwo style={{ paddingLeft: "76px" }}>
+              </ListItemRightFive>
+              <ListItemRightSix>
                 Lisbon
                 <br />
                 Manila
@@ -245,8 +352,8 @@ const Footer = () => {
                 Penang
                 <br />
                 Bangalore
-              </ListItemRightTwo>
-              <ListItemRightTwo style={{ paddingLeft: "95px" }}>
+              </ListItemRightSix>
+              <ListItemRightSeven>
                 Lisbon
                 <br />
                 Manila
@@ -254,7 +361,7 @@ const Footer = () => {
                 Penang
                 <br />
                 Bangalore
-              </ListItemRightTwo>
+              </ListItemRightSeven>
             </ListTitleRightTwo>
           </BottomViewRight>
         </RightViewFooter>

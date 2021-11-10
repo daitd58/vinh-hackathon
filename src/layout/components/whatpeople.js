@@ -19,33 +19,49 @@ const Container = styled.div`
 const HeaderBox = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 100px 130px 0;
+  padding: 130px 130px 0;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    padding: 80px 20px 40px;
+  }
 `;
 const ContentBox = styled.div`
   display: flex;
-  padding: 100px 130px 280px;
+  padding: 90px 20px 120px;
   gap: 30px;
 `;
 const TitleHeader = styled.div`
-  font-family: Alternate;
-  font-style: normal;
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 500;
-  letter-spacing: -0.015em;
   text-transform: uppercase;
   color: #204370;
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.015em;
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 `;
 const IconHeader = styled.img`
   width: 121px;
   height: 60px;
+  :hover {
+    cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const ListItem = styled.div`
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 1);
   padding: 0 30px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const HeaderItem = styled.div`
   display: flex;
@@ -61,35 +77,57 @@ const ImageIcon = styled.img`
   margin-bottom: 20px;
 `;
 const TitleName = styled.div`
-  font-weight: Bold;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 700;
   font-size: 20px;
   line-height: 28px;
   vertical-align: Top;
   color: #232327;
+  font-style: normal;
+  letter-spacing: 0em;
+  text-align: left;
 `;
 const TitleWork = styled.div`
   font-size: 14px;
   line-height: 22px;
   color: #232327;
   opacity: 67%;
+  font-family: "Oxygen", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
 `;
 const ViewItem = styled.div`
   font-size: 16px;
+  font-family: "Oxygen", sans-serif;
   line-height: 26px;
   color: rgba(35, 35, 39, 0.9);
   padding-bottom: 20px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
 `;
 const LearnMore = styled.a`
-  font-weight: Bold;
+  font-family: "Oxygen", sans-serif;
   font-size: 16px;
   line-height: 26px;
   color: #204370;
   padding-bottom: 40px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: left;
 `;
 const FooterBox = styled.div`
   position: absolute;
   top: 89%;
   width: 100%;
+  @media screen and (max-width: 768px) {
+    position: relative;
+    margin-bottom: -100px;
+  }
 `;
 const ListFooter = styled.div`
   margin: 0 130px;
@@ -98,30 +136,60 @@ const ListFooter = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  @media screen and (max-width: 768px) {
+    margin: 0 20px;
+  }
 `;
 const FooterTitle = styled.div`
   font-family: "Gothic A1", sans-serif;
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
   color: #fff;
   text-transform: uppercase;
-  padding: 58px 150px 0 150px;
+  padding: 58px 120px 0 120px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  text-align: left;
+  @media screen and (max-width: 768px) {
+    padding: 65px 20px;
+  }
 `;
 const LastFooterTitle = styled.div`
-  font-family: "Gothic A1", sans-serif;
   display: flex;
   gap: 15px;
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: bold;
+  padding: 0 150px 58px 80px;
+`;
+const TitleOne = styled.div`
+  font-family: "Gothic A1", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  text-align: left;
   color: #fff;
   text-transform: uppercase;
-  padding: 0 180px 58px 120px;
 `;
-const TitleOne = styled.div``;
-const TitleTwo = styled.div``;
-const TitleThree = styled.div``;
+const TitleTwo = styled.div`
+  font-family: "Gothic A1", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #fff;
+  text-transform: uppercase;
+`;
+const TitleThree = styled.div`
+  font-family: "Gothic A1", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #fff;
+  text-transform: uppercase;
+`;
 const WhatPeople = () => {
   return (
     <Container>

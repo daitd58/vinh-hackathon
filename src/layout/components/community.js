@@ -10,17 +10,27 @@ const Container = styled.div`
 
 const HeaderContent = styled.div`
   text-transform: uppercase;
+  font-family: "Gothic A1", sans-serif;
   font-size: 20px;
   line-height: 20px;
-  font-weight: 700;
   color: #232327;
   padding-bottom: 24px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: -0.015em;
+  text-align: left;
+  font-style: normal;
+  letter-spacing: -0.015em;
 `;
 
 const CommunityContent = styled.div`
   display: flex;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
   width: 100%;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
 `;
 const ContentLeftCommunity = styled.div`
   width: 50%;
@@ -32,18 +42,37 @@ const ContentLeftCommunity = styled.div`
     height: auto;
     box-shadow: -41px 54px 0 rgba(255, 204, 0, 1);
   }
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    padding: 0 20px;
+    & img {
+      box-shadow: -20px 26px 0 rgba(76, 143, 204, 1);
+    }
+  }
 `;
 const ContentRightCommunity = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
   margin-left: 140px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+    padding: 66px 20px 0;
+  }
 `;
 const ContentCommunity = styled.div`
+  font-family: "Oxygen", sans-serif;
   font-size: 16px;
   line-height: 26px;
-  color: #232327;
+  color: rgba(35, 35, 39, 1);
   padding-right: 225px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
+  @media screen and (max-width: 768px) {
+    padding-right: 0;
+  }
 `;
 const BtnClick = styled.button`
   width: 156px;
@@ -58,12 +87,18 @@ const BtnClick = styled.button`
   justify-content: center;
   color: #fff;
   border: 0;
+  :hover {
+    cursor: pointer;
+  }
 `;
 const Btn = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 120px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 80px;
+  }
 `;
 
 const Community = () => {
@@ -75,7 +110,7 @@ const Community = () => {
         </ContentLeftCommunity>
         <ContentRightCommunity>
           <HeaderContent>ENTREPRENEURS JOIN THE DEN COMMUNITY</HeaderContent>
-          <ContentCommunity style={{paddingBottom: '16px'}}>
+          <ContentCommunity style={{ paddingBottom: "16px" }}>
             Our members and their supporters include: founders and teams;
             mentors and advisors; remote workers and service providers; and
             angel investors and venture capitalists from around the world.

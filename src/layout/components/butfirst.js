@@ -12,30 +12,34 @@ const LeftBox = styled.div`
   flex-direction: column;
   justify-content: center;
   padding-left: 130px;
-  gap: 30px;
+  gap: 24px;
 `;
 
 const RightBox = styled.div`
   flex: 50%;
   padding-right: 130px;
-  padding-bottom: 160px;
+  padding-bottom: 165px;
 `;
 const TitleHeader = styled.div`
-  font-family: Alternate;
-  font-style: normal;
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 500;
-  letter-spacing: -0.015em;
   text-transform: uppercase;
   color: #204370;
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.015em;
 `;
 const TitleContent = styled.div`
   font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 26px;
   color: rgba(35, 35, 39, 0.8);
+  font-family: "Oxygen", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
 `;
 const BtnTitle = styled.div`
   display: flex;
@@ -43,6 +47,7 @@ const BtnTitle = styled.div`
 `;
 const Image = styled.img``;
 const BtnClick = styled.button`
+  font-family: "Oxygen", sans-serif;
   width: 156px;
   height: 65px;
   background: #204370;
@@ -55,6 +60,9 @@ const BtnClick = styled.button`
   justify-content: center;
   color: #fff;
   border: 0;
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const ButFirst = () => {

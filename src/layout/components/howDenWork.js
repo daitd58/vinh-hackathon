@@ -6,48 +6,83 @@ import slack from "../../asset/img/slack.png";
 import Global from "../../asset/img/Global.png";
 
 const Container = styled.div`
-  padding-bottom: 100px;
+  padding-bottom: 130px;
+  @media screen and (max-width: 768px) {
+    padding: 80px 20px;
+  }
 `;
 
 const TitleHeader = styled.div`
   text-transform: uppercase;
   color: #204370;
-  font-size: 60px;
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 50px;
   line-height: 60px;
-  font-weight: 500;
+  font-weight: 700;
   padding: 135px 0 50px 130px;
+  font-style: normal;
+  letter-spacing: -0.015em;
+  @media screen and (max-width: 768px) {
+    padding: 0 0 40px;
+    font-size: 30px;
+    line-height: 30px;
+  }
 `;
 
 const Box = styled.div`
   display: flex;
   gap: 75px;
   padding: 0 130px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 0;
+    gap: 20px;
+  }
 `;
 const BoxItem = styled.div`
   width: 100%;
   height: 160px;
   background: #f4f6f8;
-  padding: 30px 30px 50px 40px;
+  padding: 20px 30px 50px 40px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 32px;
+  @media screen and (max-width: 768px) {
+    padding: 20px 20px 40px 30px;
+    gap: 36px;
+  }
 `;
 const Title = styled.div`
   width: 100%;
-  font-weight: bold;
   font-size: 20px;
   line-height: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
+  }
 `;
-const Image = styled.img``;
+const Image = styled.img`
+  width: 40px;
+  height: 40px;
+`;
 const TopContent = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 `;
 const Number = styled.div`
-  font-weight: 500;
+  font-family: "Didact Gothic", sans-serif;
   font-size: 56px;
   line-height: 56px;
   color: rgba(23, 41, 64, 0.1);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  text-align: right;
 `;
 
 const HowDenWork = () => {

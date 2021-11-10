@@ -5,45 +5,69 @@ import Den from "../asset/img/Den.png";
 
 const Container = styled.div`
   background: url(${BgrAcademy});
-  background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  object-fit: cover;
+  height: 100%;
   display: flex;
+  object-fit: cover;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  padding-bottom: 190px;
-  padding-top: 90px;
+  background-size: cover;
+  @media screen and (max-width: 376px) {
+    background-position: center;
+    margin-top: 80px;
+  }
 `;
 const Logo_Den = styled.div`
   padding-top: 190px;
+  padding-bottom: 28px;
+  @media screen and (max-width: 376px) {
+    padding: 97px 0 0;
+  }
 `;
 const TitleHeader = styled.div`
+  font-family: "Didact Gothic", sans-serif;
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 36px;
+  font-weight: 700;
+  font-size: 40px;
   color: #fff;
-  line-height: 48px;
+  line-height: 50px;
   text-align: center;
-  padding: 0 455px;
+  padding: 0 440px 24px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  @media screen and (max-width: 376px) {
+    padding: 24px 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 `;
 
 const TitleContent = styled.div`
-  text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: "Oxygen", sans-serif;
   font-size: 16px;
   color: #fff;
+  font-style: normal;
   line-height: 26px;
   text-align: center;
-  padding: 0 555px;
+  letter-spacing: 0em;
+  padding: 0 595px 30px;
+  @media screen and (max-width: 376px) {
+    padding: 0 20px 40px;
+    font-size: 14px;
+    line-height: 24px;
+  }
 `;
 const BtnTitle = styled.div`
   display: flex;
-  padding-bottom: 100px;
+  padding-bottom: 125px;
 `;
 const BtnClick = styled.button`
+  font-family: "Oxygen", sans-serif;
+  font-style: normal;
+  letter-spacing: 0em;
   width: 156px;
   height: 65px;
   background: #204370;
@@ -56,6 +80,9 @@ const BtnClick = styled.button`
   justify-content: center;
   color: #fff;
   border: 0;
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const Banner = () => {
@@ -70,7 +97,7 @@ const Banner = () => {
         an entrepreneur.
       </TitleContent>
       <BtnTitle>
-        <BtnClick>Join Den</BtnClick>
+        <BtnClick>Join DEN</BtnClick>
       </BtnTitle>
     </Container>
   );
