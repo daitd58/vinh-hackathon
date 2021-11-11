@@ -26,11 +26,12 @@ const LeftBlock = styled.div`
   padding: 0 40px;
   @media screen and (max-width: 376px) {
     padding-top: 80px;
+    padding-left: 30px;
   }
 `;
 const RightBlock = styled.div`
   display: flex;
-  padding-right: 40px;
+  padding-right: 30px;
   width: 50%;
   & img {
     width: 100%;
@@ -40,7 +41,7 @@ const RightBlock = styled.div`
   }
   @media screen and (max-width: 376px) {
     width: 80%;
-    padding-left: 35px;
+    padding-left: 45px;
     & img {
       box-shadow: 40px 30px 0 rgb(101, 168, 101);
     }

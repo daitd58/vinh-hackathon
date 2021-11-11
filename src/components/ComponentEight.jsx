@@ -2,68 +2,127 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
+  padding: 100px 100px;
   background: #ffffff;
-  padding: 100px 130px 0 130px;
+  @media screen and (max-width: 1024px) {
+    padding: 80px 80px;
+  }
+  @media screen and (max-width: 769px) {
+    padding: 50px 50px;
+  }
+  @media screen and (max-width: 376px) {
+    padding: 30px 30px;
+  }
 `;
-const Header = styled.div`
+const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 80px;
-  & button {
-    height: 50px;
-    max-width: max-content;
-    padding: 0 35px;
-    font-size: 14px;
-    line-height: 26px;
-    font-weight: 600;
-    background: #ffffff;
-    color: #2a2a2a;
-    border: 1px solid #204370;
-    box-sizing: border-box;
-    border-radius: 25px;
+  width: 100%;
+  @media screen and (max-width: 376px) {
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    & button {
+      display: none;
+    }
   }
 `;
-const LeftHeader = styled.div`
+const Left = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 60%;
   & p {
-    width: 270px;
     font-style: normal;
+    font-family: "Oxygen", sans-serif;
     font-size: 14px;
-    line-height: 22px;
+    line-height: 20px;
+    padding-left: 65px;
     color: rgba(35, 35, 39, 0.9);
+  }
+  @media screen and (max-width: 1024px) {
+    width: 70%;
+    & p {
+      padding-left: 35px;
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+  @media screen and (max-width: 769px) {
+    width: 75%;
+    & p {
+      padding-left: 25px;
+      font-size: 10px;
+    }
+  }
+  @media screen and (max-width: 376px) {
+    flex-direction: column;
+    & p {
+      padding-left: 0px;
+      font-size: 12px;
+    }
   }
 `;
 const TextContent = styled.div`
-  width: 400px;
   font-weight: 700;
   font-size: 60px;
-  line-height: 80px;
+  line-height: 70px;
   letter-spacing: -0.015em;
+  white-space: nowrap;
   text-transform: uppercase;
   color: #204370;
   font-family: "Pathway Gothic One", sans-serif;
+  @media screen and (max-width: 1024px) {
+    font-size: 55px;
+  }
+  @media screen and (max-width: 769px) {
+    font-size: 50px;
+  }
+  @media screen and (max-width: 376px) {
+    font-size: 45px;
+    text-align: left;
+  }
 `;
-const Footer = styled.div`
-  background: #e9ecf1;
-  width: 100%;
-  height: 10px;
+const Right = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+`;
+const Button = styled.button`
+  height: 50px;
+  max-width: max-content;
+  padding: 0 35px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 600;
+  background: #ffffff;
+  white-space: nowrap;
+  color: #2a2a2a;
+  border: 1px solid #204370;
+  box-sizing: border-box;
+  border-radius: 25px;
+  @media screen and (max-width: 769px) {
+    padding: 0 10px;
+    font-size: 12px;
+  }
 `;
 function ComponentEight() {
   return (
     <Wrapper>
-      <Header>
-        <LeftHeader>
+      <Container>
+        <Left>
           <TextContent>upcoming events</TextContent>
           <p>
             Find the best offline and online events and training programs right
             here.
           </p>
-        </LeftHeader>
-        <button>See all upcoming events</button>
-      </Header>
-      <Footer></Footer>
+        </Left>
+        <Right>
+          <Button>See all upcoming events</Button>
+        </Right>
+      </Container>
     </Wrapper>
   );
 }

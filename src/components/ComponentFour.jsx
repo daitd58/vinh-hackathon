@@ -9,11 +9,11 @@ const Wrapper = styled.div`
   @media screen and (max-width: 1024px) {
     padding: 80px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 769px) {
     padding: 50px;
   }
-  @media screen and (max-width: 375px) {
-    padding: 35px;
+  @media screen and (max-width: 376px) {
+    padding: 30px;
   }
 `;
 const TextContent = styled.div`
@@ -25,7 +25,10 @@ const TextContent = styled.div`
   white-space: nowrap;
   color: #204370;
   font-family: "Pathway Gothic One", sans-serif;
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 1024px) {
+    font-size: 55px;
+  }
+  @media screen and (max-width: 769px) {
     font-size: 50px;
   }
 `;
@@ -39,7 +42,7 @@ const Container = styled.div`
     flex-direction: column;
     gap: 10px;
   }
-`;
+`;  
 const Box = styled.div`
   background: #f4f6f8;
   width: 20%;
@@ -53,6 +56,8 @@ const Box = styled.div`
   }
   @media screen and (max-width: 376px) {
     width: 90%;
+    height: 160px;
+    padding: 0 10px 0 30px;
   }
 `;
 
@@ -61,6 +66,9 @@ const HeaderBox = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 376px) {
+    padding: 15px 0;
+  }
 `;
 const Icon = styled.img`
   width: 18%;
@@ -76,12 +84,18 @@ const Number = styled.p`
   font-size: 35px;
   font-weight: 700;
   margin-top: 0px;
+  @media screen and (max-width: 376px) {
+    margin-bottom: 0px;
+  }
 `;
 
 const ContentBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 376px) {
+    justify-content: left;
+  }
 `;
 
 const TextDescription = styled.div`
@@ -93,11 +107,12 @@ const TextDescription = styled.div`
   @media screen and (max-width: 1024px) {
     font-size: 15px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 769px) {
     font-size: 12px;
   }
   @media screen and (max-width: 376px) {
     font-size: 16px;
+    width: 250px;
   }
 `;
 

@@ -2,56 +2,102 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div``;
-const Header = styled.div`
+const Container = styled.div`
+  position: relative;
   background: #f4f6f8;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 const BackGround = styled.div`
-  width: 80%;
+  width: 85%;
   height: 100%;
   background: #204370;
   color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px 0;
+  z-index: 1;
+  flex-direction: column;
+  @media screen and (max-width: 376px) {
+    width: 72%;
+    padding: 20px 25px;
+  }
 `;
-const Footer = styled.div`
+const WhiteBackground = styled.div`
   background: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  @media screen and (max-width: 376px) {
+    top: 80%;
+    height: 20%;
+  }
 `;
-const TitleOne = styled.div`
-  margin-top: 28px;
+const TextTitleOne = styled.div`
   font-weight: 500;
   color: #ffffff;
-  font-size: 40px;
+  font-size: 50px;
   text-transform: uppercase;
   font-family: "Pathway Gothic One", sans-serif;
+  @media screen and (max-width: 1024px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 769px) {
+    font-size: 35px;
+  }
+  @media screen and (max-width: 376px) {
+    display: none;
+  }
 `;
-const TitleTwo = styled.div`
-  margin-bottom: 28px;
+const TextTitleTwo = styled.div`
   font-weight: 500;
   text-transform: uppercase;
   color: #ffffff;
-  font-size: 40px;
+  font-size: 50px;
   font-family: "Pathway Gothic One", sans-serif;
+  @media screen and (max-width: 1024px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 769px) {
+    font-size: 35px;
+  }
+  @media screen and (max-width: 376px) {
+    display: none;
+  }
+`;
+const TextTitleThree = styled.div`
+  display: none;
+  @media screen and (max-width: 376px) {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "Pathway Gothic One", sans-serif;
+  }
 `;
 function ComponentSeven() {
   return (
     <Wrapper>
-      <Header>
+      <Container>
         <BackGround>
-          <TitleOne>Draper Startup House is on a mission to enable </TitleOne>
+          <TextTitleOne>
+            Draper Startup House is on a mission to enable{" "}
+          </TextTitleOne>
+          <TextTitleTwo>
+            ONE million entrepreneurs worldwide by 2023
+          </TextTitleTwo>
+          <TextTitleThree>
+            Draper Startup House is on a mission to enable 1 million
+            entrepreneurs worldwide by 2023
+          </TextTitleThree>
         </BackGround>
-      </Header>
-      <Footer>
-        <BackGround>
-          <TitleTwo>ONE million entrepreneurs worldwide by 2023</TitleTwo>
-        </BackGround>
-      </Footer>
+        <WhiteBackground />
+      </Container>
     </Wrapper>
   );
 }

@@ -26,7 +26,6 @@ const RightBlock = styled.div`
 `;
 
 const Logo = styled.div`
-  padding: 0 45px 0 10px;
   img {
     width: 170px;
     @media (max-width: 769px) {

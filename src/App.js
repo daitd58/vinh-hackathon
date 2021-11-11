@@ -18,10 +18,10 @@ function App() {
       <ComponentTwo />
       <ComponentThree />
       <ComponentFour />
-      {/* <ComponentFive />
+      <ComponentFive />
       <ComponentSix />
       <ComponentSeven />
-      <ComponentEight /> */}
+      <ComponentEight />
     </>
   );
 }

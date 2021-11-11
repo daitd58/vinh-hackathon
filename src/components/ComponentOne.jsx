@@ -32,7 +32,7 @@ const Block = styled.div`
 
 const LeftBlock = styled.div`
   display: flex;
-  padding-left: 40px;
+  padding-left: 30px;
   width: 50%;
   & img {
     width: 100%;
@@ -42,7 +42,6 @@ const LeftBlock = styled.div`
   }
   @media screen and (max-width: 376px) {
     width: 80%;
-    padding-left: 35px;
     & img {
       box-shadow: -45px 30px 0 rgb(41, 97, 161);
     }
@@ -74,7 +73,7 @@ const TextTitle = styled.div`
   }
   @media screen and (max-width: 376px) {
     font-size: 30px;
-    padding-left: 35px;
+    padding-left: 30px;
   }
 `;
 
@@ -94,7 +93,7 @@ const TextDescription = styled.div`
   }
   @media screen and (max-width: 376px) {
     font-size: 16px;
-    padding-left: 35px;
+    padding-left: 30px;
   }
 `;
 
@@ -122,7 +121,7 @@ const TextLi = styled.li`
     padding-left: 60px;
   }
   @media screen and (max-width: 376px) {
-    padding-left: 35px;
+    padding-left: 30px;
     margin-bottom: 10px;
   }
 `;
