@@ -13,16 +13,26 @@ const Wrapper = styled.div`
   top: 0;
   left: 0;
   z-index: 99999;
+  padding: 0 30px;
+`;
+
+const Block = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 `;
 
 const LeftBlock = styled.div`
   display: flex;
   align-items: center;
-  padding: 0 30px;
+  width: 70%;
 `;
 
 const RightBlock = styled.div`
-  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Logo = styled.div`
@@ -38,10 +48,13 @@ const Logo = styled.div`
 `;
 const Menu = styled.div`
   display: flex;
-  gap: 10px;
+  padding-left: 40px;
+  gap: 5px;
+  @media screen and (max-width: 1024px) {
+    padding-left: 30px;
+  }
   @media screen and (max-width: 769px) {
-    width: auto;
-    gap: 5px;
+    padding-left: 20px;
   }
   @media screen and (max-width: 376px) {
     display: none;
@@ -49,24 +62,29 @@ const Menu = styled.div`
 `;
 const TextTitle = styled.div`
   color: #ffffff;
-  font: Oxygen;
-  font-size: 14px;
+  font-size: 15px;
   white-space: nowrap;
-  font-weight: 400;
+  font-style: normal;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 500;
   border-left: 1px solid #ffffff;
   padding: 5px;
   line-height: 8px;
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 1024px) {
     font-size: 10px;
+  }
+  @media screen and (max-width: 769px) {
+    font-size: 8px;
   }
 `;
 const StyledButton = styled.button`
   height: 50px;
-  max-width: max-content;
   padding: 0 35px;
-  font-size: 16px;
+  font-size: 15px;
   white-space: nowrap;
-  font-weight: 700;
+  font-style: normal;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 550;
   color: #2a2a2a;
   border: 1px solid #204370;
   box-sizing: border-box;
@@ -74,12 +92,12 @@ const StyledButton = styled.button`
   @media screen and (max-width: 1024px) {
     height: 45px;
     padding: 0 25px;
-    font-size: 14px;
+    font-size: 13px;
   }
   @media screen and (max-width: 769px) {
     height: 40px;
     padding: 0 12px;
-    font-size: 9px;
+    font-size: 11px;
   }
   @media screen and (max-width: 376px) {
     display: none;
@@ -95,23 +113,25 @@ const Icon = styled.img`
 function Header() {
   return (
     <Wrapper>
-      <LeftBlock>
-        <Logo>
-          <img src={logo} alt={""} />
-        </Logo>
-        <Menu>
-          <TextTitle>CITIES</TextTitle>
-          <TextTitle>VENTURES</TextTitle>
-          <TextTitle>ACADEMY</TextTitle>
-          <TextTitle>SERVICES</TextTitle>
-          <TextTitle>ACCELERATOR</TextTitle>
-          <TextTitle>ABOUT US</TextTitle>
-        </Menu>
-      </LeftBlock>
-      <RightBlock>
-        <StyledButton>Join our community</StyledButton>
-        <Icon src={nav} />
-      </RightBlock>
+      <Block>
+        <LeftBlock>
+          <Logo>
+            <img src={logo} alt={""} />
+          </Logo>
+          <Menu>
+            <TextTitle>CITIES</TextTitle>
+            <TextTitle>VENTURES</TextTitle>
+            <TextTitle>ACADEMY</TextTitle>
+            <TextTitle>SERVICES</TextTitle>
+            <TextTitle>ACCELERATOR</TextTitle>
+            <TextTitle>ABOUT US</TextTitle>
+          </Menu>
+        </LeftBlock>
+        <RightBlock>
+          <StyledButton>Join our community</StyledButton>
+          <Icon src={nav} />
+        </RightBlock>
+      </Block>
     </Wrapper>
   );
 }

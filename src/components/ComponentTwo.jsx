@@ -43,7 +43,7 @@ const RightBlock = styled.div`
     width: 80%;
     padding-left: 45px;
     & img {
-      box-shadow: 40px 30px 0 rgb(101, 168, 101);
+      box-shadow: 30px 30px 0 rgb(101, 168, 101);
     }
   }
 `;

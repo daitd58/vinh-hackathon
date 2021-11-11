@@ -59,11 +59,14 @@ const TextTitleTwo = styled.div`
   color: #ffffff;
   font-size: 50px;
   font-family: "Pathway Gothic One", sans-serif;
+  padding-right: 50px;
   @media screen and (max-width: 1024px) {
     font-size: 40px;
+    padding-right: 40px;
   }
   @media screen and (max-width: 769px) {
     font-size: 35px;
+    padding-right: 30px;
   }
   @media screen and (max-width: 376px) {
     display: none;
@@ -73,7 +76,7 @@ const TextTitleThree = styled.div`
   display: none;
   @media screen and (max-width: 376px) {
     display: inline-block;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 500;
     text-transform: uppercase;
     color: #ffffff;
