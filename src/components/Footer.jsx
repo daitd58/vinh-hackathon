@@ -121,9 +121,9 @@ const Icon = styled.div`
     }
   }
 `;
-function Footer() {
+function Footer({setOpen}) {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <Block>
         <TextTitle>Copyright © Draper Startup House 2021</TextTitle>
         <Menu>

@@ -125,9 +125,9 @@ const Button = styled.button`
   z-index: 1;
   border: none;
 `;
-function ComponentFive() {
+function ComponentFive({setOpen}) {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <Block>
         <LeftBlock>
           <TextContent>But First...</TextContent>

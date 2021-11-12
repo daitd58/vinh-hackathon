@@ -116,9 +116,9 @@ const TextDescription = styled.div`
   }
 `;
 
-function ComponentFour() {
+function ComponentFour({setOpen}) {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <TextContent>How Den Works</TextContent>
       <Container>
         <Box>

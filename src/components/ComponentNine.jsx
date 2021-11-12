@@ -32,21 +32,22 @@ const StyleGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2%;
   padding-top: 50px;
-  @media screen and (max-width: 376px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 const StyleGridMobile = styled(Slider)`
-  display: flex;
-  padding-top: 50px;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
   display: none;
-  @media screen and (max-width: 376px) {
-    display: inline-block;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-between;
+    width: 100%;
     & ul {
       bottom: -40px;
+    }
+    .slick-slide > div {
+      margin: 0 5px;
     }
   }
 `;
@@ -143,12 +144,28 @@ const ButtonMobile = styled.button`
 export default class ComponentNine extends Component {
   render() {
     const settings = {
-      dots: true,
-      fade: true,
+      dots: false,
       infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
+      arrows: false,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      initialSlide: 0,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 376,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 0,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            infinite: false,
+            dots: false,
+          },
+        },
+      ],
     };
     return (
       <Wrapper>

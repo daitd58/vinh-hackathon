@@ -88,9 +88,9 @@ const Button = styled.button`
   }
 `;
 
-function Banner() {
+function Banner({setOpen}) {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <Content>
         <Image src={imgOne} alt={""} />
         <TextTitle>GLOBAL NETWORK FOR MENTORSHIP AND SUPPORT</TextTitle>

@@ -263,8 +263,8 @@ const TextContenMobile = styled.div`
   @media screen and (max-width: 376px) {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 22%;
     & p {
       font-style: normal;
       font-family: "Oxygen", sans-serif;
@@ -365,7 +365,7 @@ const ContentFooterMobile = styled.div`
   @media screen and (max-width: 376px) {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    gap: 30%;
     & p {
       font-style: normal;
       font-family: "Oxygen", sans-serif;
@@ -375,9 +375,9 @@ const ContentFooterMobile = styled.div`
     }
   }
 `;
-function ComponentEleven() {
+function ComponentEleven({setOpen}) {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <Block>
         <LeftBlock>
           <Logo>

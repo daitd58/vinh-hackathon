@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Banner from "./components/Banner";
 import ComponentEight from "./components/ComponentEight";
 import ComponentEleven from "./components/ComponentEleven";
@@ -14,22 +15,24 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 function App() {
+  const [open, setOpen] = useState(false)
+
   return (
     <>
-      <Header />
-      <Banner />
-      <ComponentOne />
-      <ComponentTwo />
-      <ComponentThree />
-      <ComponentFour />
-      <ComponentFive />
-      <ComponentSix />
-      <ComponentSeven />
-      <ComponentEight />
-      <ComponentNine />
-      <ComponentTen />
-      <ComponentEleven />
-      <Footer />
+      <Header open={open} setOpen={setOpen}/>
+      <Banner setOpen={setOpen}/>
+      <ComponentOne setOpen={setOpen}/>
+      <ComponentTwo setOpen={setOpen}/>
+      <ComponentThree setOpen={setOpen}/>
+      <ComponentFour setOpen={setOpen}/>
+      <ComponentFive setOpen={setOpen}/>
+      <ComponentSix setOpen={setOpen}/>
+      <ComponentSeven setOpen={setOpen}/>
+      <ComponentEight setOpen={setOpen}/>
+      <ComponentNine setOpen={setOpen}/>
+      <ComponentTen setOpen={setOpen}/>
+      <ComponentEleven setOpen={setOpen}/>
+      <Footer setOpen={setOpen}/>
     </>
   );
 }

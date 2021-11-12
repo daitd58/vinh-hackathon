@@ -89,9 +89,9 @@ const TextTitleThree = styled.div`
     font-family: "Pathway Gothic One", sans-serif;
   }
 `;
-function ComponentSeven() {
+function ComponentSeven({setOpen}) {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <Container>
         <BackGround>
           <TextTitleOne>

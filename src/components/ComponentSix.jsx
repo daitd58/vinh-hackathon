@@ -54,6 +54,7 @@ const TextContent = styled.div`
 const StyledArrow = styled.div`
   display: flex;
   justify-content: flex-end;
+  height: 40px;
   gap: 5px;
   & img {
     width: 50%;
@@ -275,6 +276,42 @@ const FooterContent = styled.div`
     }
   }
 `;
+const ButtonArrowLeft = styled.button`
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  background: url(${arrowLeft});
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: unset;
+  :hover,
+  :active,
+  :focus {
+    background: url(${arrowLeft});
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+`;
+const ButtonArrowRight = styled.button`
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  background: url(${arrowRight});
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: unset;
+  :hover,
+  :active,
+  :focus {
+    background: url(${arrowRight});
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+`;
 export default class ComponentSix extends Component {
   render() {
     const settings = {
@@ -284,6 +321,7 @@ export default class ComponentSix extends Component {
       speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
+      arrows: false,
     };
     return (
       <Wrapper>
@@ -291,8 +329,8 @@ export default class ComponentSix extends Component {
           <LeftBlock>
             <TextContent>What PEOPLE ARE SAYING ABOUT DEN</TextContent>
             <StyledArrow>
-              <img src={arrowLeft} alt={""} />
-              <img src={arrowRight} alt={""} />
+              <ButtonArrowLeft></ButtonArrowLeft>
+              <ButtonArrowRight></ButtonArrowRight>
             </StyledArrow>
           </LeftBlock>
           <RightBlock>
@@ -318,7 +356,7 @@ export default class ComponentSix extends Component {
                     Felis donec et odio pellentesque di scelerisque felis.
                     Ornare massa eget egest.
                   </p>
-                  <a href="#">Learn more</a>
+                  <a href="/">Learn more</a>
                 </FooterContent>
               </Content>
             </Box>
@@ -344,7 +382,7 @@ export default class ComponentSix extends Component {
                     Felis donec et odio pellentesque di scelerisque felis.
                     Ornare massa eget egest.
                   </p>
-                  <a href="#">Learn more</a>
+                  <a href="/">Learn more</a>
                 </FooterContent>
               </Content>
             </Box>
@@ -370,7 +408,7 @@ export default class ComponentSix extends Component {
                     Felis donec et odio pellentesque di scelerisque felis.
                     Ornare massa eget egest.
                   </p>
-                  <a href="#">Learn more</a>
+                  <a href="/">Learn more</a>
                 </FooterContent>
               </Content>
             </Box>
@@ -398,7 +436,7 @@ export default class ComponentSix extends Component {
                     Felis donec et odio pellentesque di scelerisque felis.
                     Ornare massa eget egest.
                   </p>
-                  <a href="#">Learn more</a>
+                  <a href="/">Learn more</a>
                 </FooterContent>
               </Content>
             </Box>
@@ -424,7 +462,7 @@ export default class ComponentSix extends Component {
                     Felis donec et odio pellentesque di scelerisque felis.
                     Ornare massa eget egest.
                   </p>
-                  <a href="#">Learn more</a>
+                  <a href="/">Learn more</a>
                 </FooterContent>
               </Content>
             </Box>
@@ -450,7 +488,7 @@ export default class ComponentSix extends Component {
                     Felis donec et odio pellentesque di scelerisque felis.
                     Ornare massa eget egest.
                   </p>
-                  <a href="#">Learn more</a>
+                  <a href="/">Learn more</a>
                 </FooterContent>
               </Content>
             </Box>

@@ -109,9 +109,9 @@ const TextLi = styled.li`
   }
 `;
 
-function ComponentTwo() {
+function ComponentTwo({setOpen}) {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <Block>
         <LeftBlock>
           <TextTitle>GET INSPIRed By PEERS AND EXPERTS </TextTitle>

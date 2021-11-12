@@ -108,9 +108,9 @@ const Button = styled.button`
     font-size: 12px;
   }
 `;
-function ComponentEight() {
+function ComponentEight({setOpen}) {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <Container>
         <Left>
           <TextContent>upcoming events</TextContent>

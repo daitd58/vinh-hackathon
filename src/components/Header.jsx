@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import logo from "../img/logo.png";
 import nav from "../img/nav.png";
+import SideBar from "./SideBar";
 
 const Wrapper = styled.div`
-  background-color: #0e2c51;
+  background: rgba(14, 44, 81, 0.8);
+  backdrop-filter: blur(35px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -109,7 +111,7 @@ const Icon = styled.img`
     width: 30px;
   }
 `;
-function Header() {
+function Header({open, setOpen}) {
   return (
     <Wrapper>
       <Block>
@@ -128,9 +130,10 @@ function Header() {
         </LeftBlock>
         <RightBlock>
           <StyledButton>Join our community</StyledButton>
-          <Icon src={nav} />
+          <Icon src={nav} open ={open} onClick={() => setOpen(!open)}/>
         </RightBlock>
       </Block>
+      <SideBar open ={open}/>
     </Wrapper>
   );
 }

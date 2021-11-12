@@ -59,9 +59,9 @@ const Button = styled.button`
     padding: 10px 50px;
   }
 `;
-function ComponentTen() {
+function ComponentTen({setOpen}) {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <Block>
         <LeftBlock>
           WHERE ENTREPRENEURS AROUND THE WORLD GET CONNECTED, INSPIRED, AND

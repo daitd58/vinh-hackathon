@@ -111,9 +111,9 @@ const Button = styled.button`
   z-index: 1;
   border: none;
 `;
-function ComponentThree() {
+function ComponentThree({setOpen}) {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <Block>
         <LeftBlock>
           <img src={image} alt={""} />
