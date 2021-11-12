@@ -88,7 +88,7 @@ const RightBlock = styled.div`
 `;
 const TextTitle = styled.div`
   font-weight: 500;
-  font-size: 30px;
+  font-size: 36px;
   line-height: 36px;
   letter-spacing: -0.015em;
   text-transform: uppercase;
@@ -122,9 +122,9 @@ const TextDescription = styled.div`
   font-family: "Oxygen", sans-serif;
   font-style: normal;
   font-weight: normal;
-  width: 360px;
-  font-size: 14px;
-  line-height: 25px;
+  width: 415px;
+  font-size: 16px;
+  line-height: 26px;
   padding-left: 100px;
   color: #232327;
   @media screen and (max-width: 1024px) {

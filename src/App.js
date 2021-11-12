@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Background from "./components/BackGround";
 import ComponentOne from "./components/ComponentOne";
@@ -13,21 +14,22 @@ import ComponentNine from "./components/ComponentNine";
 import Describe from "./components/Describe";
 
 function App() {
+  const [open, setOpen] = useState(false);
   return (
-    <div>
-      <Header />
-      <Background />
-      <ComponentOne />
-      <ComponentTwo />
-      <ComponentThree />
-      <ComponentFour />
-      <ComponentFive />
-      <Describe />
-      <ComponentSix />
-      <ComponentSeven />
-      {/* <ComponentEight />
-      <ComponentNine /> */}
-    </div>
+    <>
+      <Header open={open} setOpen={setOpen} />
+      <Background setOpen={setOpen} />
+      <ComponentOne setOpen={setOpen} />
+      <ComponentTwo setOpen={setOpen} />
+      <ComponentThree setOpen={setOpen} />
+      <ComponentFour setOpen={setOpen} />
+      <ComponentFive setOpen={setOpen} />
+      <Describe setOpen={setOpen} />
+      <ComponentSix setOpen={setOpen} />
+      <ComponentSeven setOpen={setOpen} />
+      <ComponentEight setOpen={setOpen} />
+      <ComponentNine setOpen={setOpen} />
+    </>
   );
 }
 

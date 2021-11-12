@@ -8,8 +8,25 @@ const Wrapper = styled.div`
 
 const BackGroundSecond = styled.div`
   width: 100%;
-  height: 377px;
   background: #204370;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 31px 0 65px 0;
+  @media screen and (max-width: 1024px) {
+    padding: 31px 0 62px 0;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 31px 0 60px 0;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 31px 0 40px 0;
+  }
+  @media screen and (max-width: 376px) {
+    padding: 40px 0 50px 0;
+  }
 `;
 
 const Title = styled.p`
@@ -23,19 +40,34 @@ const Title = styled.p`
   text-transform: uppercase;
   color: #ffffff;
   font-family: "Pathway Gothic One", sans-serif;
-  padding: 61px 300px 0px 300px;
+  padding: 0 300px;
+  @media screen and (max-width: 1024px) {
+    font-size: 52px;
+    line-height: 52px;
+    padding: 0 228px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 42px;
+    line-height: 42px;
+    padding: 0 158px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 48px;
+  }
+  @media screen and (max-width: 376px) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 17px;
+  }
 `;
 
 const Box = styled.div`
-  display: flex;
-  justify-content: center;
+  padding: 0px 0 16px 0px;
 `;
 
 const Button = styled.button`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   padding: 12px 45px;
   background: #ffcc00;
   border-radius: 40px;

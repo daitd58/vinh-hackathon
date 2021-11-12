@@ -5,6 +5,9 @@ import albert from "../assets/img/albert.png";
 import button_group from "../assets/img/button_group.png";
 import marker from "../assets/img/marker.png";
 import styled from "styled-components";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Wrapper = styled.div`
   background: #f4f6f8;
@@ -16,10 +19,10 @@ const Wrapper = styled.div`
     padding: 40px;
   }
   @media screen and (max-width: 480px) {
-    padding: 20px;
+    padding: 20px 21px 85px 22px;
   }
   @media screen and (max-width: 376px) {
-    padding: 20px;
+    padding: 20px 20px 55px 20px;
   }
 `;
 const Block = styled.div``;
@@ -94,14 +97,15 @@ const RightBlock = styled.div`
   padding-top: 100px;
   justify-content: space-between;
   width: 100%;
+
   @media screen and (max-width: 768px) {
     padding-top: 30px;
   }
   @media screen and (max-width: 480px) {
-    flex-direction: column;
+    display: none;
   }
   @media screen and (max-width: 376px) {
-    flex-direction: column;
+    display: none;
   }
 `;
 const Box = styled.div`
@@ -335,7 +339,32 @@ const FooterContent = styled.div`
     }
   }
 `;
+const StyleGridMobile = styled(Slider)`
+  display: none;
+  @media screen and (max-width: 480px) {
+    display: flex;
+    padding-top: 100px;
+    justify-content: space-between;
+    width: 100%;
+  }
+  @media screen and (max-width: 376px) {
+    display: flex;
+    padding-top: 100px;
+    justify-content: space-between;
+    width: 100%;
+  }
+`;
+
 const ComponentFive = () => {
+  const settings = {
+    dots: true,
+    fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
   return (
     <>
       <Wrapper>
@@ -344,7 +373,6 @@ const ComponentFive = () => {
             <TextContent>What PEOPLE ARE SAYING ABOUT DEN</TextContent>
             <StyledArrow>
               <img src={button_group} alt={""} />
-              {/* <img src={arrowRight} alt={""} /> */}
             </StyledArrow>
           </LeftBlock>
           <RightBlock>
@@ -427,6 +455,87 @@ const ComponentFive = () => {
               </Content>
             </Box>
           </RightBlock>
+
+          <StyleGridMobile {...settings}>
+            <Box>
+              <Avatar>
+                <img src={simon} alt={""} />
+              </Avatar>
+              <Icon>
+                <img src={marker} alt={""} />
+              </Icon>
+              <Content>
+                <HeaderContent>
+                  <h1>Simon JD</h1>
+                  <p>Co-Founder and CEO, Travelio</p>
+                </HeaderContent>
+                <FooterContent>
+                  <p>
+                    Ornare massa eget egestas purus viverrasan in nisl. Sit amet
+                    luctus venenatis lectus magna fring ut venenatis tellus in
+                    metus vulputate eu scelerisque felis. Felis done.
+                  </p>
+                  <p>
+                    Felis donec et odio pellentesque di scelerisque felis.
+                    Ornare massa eget egest.
+                  </p>
+                  <a href="#">Learn more</a>
+                </FooterContent>
+              </Content>
+            </Box>
+            <Box>
+              <Avatar>
+                <img src={jane} alt={""} />
+              </Avatar>{" "}
+              <Icon>
+                <img src={marker} alt={""} />
+              </Icon>
+              <Content>
+                <HeaderContent>
+                  <h1>Jane Cooper</h1>
+                  <p>Co-Founder and CEO, Travelio</p>
+                </HeaderContent>
+                <FooterContent>
+                  <p>
+                    Ornare massa eget egestas purus viverrasan in nisl. Sit amet
+                    luctus venenatis lectus magna fring ut venenatis tellus in
+                    metus vulputate eu scelerisque felis. Felis done.
+                  </p>
+                  <p>
+                    Felis donec et odio pellentesque di scelerisque felis.
+                    Ornare massa eget egest.
+                  </p>
+                  <a href="#">Learn more</a>
+                </FooterContent>
+              </Content>
+            </Box>
+            <Box>
+              <Avatar>
+                <img src={albert} alt={""} />
+              </Avatar>{" "}
+              <Icon>
+                <img src={marker} alt={""} />
+              </Icon>
+              <Content>
+                <HeaderContent>
+                  <h1>Albert Flores</h1>
+                  <p>Marketing Coordinator, Gillette </p>
+                </HeaderContent>
+                <FooterContent>
+                  <p>
+                    Ornare massa eget egestas purus viverrasan in nisl. Sit amet
+                    luctus venenatis lectus magna fring ut venenatis tellus in
+                    metus vulputate eu scelerisque felis. Felis done.
+                  </p>
+                  <p>
+                    Felis donec et odio pellentesque di scelerisque felis.
+                    Ornare massa eget egest.
+                  </p>
+                  <a href="#">Learn more</a>
+                </FooterContent>
+              </Content>
+            </Box>
+          </StyleGridMobile>
         </Block>
       </Wrapper>
     </>

@@ -91,7 +91,7 @@ const LeftBlock = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 87% !important;
+    width: 82% !important;
   }
   & img {
     width: 100%;

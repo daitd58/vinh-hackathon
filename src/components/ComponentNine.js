@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import circle from "../assets/img/circle.png";
 import ComponentTen from "./ComponentTen";
+import Mobile from "./Mobile";
 
 const Wrapper = styled.div`
   background: #f4f6f8;
@@ -10,12 +11,27 @@ const Wrapper = styled.div`
 const ViewFooter = styled.div`
   display: flex;
   padding: 100px 40px 40px;
+  @media screen and (max-width: 1024px) {
+    padding: 100px 20px 36px;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+  @media screen and (max-width: 376px) {
+    display: none;
+  }
 `;
 
 const LeftViewFooter = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 30px;
+  @media screen and (max-width: 1024px) {
+    width: 34%;
+  }
 `;
 
 const RightViewFooter = styled.div`
@@ -42,6 +58,10 @@ const Title = styled.div`
   padding-bottom: 8px;
   color: #232327;
   font-family: "Oxygen", sans-serif;
+  @media screen and (max-width: 1024px) {
+    font-size: 13px;
+    width: 63%;
+  }
 `;
 
 const Border = styled.div`
@@ -63,6 +83,9 @@ const TitleAddress = styled.div`
   color: #172940;
   margin: 8px 0px;
   font-family: "Oxygen", sans-serif;
+  @media screen and (max-width: 1024px) {
+    font-size: 13px;
+  }
 `;
 
 const NameAddress = styled.div`
@@ -76,6 +99,10 @@ const NameAddress = styled.div`
   width: 41%;
   padding: 8px 0;
   font-family: "Oxygen", sans-serif;
+  @media screen and (max-width: 1024px) {
+    font-size: 13px;
+    width: 53%;
+  }
 `;
 
 const EmailAddress = styled.a`
@@ -88,12 +115,18 @@ const EmailAddress = styled.a`
   color: #4c8fcc;
   text-decoration: none;
   font-family: "Oxygen", sans-serif;
+  @media screen and (max-width: 1024px) {
+    font-size: 13px;
+  }
 `;
 
 const TopViewRight = styled.div`
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(35, 35, 39, 0.1);
   width: 114.5%;
+  @media screen and (max-width: 1024px) {
+    width: auto;
+  }
 `;
 
 const BottomViewRight = styled.div`
@@ -110,6 +143,9 @@ const TitleRight = styled.div`
   color: #172940;
   padding-bottom: 25px;
   font-family: "Pathway Gothic One", sans-serif;
+  @media screen and (max-width: 1024px) {
+    font-size: 26px;
+  }
 `;
 
 const ListTitleRightOne = styled.div`
@@ -127,16 +163,46 @@ const ListItemRightOne = styled.div`
   text-align: left;
   color: rgba(23, 41, 64, 0.9);
   width: 100%;
+  @media screen and (max-width: 1024px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+  @media screen and (max-width: 376px) {
+    display: none;
+  }
 `;
 
 const ListItemOne = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+  @media screen and (max-width: 376px) {
+    display: none;
+  }
 `;
 
 const ListTitleRightTwo = styled.div`
   display: grid;
   grid-template-columns: repeat(5, auto);
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+  @media screen and (max-width: 376px) {
+    display: none;
+  }
 `;
 
 const ListItemRightTwo = styled.div`
@@ -149,6 +215,20 @@ const ListItemRightTwo = styled.div`
   color: rgba(23, 41, 64, 0.9);
   width: 100%;
   font-family: "Oxygen", sans-serif;
+  @media screen and (max-width: 1024px) {
+    font-size: 13px;
+    width: 0;
+    padding: 0 44px 0 8px;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+  @media screen and (max-width: 376px) {
+    display: none;
+  }
 `;
 
 const BoxButton = styled.div`
@@ -159,6 +239,10 @@ const BoxButton = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0px 16px;
+  @media screen and (max-width: 1024px) {
+    right: 20px;
+    padding: 15px 16px;
+  }
 `;
 
 const Button = styled.button`
@@ -173,6 +257,12 @@ const Button = styled.button`
   height: 65px;
   color: #ffffff;
   margin: -5px -15px;
+  border: none;
+  @media screen and (max-width: 1024px) {
+    width: 213px;
+    height: 49px;
+    font-size: 13px;
+  }
 `;
 
 const BorderFooter = styled.div`
@@ -295,6 +385,7 @@ const ComponentNine = () => {
         <BorderEnd />
       </BorderFooter>
       <ComponentTen />
+      <Mobile />
     </Wrapper>
   );
 };

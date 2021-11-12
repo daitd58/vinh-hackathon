@@ -59,7 +59,7 @@ const RightBlock = styled.div`
     width: 100%;
     height: auto;
     display: inline-block;
-    box-shadow: 45px 45px 0 rgb(101, 168, 101);
+    box-shadow: 40px 45px 0 rgb(101, 168, 101);
     @media screen and (max-width: 480px) {
       box-shadow: 50px 37px 0 rgb(101, 168, 101);
     }
@@ -77,20 +77,21 @@ const RightBlock = styled.div`
   }
   @media screen and (max-width: 768px) {
     width: 88%;
-    padding-left: 35px;
+    padding-left: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   @media screen and (max-width: 480px) {
-    padding-left: 21px;
-    width: 79% !important;
+    padding-left: 36px;
+    width: 82%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   @media screen and (max-width: 376px) {
-    width: 83%;
+    width: 80%;
+    padding-left: 25px;
     display: flex;
     justify-content: center;
     align-items: center;

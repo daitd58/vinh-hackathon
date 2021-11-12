@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 const Box = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 40px 0 130px;
+  padding: 0 40px 15px 130px;
   align-items: center;
   & span {
     font-family: "Oxygen", sans-serif;
@@ -22,6 +22,9 @@ const Box = styled.div`
     font-size: 14px;
     line-height: 22px;
     color: rgba(35, 35, 39, 0.7);
+    @media screen and (max-width: 1024px) {
+      font-size: 12px;
+    }
   }
 
   & ul {
@@ -47,17 +50,32 @@ const Box = styled.div`
       font-size: 14px;
       line-height: 22px;
       color: rgba(23, 41, 64, 0.9);
+      @media screen and (max-width: 1024px) {
+        font-size: 12px;
+      }
     }
   }
 
   & li:last-child {
     border-right: none;
   }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+  @media screen and (max-width: 376px) {
+    display: none;
+  }
 `;
 
 const BoxList = styled.div`
   display: flex;
   gap: 20px;
+  @media screen and (max-width: 1024px) {
+    gap: 13px;
+  }
 `;
 const ComponentTen = () => {
   return (
@@ -67,26 +85,37 @@ const ComponentTen = () => {
           <span>Copyright © Draper Startup House 2021</span>
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <a href="#">Home</a>
             </li>
             <li>
-              <a href="#news">About</a>
+              <a href="#">About</a>
             </li>
             <li>
-              <a href="#contact">Stories and news</a>
+              <a href="#">Stories and news</a>
             </li>
             <li>
-              <a href="#about">Contact</a>
+              <a href="#">Contact</a>
             </li>
             <li>
-              <a href="#about">Privacy Policy</a>
+              <a href="#">Privacy Policy</a>
             </li>
           </ul>
           <BoxList>
-            <img src={linkedin} />
-            <img src={facebook} />
-            <img src={twitter} />
-            <img src={instagram} />
+            <a href="#">
+              <img src={linkedin} />
+            </a>
+            <a href="">
+              {" "}
+              <img src={facebook} />
+            </a>
+            <a href="">
+              {" "}
+              <img src={twitter} />
+            </a>
+            <a href="">
+              {" "}
+              <img src={instagram} />
+            </a>
           </BoxList>
         </Box>
       </Wrapper>

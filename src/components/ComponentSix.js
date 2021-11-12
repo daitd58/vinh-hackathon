@@ -162,7 +162,7 @@ const Line = styled.hr`
   }
   @media screen and (max-width: 376px) {
     position: static;
-    width: 87%;
+    width: 90%;
     margin-top: 30px;
   }
 `;
