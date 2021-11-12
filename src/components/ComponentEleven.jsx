@@ -5,31 +5,87 @@ import logo from "../img/logoD.png";
 const Wrapper = styled.div`
   background: #f4f6f8;
   padding: 80px 30px 50px 30px;
+  @media screen and (max-width: 769px) {
+    padding: 80px 30px 30px 30px;
+  }
+  @media screen and (max-width: 376px) {
+    padding: 70px 30px 0px 30px;
+  }
 `;
 const Block = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 376px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const LeftBlock = styled.div`
   width: 30%;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 769px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 376px) {
+    width: 100%;
+    padding-bottom: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
-const Logo = styled.div``;
+const Logo = styled.div`
+  & img {
+    width: 140%;
+  }
+  @media screen and (max-width: 1280px) {
+    & img {
+      width: 165%;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    & img {
+      width: 175%;
+    }
+  }
+  @media screen and (max-width: 769px) {
+    & img {
+      width: 125%;
+    }
+  }
+  @media screen and (max-width: 376px) {
+    & img {
+      width: 100%;
+    }
+  }
+`;
 const ContentLeftBlock = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding-left: 30px;
+  @media screen and (max-width: 1280px) {
+    padding-left: 40px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding-left: 35px;
+  }
   @media screen and (max-width: 769px) {
-    padding-left: 20px;
+    padding-left: 25px;
+  }
+  @media screen and (max-width: 376px) {
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
   }
 `;
 const TextDescriptionLeftBlock = styled.div`
   font-style: normal;
   font-family: "Oxygen", sans-serif;
+  color: rgba(23, 41, 64, 0.9);
   padding-right: 120px;
   padding-bottom: 15px;
   font-size: 16px;
@@ -43,8 +99,13 @@ const TextDescriptionLeftBlock = styled.div`
     font-size: 14px;
   }
   @media screen and (max-width: 769px) {
-    padding-right: 40px;
-    font-size: 12px;
+    padding-right: 80px;
+    font-size: 11px;
+  }
+  @media screen and (max-width: 376px) {
+    padding: 15px 30px;
+    font-size: 14px;
+    text-align: center;
   }
 `;
 const TextTitleLeftBlock = styled.div`
@@ -57,7 +118,13 @@ const TextTitleLeftBlock = styled.div`
     font-size: 14px;
   }
   @media screen and (max-width: 769px) {
-    font-size: 12px;
+    font-size: 11px;
+  }
+  @media screen and (max-width: 376px) {
+    padding: 0 30px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
   }
 `;
 const TextFooterLeftBlock = styled.div`
@@ -70,7 +137,13 @@ const TextFooterLeftBlock = styled.div`
     font-size: 14px;
   }
   @media screen and (max-width: 769px) {
-    font-size: 12px;
+    font-size: 11px;
+  }
+  @media screen and (max-width: 376px) {
+    padding: 0 30px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
   }
 `;
 const Hr = styled.div`
@@ -104,14 +177,29 @@ const MainTextLeftBlock = styled.div`
   }
   @media screen and (max-width: 769px) {
     & p {
-      padding-right: 35px;
-      font-size: 12px;
+      padding-right: 110px;
+      font-size: 11px;
+    }
+  }
+  @media screen and (max-width: 376px) {
+    padding-top: 25px;
+    & p {
+      padding: 0 70px;
+      font-size: 14px;
+      text-align: center;
     }
   }
 `;
 const RightBlock = styled.div`
   width: 60%;
   display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 769px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 376px) {
+    width: 100%;
+  }
 `;
 const HeaderRightBlock = styled.div``;
 const TextTitleHeaderRightBlock = styled.div`
@@ -120,8 +208,173 @@ const TextTitleHeaderRightBlock = styled.div`
   text-transform: uppercase;
   font-style: normal;
   font-family: "Pathway Gothic One", sans-serif;
+  color: #172940;
+  @media screen and (max-width: 1024px) {
+    font-size: 25px;
+  }
+  @media screen and (max-width: 769px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 376px) {
+    font-size: 28px;
+  }
 `;
-const FooterRightBlock = styled.div``;
+const ContentHeaderRightBlock = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 2px solid rgba(35, 35, 39, 0.1);
+`;
+const TextContent = styled.div`
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  & p {
+    font-style: normal;
+    font-family: "Oxygen", sans-serif;
+    color: rgba(23, 41, 64, 0.9);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 35px;
+  }
+  @media screen and (max-width: 1280px) {
+    & p {
+      line-height: 30px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    & p {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 769px) {
+    width: 73%;
+    & p {
+      font-size: 11px;
+    }
+  }
+  @media screen and (max-width: 376px) {
+    display: none;
+  }
+`;
+const TextContenMobile = styled.div`
+  display: none;
+  @media screen and (max-width: 376px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & p {
+      font-style: normal;
+      font-family: "Oxygen", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+  }
+`;
+const StyleButton = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 376px) {
+    padding: 25px 0;
+  }
+`;
+const Button = styled.button`
+  height: 52px;
+  background: #204370;
+  border-radius: 25px;
+  font-family: "Oxygen", sans-serif;
+  font-style: normal;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  padding: 0 35px;
+  border: none;
+  @media screen and (max-width: 1024px) {
+    height: 48px;
+    padding: 0 25px;
+    font-size: 13px;
+  }
+  @media screen and (max-width: 769px) {
+    height: 40px;
+    padding: 0 12px;
+    font-size: 10px;
+  }
+  @media screen and (max-width: 376px) {
+    display: none;
+  }
+`;
+const ButtonMobile = styled.button`
+  display: none;
+  @media screen and (max-width: 376px) {
+    display: inline-block;
+    height: 52px;
+    background: #204370;
+    border-radius: 25px;
+    font-family: "Oxygen", sans-serif;
+    font-style: normal;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #ffffff;
+    padding: 0 35px;
+    border: none;
+  }
+`;
+const FooterRightBlock = styled.div`
+  padding-top: 30px;
+`;
+const ContentFooter = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  & p {
+    font-style: normal;
+    font-family: "Oxygen", sans-serif;
+    color: rgba(23, 41, 64, 0.9);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 35px;
+  }
+  @media screen and (max-width: 1280px) {
+    & p {
+      line-height: 30px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    & p {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 769px) {
+    & p {
+      font-size: 11px;
+    }
+  }
+  @media screen and (max-width: 376px) {
+    display: none;
+  }
+`;
+const ContentFooterMobile = styled.div`
+  display: none;
+  @media screen and (max-width: 376px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    & p {
+      font-style: normal;
+      font-family: "Oxygen", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+`;
 function ComponentEleven() {
   return (
     <Wrapper>
@@ -152,23 +405,114 @@ function ComponentEleven() {
               </TextFooterLeftBlock>
             </MainTextLeftBlock>
           </ContentLeftBlock>
+          <StyleButton>
+            <ButtonMobile>Join our Community now</ButtonMobile>
+          </StyleButton>
         </LeftBlock>
         <RightBlock>
           <HeaderRightBlock>
             <TextTitleHeaderRightBlock>What We Do</TextTitleHeaderRightBlock>
-            <div>
-              <div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-              <div></div>
-            </div>
+            <ContentHeaderRightBlock>
+              <TextContent>
+                <div>
+                  <p>Community - DEN</p>
+                  <p>Ventures</p>
+                </div>
+                <div>
+                  <p>Academy</p>
+                  <p>Services</p>
+                </div>
+                <div>
+                  <p>Partnerships</p>
+                  <p>Location Partners</p>
+                </div>
+              </TextContent>
+              <TextContenMobile>
+                <div>
+                  <p>Community - DEN</p>
+                  <p>Ventures</p>
+                  <p>Academy</p>
+                </div>
+                <div>
+                  <p>Services</p>
+                  <p>Partnerships</p>
+                  <p>Location Partners</p>
+                </div>
+              </TextContenMobile>
+              <StyleButton>
+                <Button>Join our community</Button>
+              </StyleButton>
+            </ContentHeaderRightBlock>
           </HeaderRightBlock>
-          <FooterRightBlock></FooterRightBlock>
+          <FooterRightBlock>
+            <TextTitleHeaderRightBlock>
+              HOW FAR DO YOU WANT TO GO TODAY?
+            </TextTitleHeaderRightBlock>
+            <ContentFooter>
+              <div>
+                <p>Bali</p>
+                <p>Bangalore</p>
+                <p>Buenos Aires</p>
+                <p>Singapore</p>
+                <p>Lisbon</p>
+              </div>
+              <div>
+                <p>Canary Islands</p>
+                <p>Chiang Mai</p>
+                <p>Da Nang</p>
+                <p>Singapore</p>
+                <p>Valencia</p>
+              </div>
+              <div>
+                <p>Lisbon</p>
+                <p>Manila</p>
+                <p>Penang</p>
+                <p>Canary Islands</p>
+                <p>Valencia</p>
+              </div>
+              <div>
+                <p>Lisbon</p>
+                <p>Manila</p>
+                <p>Penang</p>
+                <p>Bangalore</p>
+              </div>
+              <div>
+                <p>Lisbon</p>
+                <p>Manila</p>
+                <p>Penang</p>
+                <p>Bangalore</p>
+              </div>
+            </ContentFooter>
+            <ContentFooterMobile>
+              <div>
+                <p>Bali</p>
+                <p>Bangalore</p>
+                <p>Buenos Aires</p>
+                <p>Singapore</p>
+                <p>Lisbon</p>
+                <p>Canary Islands</p>
+                <p>Chiang Mai</p>
+                <p>Da Nang</p>
+                <p>Valencia</p>
+                <p>Lisbon</p>
+                <p>Manila</p>
+                <p>Penang</p>
+              </div>
+              <div>
+                <p>Penang</p>
+                <p>Canary Islands</p>
+                <p>Valencia</p>
+                <p>Lisbon</p>
+                <p>Manila</p>
+                <p>Penang</p>
+                <p>Bangalore</p>
+                <p>Lisbon</p>
+                <p>Manila</p>
+                <p>Penang</p>
+                <p>Bangalore</p>
+              </div>
+            </ContentFooterMobile>
+          </FooterRightBlock>
         </RightBlock>
       </Block>
     </Wrapper>

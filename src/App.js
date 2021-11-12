@@ -10,6 +10,7 @@ import ComponentSix from "./components/ComponentSix";
 import ComponentTen from "./components/ComponentTen";
 import ComponentThree from "./components/ComponentThree";
 import ComponentTwo from "./components/ComponentTwo";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <ComponentNine />
       <ComponentTen />
       <ComponentEleven />
+      <Footer />
     </>
   );
 }

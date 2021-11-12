@@ -10,7 +10,7 @@ const Container = styled.div`
   align-items: center;
 `;
 const BackGround = styled.div`
-  width: 85%;
+  width: 87%;
   height: 100%;
   background: #204370;
   color: #ffffff;
@@ -20,6 +20,12 @@ const BackGround = styled.div`
   padding: 20px 0;
   z-index: 1;
   flex-direction: column;
+  @media screen and (max-width: 1280px) {
+    width: 84%;
+  }
+  @media screen and (max-width: 769px) {
+    width: 86%;
+  }
   @media screen and (max-width: 376px) {
     width: 72%;
     padding: 20px 25px;

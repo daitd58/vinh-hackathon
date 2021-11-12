@@ -281,7 +281,7 @@ export default class ComponentSix extends Component {
       dots: true,
       fade: true,
       infinite: true,
-      speed: 500,
+      speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
     };

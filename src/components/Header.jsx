@@ -80,14 +80,13 @@ const TextTitle = styled.div`
 const StyledButton = styled.button`
   height: 50px;
   padding: 0 35px;
-  font-size: 15px;
+  font-size: 16px;
   white-space: nowrap;
   font-style: normal;
   font-family: "Oxygen", sans-serif;
-  font-weight: 550;
+  font-weight: 500;
   color: #2a2a2a;
   border: 1px solid #204370;
-  box-sizing: border-box;
   border-radius: 25px;
   @media screen and (max-width: 1024px) {
     height: 45px;
@@ -95,9 +94,9 @@ const StyledButton = styled.button`
     font-size: 13px;
   }
   @media screen and (max-width: 769px) {
-    height: 40px;
+    height: 35px;
     padding: 0 12px;
-    font-size: 11px;
+    font-size: 10px;
   }
   @media screen and (max-width: 376px) {
     display: none;
