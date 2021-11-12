@@ -1,18 +1,36 @@
-import Background from './components/Background';
-import ComponentTwo from './components/componentTwo/componentTwo';
-import Header from './components/Header';
-import ComponentOne from './components/componentOne/componentOne';
-import ComponentThree from './components/componentThree/componentThree';
+import Banner from "./components/Banner";
+import ComponentEight from "./components/ComponentEight";
+import ComponentEleven from "./components/ComponentEleven";
+import ComponentFive from "./components/ComponentFive";
+import ComponentFour from "./components/ComponentFour";
+import ComponentNine from "./components/ComponentNine";
+import ComponentOne from "./components/ComponentOne";
+import ComponentSeven from "./components/ComponentSeven";
+import ComponentSix from "./components/ComponentSix";
+import ComponentTen from "./components/ComponentTen";
+import ComponentThree from "./components/ComponentThree";
+import ComponentTwo from "./components/ComponentTwo";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div style={{display: 'flex', flexDirection:'column'}} >
+    <>
       <Header />
-      <Background/>
+      <Banner />
       <ComponentOne />
       <ComponentTwo />
       <ComponentThree />
-      </div>
+      <ComponentFour />
+      <ComponentFive />
+      <ComponentSix />
+      <ComponentSeven />
+      <ComponentEight />
+      <ComponentNine />
+      <ComponentTen />
+      <ComponentEleven />
+      <Footer />
+    </>
   );
 }
 
