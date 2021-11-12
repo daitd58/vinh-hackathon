@@ -38,37 +38,17 @@ const TitleHeader = styled.div`
   letter-spacing: -0.015em;
   text-align: center;
   width: 35%;
-  @media screen and (max-width: 1370px) {
-    width: 40%;
-  }
-  @media screen and (max-width: 1220px) {
+  @media screen and (max-width: 1280px) {
     width: 50%;
   }
-  @media screen and (max-width: 970px) {
-    width: 55%;
-  }
-  @media screen and (max-width: 880px) {
-    width: 65%;
-  }
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 768px) {
     width: 75%;
   }
-  @media screen and (max-width: 680px) {
-    font-size: 34px;
-    line-height: 34px;
-  }
-  @media screen and (max-width: 620px) {
-    font-size: 30px;
-    line-height: 30px;
-  }
-  @media screen and (max-width: 510px) {
-    font-size: 24px;
-    line-height: 24px;
-  }
-  @media screen and (max-width: 390px) {
-    padding: 24px 20px;
+  @media screen and (max-width: 376px) {
+    padding: 24px 0px;
     font-size: 20px;
     line-height: 20px;
+    width: 90%;
   }
 `;
 
@@ -83,32 +63,14 @@ const TitleContent = styled.div`
   letter-spacing: 0em;
   padding: 0 0 30px;
   width: 25%;
-  @media screen and (max-width: 1260px) {
-    width: 30%;
+  @media screen and (max-width: 1024px) {
+    width: 31%;
   }
-  @media screen and (max-width: 1020px) {
-    width: 35%;
-  }
-  @media screen and (max-width: 880px) {
+  @media screen and (max-width: 768px) {
     width: 40%;
   }
-  @media screen and (max-width: 780px) {
-    width: 45%;
-  }
-  @media screen and (max-width: 680px) {
-    width: 50%;
-  }
-  @media screen and (max-width: 620px) {
-    width: 60%;
-  }
-  @media screen and (max-width: 520px) {
-    width: 70%;
-  }
-  @media screen and (max-width: 440px) {
-    width: 82%;
-  }
   @media screen and (max-width: 376px) {
-    width: 100%;
+    width: 85%;
     padding: 0 0 40px;
   }
 `;

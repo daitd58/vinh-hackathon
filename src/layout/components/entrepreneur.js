@@ -18,7 +18,6 @@ const TitleHeader = styled.div`
   padding: 157px 0 100px;
   font-style: normal;
   letter-spacing: -0.015em;
-  text-align: center;
   @media screen and (max-width: 768px) {
     padding: 80px 20px 60px;
     font-size: 30px;
@@ -43,12 +42,12 @@ const ContentLeftNetwork = styled.div`
     width: 100%;
     display: inline-block;
     height: auto;
-    box-shadow: -41px 54px 0 rgba(76, 143, 204, 1);
+    box-shadow: -41px 41px 0 rgba(76, 143, 204, 1);
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1024px) {
     padding: 0 30px;
     & img {
-      box-shadow: -30px 36px 0 rgba(76, 143, 204, 1);
+      box-shadow: -30px 30px 0 rgba(76, 143, 204, 1);
     }
   }
   @media screen and (max-width: 768px) {
@@ -57,15 +56,10 @@ const ContentLeftNetwork = styled.div`
     & img {
       width: 95%;
       margin-left: 20px;
-      box-shadow: -20px 26px 0 rgba(76, 143, 204, 1);
+      box-shadow: -20px 20px 0 rgba(76, 143, 204, 1);
     }
   }
-  @media screen and (max-width: 620px) {
-    & img {
-      width: 93%;
-    }
-  }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 376px) {
     & img {
       width: 90%;
     }
@@ -76,17 +70,11 @@ const ContentRightNetwork = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 140px;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1280px) {
     margin-left: 80px;
   }
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 1024px) {
     margin-left: 30px;
-  }
-  @media screen and (max-width: 850px) {
-    margin-left: 0px;
-  }
-  @media screen and (max-width: 790px) {
-    margin-left: -10px;
   }
   @media screen and (max-width: 768px) {
     width: 90%;
@@ -118,19 +106,10 @@ const ContentNetwork = styled.div`
   font-weight: 400;
   letter-spacing: 0em;
   text-align: left;
-  @media screen and (max-width: 1370px) {
-    width: 75%;
-  }
   @media screen and (max-width: 1280px) {
     width: 82%;
   }
-  @media screen and (max-width: 1195px) {
-    width: 85%;
-  }
-  @media screen and (max-width: 1099px) {
-    width: 92%;
-  }
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 1024px) {
     width: 95%;
   }
 `;

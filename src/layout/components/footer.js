@@ -258,8 +258,8 @@ const BorderEnd = styled.div`
 const Footer = () => {
   return (
     <Container>
-      <Connected />
-      <ViewFooter>
+      {/* <Connected /> */}
+      {/* <ViewFooter>
         <LeftViewFooter>
           <Logo src={D} alt={""} />
           <ViewAddress>
@@ -368,7 +368,7 @@ const Footer = () => {
       </ViewFooter>
       <BorderFooter>
         <BorderEnd />
-      </BorderFooter>
+      </BorderFooter> */}
       <End />
     </Container>
   );

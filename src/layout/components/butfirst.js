@@ -5,16 +5,14 @@ import Entrepreneurs from "../../asset/img/Entrepreneurs.png";
 const Container = styled.div`
   display: flex;
   padding: 0 130px;
-  @media screen and (max-width: 970px) {
-    flex-direction: column;
-  }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1280px) {
     padding: 80px 80px 0 80px;
   }
-  @media screen and (max-width: 890px) {
+  @media screen and (max-width: 1024px) {
     padding: 80px 40px 0 40px;
   }
   @media screen and (max-width: 768px) {
+    flex-direction: column;
     padding: 80px 20px 0 20px;
   }
 `;
@@ -30,7 +28,7 @@ const LeftBox = styled.div`
 const RightBox = styled.div`
   flex: 50%;
   padding-bottom: 165px;
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 1024px) {
     padding: 60px 0;
   }
   @media screen and (max-width: 768px) {
@@ -66,7 +64,7 @@ const ViewDesktop = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -75,11 +73,7 @@ const BtnTitle = styled.div`
   padding-bottom: 100px;
 `;
 const Image = styled.img`
-  @media screen and (max-width: 1270px) {
-    width: 90%;
-    padding-left: 10%;
-  }
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
     padding: 0;
   }
@@ -104,17 +98,11 @@ const BtnClick = styled.button`
 `;
 const ViewMobile = styled.div`
   display: none;
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
     flex-direction: column;
     display: flex;
     gap: 32px;
-    padding: 0 80px;
-  }
-  @media screen and (max-width: 890px) {
-    padding: 0 40px;
-  }
-  @media screen and (max-width: 768px) {
-    padding: 0 20px;
   }
 `;
 const BtnTitleMobile = styled.div`

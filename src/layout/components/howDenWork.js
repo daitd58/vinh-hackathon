@@ -7,10 +7,10 @@ import Global from "../../asset/img/Global.png";
 
 const Container = styled.div`
   padding: 0 130px 130px;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1280px) {
     padding: 80px 80px;
   }
-  @media screen and (max-width: 890px) {
+  @media screen and (max-width: 1024px) {
     padding: 80px 40px;
   }
   @media screen and (max-width: 768px) {
@@ -39,21 +39,18 @@ const Box = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 60px;
-  @media screen and (max-width: 1435px) {
-    grid-gap: 30px;
-  }
-  @media screen and (max-width: 1356px) {
+  @media screen and (max-width: 1280px) {
     grid-gap: 15px;
   }
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
   }
-  @media screen and (max-width: 810px) {
+  @media screen and (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     padding: 0;
   }
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 376px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `;
@@ -67,7 +64,7 @@ const BoxItem = styled.div`
   gap: 32px;
   border: 0;
   box-sizing: border-box;
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1280px) {
     padding: 10px 10px 30px 20px;
   }
   @media screen and (max-width: 768px) {
@@ -84,12 +81,6 @@ const Title = styled.div`
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
-  /* @media screen and (max-width: 1050px) {
-    font-size: 16px;
-  }
-  @media screen and (max-width: 810px) {
-    font-size: 22px;
-  } */
 `;
 const Image = styled.img`
   width: 40px;

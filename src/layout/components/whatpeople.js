@@ -27,7 +27,7 @@ const HeaderBox = styled.div`
 `;
 const ContentBox = styled.div`
   display: flex;
-  padding: 90px 130px 120px;
+  padding: 90px 130px 275px;
   gap: 30px;
 `;
 const TitleHeader = styled.div`
@@ -68,13 +68,16 @@ const HeaderItem = styled.div`
   align-items: flex-end;
   padding-bottom: 40px;
   gap: 30px;
-  & img {
-    margin-top: -50px;
-  }
+  margin-top: -50px;
 `;
 const BoxTitle = styled.div``;
 const ImageIcon = styled.img`
   margin-bottom: 20px;
+  @media screen and (max-width: 1280px) {
+    margin: 0;
+  }
+`;
+const ImagePeople = styled.img`
 `;
 const TitleName = styled.div`
   font-family: "Oxygen", sans-serif;
@@ -204,7 +207,7 @@ const WhatPeople = () => {
       <ContentBox>
         <ListItem>
           <HeaderItem>
-            <img src={simon} alt={""} />
+            <ImagePeople src={simon} alt={""} />
             <BoxTitle>
               <ImageIcon src={Icon} alt={""} />
               <TitleName>Simon JD</TitleName>
@@ -217,7 +220,7 @@ const WhatPeople = () => {
         </ListItem>
         <ListItem>
           <HeaderItem>
-            <img src={janecooper} alt={""} />
+            <ImagePeople src={janecooper} alt={""} />
             <BoxTitle>
               <ImageIcon src={Icon} alt={""} />
               <TitleName>Simon JD</TitleName>
@@ -230,7 +233,7 @@ const WhatPeople = () => {
         </ListItem>
         <ListItem>
           <HeaderItem>
-            <img src={albertflores} alt={""} />
+            <ImagePeople src={albertflores} alt={""} />
             <BoxTitle>
               <ImageIcon src={Icon} alt={""} />
               <TitleName>Albert Flores</TitleName>

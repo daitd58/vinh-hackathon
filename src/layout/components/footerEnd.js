@@ -4,27 +4,21 @@ import linkedin from "../../asset/img/linkedin.png";
 import facebook from "../../asset/img/facebook.png";
 import twitter from "../../asset/img/twitter.png";
 import instagram from "../../asset/img/instagram.png";
-import menu from "../../asset/img/menu.png";
 
 const FooterEnd = styled.div`
   padding: 35px 40px 40px 130px;
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1280px) {
     padding: 35px 40px 40px 80px;
   }
-  @media screen and (max-width: 890px) {
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
     padding: 35px 40px 40px 40px;
+    align-items: center;
   }
   @media screen and (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
     padding: 30px 20px 50px;
-  }
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 10px 50px;
   }
 `;
 const TitleEnd = styled.div`
@@ -35,9 +29,6 @@ const TitleEnd = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: rgba(35, 35, 39, 0, 7);
-  @media screen and (max-width: 1030px) {
-    display: none;
-  }
   @media screen and (max-width: 768px) {
     display: block;
   }
@@ -45,22 +36,13 @@ const TitleEnd = styled.div`
 const Menu = styled.div`
   display: flex;
   gap: 10px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     padding: 18px 0 40px;
-    flex-wrap: wrap;
     justify-content: center;
   }
-  @media screen and (max-width: 605px) {
-    width: 75%;
-  }
-  @media screen and (max-width: 500px) {
-    width: 85%;
-  }
-  @media screen and (max-width: 460px) {
-    width: 95%;
-  }
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 376px) {
     width: 100%;
+    flex-wrap: wrap;
   }
 `;
 const MenuItem = styled.div`
@@ -76,15 +58,6 @@ const MenuItem = styled.div`
   :hover {
     cursor: pointer;
   }
-  @media screen and (max-width: 1170px) {
-    padding: 0 15px;
-  }
-  @media screen and (max-width: 605px) {
-    padding: 0 24px;
-  }
-  @media screen and (max-width: 340px) {
-    padding: 0 10px;
-  }
 `;
 const HomeMenuItem = styled.div`
   font-size: 14px;
@@ -97,15 +70,9 @@ const HomeMenuItem = styled.div`
   padding: 0 24px;
   :hover {
     cursor: pointer;
-  }
-  @media screen and (max-width: 1170px) {
-    padding: 0 15px;
-  }
-  @media screen and (max-width: 605px) {
-    padding-right: 24px;
-  }
-  @media screen and (max-width: 340px) {
-    padding: 0 10px;
+  }  
+  @media screen and (max-width: 376px) {
+    padding-left: 0;
   }
 `;
 const ContactMenuItem = styled.div`
@@ -121,18 +88,8 @@ const ContactMenuItem = styled.div`
   :hover {
     cursor: pointer;
   }
-  @media screen and (max-width: 1170px) {
-    padding: 0 15px;
-  }
-  @media screen and (max-width: 605px) {
-    padding: 0 24px;
-    border: 0;
-  }
-  @media screen and (max-width: 375px) {
-    padding-left: 0;
-  }
-  @media screen and (max-width: 340px) {
-    padding: 0 10px;
+  @media screen and (max-width: 376px) {
+    border: none;
   }
 `;
 const StoriesMenuItem = styled.div`
@@ -148,17 +105,8 @@ const StoriesMenuItem = styled.div`
   :hover {
     cursor: pointer;
   }
-  @media screen and (max-width: 1170px) {
-    padding: 0 15px;
-  }
-  @media screen and (max-width: 605px) {
-    padding: 0 24px;
-  }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 376px) {
     padding-right: 0;
-  }
-  @media screen and (max-width: 340px) {
-    padding: 0 10px;
   }
 `;
 const Icons = styled.div`
@@ -169,9 +117,6 @@ const Icons = styled.div`
       cursor: pointer;
     }
   }
-`;
-const MenuIcon = styled.img`
-  display: none;
 `;
 
 const End = () => {
@@ -185,7 +130,6 @@ const End = () => {
         <ContactMenuItem href="#">Contact</ContactMenuItem>
         <MenuItem href="#">Privacy Policy</MenuItem>
       </Menu>
-      <MenuIcon src={menu} alt={""} />
       <Icons>
         <a href="https://www.linkedin.com/">
           <img src={linkedin} alt={""} />

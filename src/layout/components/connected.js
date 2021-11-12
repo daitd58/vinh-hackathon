@@ -3,6 +3,10 @@ import styled from "styled-components";
 
 const HeaderFooter = styled.div`
   background: rgba(32, 67, 112, 1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 const TitleHeader = styled.div`
   font-family: "Gothic A1", sans-serif;
@@ -13,7 +17,24 @@ const TitleHeader = styled.div`
   text-transform: uppercase;
   letter-spacing: -0.015em;
   text-align: center;
-  padding: 80px 220px 40px 220px;
+  padding: 80px 0 40px;
+  width: 80%;
+  @media screen and (max-width: 1200px) {
+    font-size: 34px;
+    line-height: 44px;
+  }
+  @media screen and (max-width: 1020px) {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  @media screen and (max-width: 850px) {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  @media screen and (max-width: 720px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 `;
 const BtnTitle = styled.div`
   display: flex;
@@ -22,7 +43,7 @@ const BtnTitle = styled.div`
   padding-bottom: 80px;
 `;
 const BtnClick = styled.button`
-font-family: "Oxygen", sans-serif;
+  font-family: "Oxygen", sans-serif;
   font-style: normal;
   letter-spacing: 0em;
   width: 156px;
@@ -44,15 +65,15 @@ font-family: "Oxygen", sans-serif;
 
 const Connected = () => {
   return (
-      <HeaderFooter>
-        <TitleHeader>
-          WHERE ENTREPRENEURS AROUND THE WORLD GET CONNECTED, INSPIRED, AND
-          EMPOWERED
-        </TitleHeader>
-        <BtnTitle>
-          <BtnClick>Join Den</BtnClick>
-        </BtnTitle>
-      </HeaderFooter>
+    <HeaderFooter>
+      <TitleHeader>
+        WHERE ENTREPRENEURS AROUND THE WORLD GET CONNECTED, INSPIRED, AND
+        EMPOWERED
+      </TitleHeader>
+      <BtnTitle>
+        <BtnClick>Join Den</BtnClick>
+      </BtnTitle>
+    </HeaderFooter>
   );
 };
 
