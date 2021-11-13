@@ -54,7 +54,7 @@ const Title = styled.div`
   color: rgba(35, 35, 39, 1);
   width: 55%;
   padding-bottom: 8px;
-  
+
   @media screen and (max-width: 768px) {
     width: 100%;
     text-align: center;
@@ -427,7 +427,6 @@ const MenuIcon = styled.img`
   display: none;
 `;
 
-
 const Mainten = () => {
   return (
     <Container>
@@ -543,31 +542,26 @@ const Mainten = () => {
         <BorderEnd />
       </BorderFooter>
 
-       <FooterEnd>
-      <TitleEnd>Copyright © Draper Startup House 2021</TitleEnd>
-      <Menu>
-        <HomeMenuItem href="#">Home</HomeMenuItem>
-        <MenuItem href="#">About</MenuItem>
-        <StoriesMenuItem href="#">Stories and News</StoriesMenuItem>
-        <ContactMenuItem href="#">Contact</ContactMenuItem>
-        <MenuItem href="#">Privacy Policy</MenuItem>
-      </Menu>
-      <MenuIcon src={Line} alt={""} />
-      <Icons>
-        <a href="https://www.linkedin.com/">
+      <FooterEnd>
+        <TitleEnd>Copyright © Draper Startup House 2021</TitleEnd>
+        <Menu>
+          <HomeMenuItem href="#">Home</HomeMenuItem>
+          <MenuItem href="#">About</MenuItem>
+          <StoriesMenuItem href="#">Stories and News</StoriesMenuItem>
+          <ContactMenuItem href="#">Contact</ContactMenuItem>
+          <MenuItem href="#">Privacy Policy</MenuItem>
+        </Menu>
+        <MenuIcon src={Line} alt={""} />
+        <Icons>
           <img src={In} alt={""} />
-        </a>
-        <a href="https://www.facebook.com/">
+
           <img src={Facebook} alt={""} />
-        </a>
-        <a href="https://www.twitter.com/">
+
           <img src={Twitter} alt={""} />
-        </a>
-        <a href="https://www.instagram.com/">
+
           <img src={Instagram} alt={""} />
-        </a>
-      </Icons>
-    </FooterEnd>
+        </Icons>
+      </FooterEnd>
     </Container>
   );
 };
