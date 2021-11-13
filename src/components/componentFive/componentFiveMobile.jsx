@@ -12,9 +12,10 @@ const Wrapper = styled.div`
   heigh: 100%;
   padding: 130px 0;
   background: #f4f6f8;
+  display:none;
   @media screen and (max-width: 376px) {
     padding: 80px 0;
-    display:none;
+    display:block;
   }
 `;
 
@@ -190,8 +191,12 @@ const Menu = styled.div`
   }
 `;
 
-function ComponentFive() {
-  
+function ComponentFiveMobile() {
+  const [active, setActive] = useState(1);
+
+  const handleChangeCard = (number) => {
+    setActive(number);
+  };
   return (
     <>
       <Wrapper>
@@ -202,7 +207,7 @@ function ComponentFive() {
           </Heading>
         </FirstContent>
         <CardList>
-          <Card >
+          <Card style={{ display: active === 1 ? "block" : "none" }}>
             <CardImage>
               <img src={Avatar1} alt="Avatar1" />
             </CardImage>
@@ -230,7 +235,7 @@ function ComponentFive() {
               </Description>
             </CardContent>
           </Card>
-          <Card >
+          <Card style={{ display: active === 2 ? "block" : "none" }}>
             <CardImage>
               <img src={Avatar2} alt="Avatar2" />
             </CardImage>
@@ -258,7 +263,7 @@ function ComponentFive() {
               </Description>
             </CardContent>
           </Card>
-          <Card >
+          <Card style={{ display: active === 3 ? "block" : "none" }}>
             <CardImage>
               <img src={Avatar3} alt="Avatar3" />
             </CardImage>
@@ -288,9 +293,26 @@ function ComponentFive() {
           </Card>
         </CardList>
 
+        <Menu className="menu">
+          <img
+            src={active === 1 ? Active : Inactive}
+            alt="dot"
+            onClick={() => handleChangeCard(1)}
+          />
+          <img
+            src={active === 2 ? Active : Inactive}
+            alt="dot"
+            onClick={() => handleChangeCard(2)}
+          />
+          <img
+            src={active === 3 ? Active : Inactive}
+            alt="dot"
+            onClick={() => handleChangeCard(3)}
+          />
+        </Menu>
       </Wrapper>
     </>
   );
 }
 
-export default ComponentFive;
+export default ComponentFiveMobile;

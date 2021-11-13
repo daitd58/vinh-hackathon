@@ -9,28 +9,39 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const BlueSquare = styled.div`
-  width: 675px;
-  height: 424px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #ffcc00;
-  z-index: 0;
-`;
-
 const Content = styled.div`
   padding-top: 150px;
   display: flex;
   justify-content: space-between;
   position: relative;
+  @media screen and (max-width: 376px) {
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 60px;
+  }
 `;
 
 const LeftContent = styled.div`
   width: 50%;
   padding: 40px;
   z-index: 999;
-  & > img {
+  & img {
+    width: 100%;
+    height: auto;
+    box-shadow: -40px 40px 0 rgb(255, 204, 0);
+  }
+  @media screen and (max-width: 376px) {
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+    & img {
+      width: 90%;
+      height: auto;
+      box-shadow: -20px 26px 0 rgb(255, 204, 0);
+    }
   }
 `;
 const RightContent = styled.div`
@@ -38,7 +49,7 @@ const RightContent = styled.div`
   padding: 40px;
   h1 {
     font-weight: 500;
-    ffont-size: 36px;
+    font-size: 36px;
     line-height: 36px;
     letter-spacing: -0.015em;
     text-transform: uppercase;
@@ -48,14 +59,32 @@ const RightContent = styled.div`
   }
 
   h3 {
-    font-family: Oxygen;
+    font-family: "Oxygen", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 26px;
     color: rgba(35, 35, 39, 0.7);
     margin-bottom: 24px;
+    padding-right: 230px;
   }
+  @media screen and (max-width: 376px) {
+    width: 100%;
+    padding: 0px;
+    h1 {
+      margin-left: 20px;
+      font-size: 32px;
+      line-height: 32px;
+    }
+    h3 {
+      margin-left: 20px;
+      padding: 0;
+      padding-right: 20px;
+    }
+    li {
+      margin-left: 20px;
+      font-size: 13px;
+    }
   }
 `;
 
@@ -64,13 +93,28 @@ const ButtonContainer = styled.div`
   justify-content: center;
   margin-top: 80px;
   padding-bottom: 120px;
+  transition: all 1s;
+  :hover {
+    filter: brightness(150%);
+    
+  }
+  @media screen and (max-width: 376px) {
+    margin-top: 40px;
+    padding-bottom: 80px;
+  }
 `;
 const Button = styled.button`
+  cursor: pointer;
+  transition: all 1s;
+  :hover {
+    filter: brightness(150%);
+    
+  }
   max-width: max-content;
   height: 65px;
   background: #204370;
   border-radius: 40px;
-  font-family: Oxygen;
+  font-family: "Oxygen", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -86,9 +130,8 @@ function ComponentThree() {
     <>
       <Wrapper>
         <Content>
-          <BlueSquare />
           <LeftContent>
-            <img src={Team} alt="" />
+            <img src={Team} alt="party" />
           </LeftContent>
           <RightContent>
             <h1>ENTREPRENEURS JOIN THE DEN COMMUNITY</h1>

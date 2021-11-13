@@ -6,23 +6,17 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  position: relative;
-  background:#F4F6F8;
-`;
-
-const GreenSquare = styled.div`
-  width: 675px;
-  height: 424px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: #5cc68f;
-  z-index: 0;
+  background: #f4f6f8;
+  @media screen and (max-width: 376px) {
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+  }
 `;
 
 const LeftContent = styled.div`
   max-width: max-content;
   width: 50%;
+
   padding: 150px 0 0 130px;
   h1 {
     font-weight: 500;
@@ -36,7 +30,7 @@ const LeftContent = styled.div`
   }
 
   h3 {
-    font-family: Oxygen;
+    font-family: "Oxygen", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -51,7 +45,7 @@ const LeftContent = styled.div`
     padding: 0;
   }
   li {
-    font-family: Oxygen;
+    font-family: "Oxygen", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -62,14 +56,45 @@ const LeftContent = styled.div`
       color: #a6b4c6;
     }
   }
+  @media screen and (max-width: 376px) {
+    width: 100%;
+    padding: 0;
+    h1 {
+      margin-left: 20px;
+      font-size: 32px;
+      line-height: 32px;
+    }
+    h3 {
+      margin-left: 20px;
+      padding: 0;
+      padding-right: 20px;
+    }
+    li {
+      margin-left: 20px;
+      font-size: 13px;
+    }
+  }
 `;
 const RightContent = styled.div`
   width: 50%;
-  z-index:1;
+  z-index: 1;
   padding: 150px 48px 54px 0;
   & img {
     width: 100%;
     height: auto;
+    box-shadow: 48px 54px 0 rgb(92, 198, 143);
+  }
+  @media screen and (max-width: 376px) {
+    width: 100%;
+    padding: 60px 0 66px 0;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    & img {
+      box-shadow: 20px 26px 0 rgb(92, 198, 143);
+      width: 90%;
+    }
   }
 `;
 
@@ -77,7 +102,6 @@ function ComponentTwo() {
   return (
     <>
       <Wrapper>
-        <GreenSquare />
         <LeftContent>
           <h1>GET INSPIRed By PEERS AND EXPERTS </h1>
           <h3>
@@ -92,7 +116,7 @@ function ComponentTwo() {
           </ul>
         </LeftContent>
         <RightContent>
-          <img src={TalkShow} />
+          <img src={TalkShow} alt="talkshow" />
         </RightContent>
       </Wrapper>
     </>

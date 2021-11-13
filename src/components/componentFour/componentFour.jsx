@@ -22,12 +22,25 @@ const Title = styled.div`
   text-transform: uppercase;
   color: #204370;
   font-family: "Pathway Gothic One", sans-serif;
+  @media screen and (max-width: 376px) {
+    padding: 80px 0 0 0px;
+    margin-left: 20px;
+    font-size: 62px;
+    line-height: 62px;
+  }
 `;
 
 const List = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 48px 130px 130px 135px;
+  @media screen and (max-width: 376px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin-top: 40px;
+  }
 `;
 
 const ListItem = styled.div`
@@ -36,7 +49,7 @@ const ListItem = styled.div`
   background: #f4f6f8;
   position: relative;
   & p {
-    font-family: Oxygen;
+    font-family: "Oxygen", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -44,6 +57,17 @@ const ListItem = styled.div`
     color: #232327;
     padding-top: 33px;
     padding-right: 50px;
+  }
+  @media screen and (max-width: 376px) {
+    width: 335px;
+    height: 208px;
+    margin-bottom: 20px;
+    p {
+      padding-right: 30px;
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
   }
 `;
 
@@ -68,6 +92,10 @@ const ListImage = styled.div`
     width: 40px;
     height: auto;
   }
+  @media screen and (max-width: 376px) {
+    padding-left: 30px;
+    padding-top: 34px;
+  }
 `;
 
 const Content = styled.div`
@@ -75,7 +103,13 @@ const Content = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
-  padding-bottom:167px;
+  position:relative;
+  padding-bottom: 167px;
+  @media screen and (max-width: 376px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 80px;
+  }
 `;
 
 const LeftContent = styled.div`
@@ -84,7 +118,7 @@ const LeftContent = styled.div`
   & h1 {
     font-family: "Pathway Gothic One", sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 90px;
     line-height: 90px;
     letter-spacing: -0.015em;
@@ -92,8 +126,8 @@ const LeftContent = styled.div`
     color: #204370;
   }
   & p {
-      padding:24px 0;
-    font-family: Oxygen;
+    padding: 24px 0;
+    font-family: "Oxygen", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -105,19 +139,53 @@ const LeftContent = styled.div`
     height: 65px;
     background: #204370;
     border-radius: 40px;
-    font-family: Oxygen;
+    font-family: "Oxygen", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
     line-height: 26px;
     color: #ffffff;
+    border:none;
+  cursor: pointer;
+  transition: all 1s;
+  :hover {
+    filter: brightness(150%);
+    
+  }
+
+  }
+  @media screen and (max-width: 376px) {
+    width: 100%;
+    padding: 80px 0 0 0px;
+    h1 {
+      margin-left: 20px;
+      font-size: 62px;
+      line-height: 80px;
+    }
   }
 `;
+const Bottom= styled.div`
+ @media screen and (max-width: 376px) {
+  width: 100%;
+  padding: 430px 0 0 0px;
+  text-align:center;
+}`
 
 const RightContent = styled.div`
   width: 50%;
 
   padding: 0 135px 0 0;
+  @media screen and (max-width: 376px) {
+    width: 100%;
+    & img {
+      width: 335px;
+      height: auto;
+      position:absolute;
+      padding: 0;
+      top:275px;
+      left:20px;
+    }
+  }
 `;
 
 function ComponentFour() {
@@ -162,8 +230,10 @@ function ComponentFour() {
             <h1>
               But First... <br /> you Have to Join
             </h1>
+            <Bottom>
             <p>What are you waiting for? Join DEN today.</p>
             <button>Join DEN</button>
+            </Bottom>
           </LeftContent>
           <RightContent>
             <img src={Group} alt="" />
