@@ -13,13 +13,13 @@ const Wrapper = styled.div`
   padding: 130px 130px 150px 130px;
   background: #ffffff;
   @media screen and (max-width: 1024px) {
-    padding: 0 64px 150px 64px;
+    padding: 0 64px 120px 64px;
   }
   @media screen and (max-width: 768px) {
-    padding: 0 40px 130px 40px;
+    padding: 0 40px 100px 40px;
   }
   @media screen and (max-width: 480px) {
-    padding: 0 20px 10px 20px;
+    padding: 0 20px 70px 20px;
   }
 `;
 
@@ -158,20 +158,19 @@ const Button = styled.button`
 
 const StyledButtonMobile = styled.div`
   display: none;
+  @media screen and (max-width: 480px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 32px;
+  }
   @media screen and (max-width: 376px) {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 50px;
-    & button {
-      &.slick-next:before {
-        display: none;
-      }
-      right: 0;
-      display: none;
-      left: 0;
-    }
+    padding-top: 20px;
   }
 `;
 
