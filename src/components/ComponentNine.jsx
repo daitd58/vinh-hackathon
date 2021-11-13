@@ -110,6 +110,7 @@ const Button = styled.button`
   font-weight: 550;
   padding: 10px 30px;
   border: none;
+  cursor: pointer;
   font-style: normal;
   font-family: "Oxygen", sans-serif;
   @media screen and (max-width: 1024px) {
@@ -133,6 +134,7 @@ const ButtonMobile = styled.button`
   padding: 0 55px;
   font-size: 17px;
   font-weight: 700;
+  cursor: pointer;
   background: #ffffff;
   white-space: nowrap;
   color: #2a2a2a;

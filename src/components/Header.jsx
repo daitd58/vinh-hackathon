@@ -56,22 +56,24 @@ const Menu = styled.div`
     font-style: normal;
     white-space: nowrap;
     font-family: "Oxygen", sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
-    color: #FFFFFF;
-    padding: 0 15px;
+    color: #ffffff;
+    padding: 0 24px;
     border-left: 1.5px solid #d2d9e2;
+    cursor: pointer;
   }
   @media screen and (max-width: 1024px) {
     padding-left: 30px;
     & p {
-      font-size: 10px;
+      font-size: 8px;
+      padding: 0 18px;
     }
   }
   @media screen and (max-width: 769px) {
     padding-left: 20px;
     & p {
-      font-size: 7px;
+      padding: 0 10px;
     }
   }
   @media screen and (max-width: 376px) {
@@ -89,6 +91,7 @@ const StyledButton = styled.button`
   color: #2a2a2a;
   border: 1px solid #204370;
   border-radius: 25px;
+  cursor: pointer;
   @media screen and (max-width: 1024px) {
     height: 45px;
     padding: 0 25px;
@@ -110,7 +113,7 @@ const Icon = styled.img`
     width: 30px;
   }
 `;
-function Header({open, setOpen}) {
+function Header({ open, setOpen }) {
   return (
     <Wrapper>
       <Block>
@@ -129,10 +132,10 @@ function Header({open, setOpen}) {
         </LeftBlock>
         <RightBlock>
           <StyledButton>Join our community</StyledButton>
-          <Icon src={nav} open ={open} onClick={() => setOpen(!open)}/>
+          <Icon src={nav} open={open} onClick={() => setOpen(!open)} />
         </RightBlock>
       </Block>
-      <SideBar open ={open}/>
+      <SideBar open={open} />
     </Wrapper>
   );
 }

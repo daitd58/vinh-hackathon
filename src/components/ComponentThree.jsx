@@ -110,6 +110,7 @@ const Button = styled.button`
   padding: 0 45px;
   z-index: 1;
   border: none;
+  cursor: pointer;
 `;
 function ComponentThree({setOpen}) {
   return (

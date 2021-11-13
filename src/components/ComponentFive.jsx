@@ -54,6 +54,7 @@ const LeftBlock = styled.div`
     color: #ffffff;
     padding: 0 45px;
     z-index: 1;
+    cursor: pointer;
     border: none;
     @media screen and (max-width: 376px) {
       display: none;
@@ -124,6 +125,7 @@ const Button = styled.button`
   padding: 0 45px;
   z-index: 1;
   border: none;
+  cursor: pointer;
 `;
 function ComponentFive({setOpen}) {
   return (

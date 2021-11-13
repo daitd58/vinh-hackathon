@@ -52,6 +52,7 @@ const Button = styled.button`
   font-weight: 550;
   height: 65px;
   padding: 0 45px;
+  cursor: pointer;
   border: none;
   font-style: normal;
   font-family: "Oxygen", sans-serif;

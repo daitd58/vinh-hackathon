@@ -83,27 +83,26 @@ const Number = styled.p`
   color: #1729401a;
   font-size: 35px;
   font-weight: 700;
-  margin-top: 0px;
+  margin-top: 0px;text-transform: uppercase;
   @media screen and (max-width: 376px) {
     margin-bottom: 0px;
   }
 `;
 
 const ContentBox = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   @media screen and (max-width: 376px) {
     justify-content: left;
   }
 `;
 
-const TextDescription = styled.div`
+const TextDescription = styled.p`
   font-family: "Oxygen", sans-serif;
+  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 25px;
   width: 170px;
+  margin: 0;
   @media screen and (max-width: 1024px) {
     font-size: 15px;
   }

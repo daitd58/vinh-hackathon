@@ -133,6 +133,7 @@ const TextFooterLeftBlock = styled.div`
   font-size: 16px;
   font-weight: 500;
   color: #4c8fcc;
+  cursor: pointer;
   @media screen and (max-width: 1024px) {
     font-size: 14px;
   }
@@ -289,6 +290,7 @@ const Button = styled.button`
   font-family: "Oxygen", sans-serif;
   font-style: normal;
   white-space: nowrap;
+  cursor: pointer;
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
@@ -313,6 +315,7 @@ const ButtonMobile = styled.button`
   display: none;
   @media screen and (max-width: 376px) {
     display: inline-block;
+    cursor: pointer;
     height: 52px;
     background: #204370;
     border-radius: 25px;

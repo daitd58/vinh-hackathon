@@ -70,6 +70,15 @@ const RightBlock = styled(Slider)`
       margin-right: 10px;
     }
   }
+  @media screen and (max-width: 1024px) {
+    padding-top: 80px;
+  }
+  @media screen and (max-width: 769px) {
+    padding-top: 60px;
+  }
+  @media screen and (max-width: 376px) {
+    padding-top: 40px;
+  }
 `;
 const Box = styled.div`
   position: relative;
@@ -259,6 +268,7 @@ const ButtonArrowLeft = styled.button`
   background-position: center;
   background-repeat: no-repeat;
   border: unset;
+  cursor: pointer;
   :hover,
   :active,
   :focus {
@@ -285,6 +295,7 @@ const ButtonArrowRight = styled.button`
   right: 0;
   width: 50px;
   height: 50px;
+  cursor: pointer;
   background: url(${arrowRight});
   background-size: 100%;
   background-position: center;

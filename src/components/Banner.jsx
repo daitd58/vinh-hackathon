@@ -82,6 +82,7 @@ const Button = styled.button`
   align-items: center;
   justify-content: center;
   border: none;
+  cursor: pointer;
   font-family: "Oxygen", sans-serif;
   @media screen and (max-width: 376px) {
     width: 150px;
