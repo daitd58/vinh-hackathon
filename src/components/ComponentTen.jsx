@@ -51,13 +51,10 @@ const Button = styled.button`
   font-size: 16px;
   font-weight: 550;
   height: 65px;
-  padding: 10px 55px;
+  padding: 0 45px;
   border: none;
   font-style: normal;
   font-family: "Oxygen", sans-serif;
-  @media screen and (max-width: 376px) {
-    padding: 10px 50px;
-  }
 `;
 function ComponentTen({setOpen}) {
   return (

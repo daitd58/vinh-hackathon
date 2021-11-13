@@ -30,7 +30,7 @@ const Ul = styled.ul`
   }
 `;
 
-const SideBar = ({ open}) => {
+function SideBar ({ open})  {
   return (
     <Ul open={open}>
       <li>Cities</li>

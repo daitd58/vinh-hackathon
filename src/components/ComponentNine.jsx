@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -39,10 +39,9 @@ const StyleGrid = styled.div`
 const StyleGridMobile = styled(Slider)`
   display: none;
   @media screen and (max-width: 768px) {
-    display: flex;
-    padding-top: 50px;
-    justify-content: space-between;
+    display: inline-block;
     width: 100%;
+    padding-top: 50px;
     & ul {
       bottom: -40px;
     }
@@ -141,135 +140,134 @@ const ButtonMobile = styled.button`
   box-sizing: border-box;
   border-radius: 35px;
 `;
-export default class ComponentNine extends Component {
-  render() {
-    const settings = {
-      dots: false,
-      infinite: true,
-      arrows: false,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      initialSlide: 0,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      responsive: [
-        {
-          breakpoint: 376,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            initialSlide: 0,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            infinite: false,
-            dots: false,
-          },
+function ComponentNine({setOpen}) {
+  const settings = {
+    dots: false,
+    infinite: true,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 376,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          infinite: false,
+          dots: false,
         },
-      ],
-    };
-    return (
-      <Wrapper>
-        <StyleScroll></StyleScroll>
-        <StyleGrid>
-          <StyleBox>
-            <img src={imageOne} alt={""} />
-            <p>15 jan 2021</p>
-            <TextTitle>How to Test Ideas with No Money or Time</TextTitle>
-            <StyleButton>
-              <Button>Register</Button>
-            </StyleButton>
-          </StyleBox>
-          <StyleBox>
-            <img src={imageTwo} alt={""} />
-            <p>08 jun 2021</p>
-            <TextTitle>
-              CLEANTECH STARTUPS FROM FINLAND AND ESTONIA TO ENTER MALAYSIA
-            </TextTitle>
-            <StyleButton>
-              <Button>Register</Button>
-            </StyleButton>
-          </StyleBox>
-          <StyleBox>
-            <img src={imageThree} alt={""} />
-            <p>17 may 2021</p>
-            <TextTitle>
-              Yoga – first cass for beginer – feel free to sign up here.
-            </TextTitle>
-            <StyleButton>
-              <Button>Register</Button>
-            </StyleButton>
-          </StyleBox>
-          <StyleBox>
-            <img src={imageFour} alt={""} />
-            <p>15 jan 2021</p>
-            <TextTitle>How to Test Ideas with No Money or Time</TextTitle>
-            <StyleButton>
-              <Button>Register</Button>
-            </StyleButton>
-          </StyleBox>
-          <StyleBox>
-            <img src={imageFive} alt={""} />
-            <p>08 jun 2021</p>
-            <TextTitle>
-              CLEANTECH STARTUPS FROM FINLAND AND ESTONIA TO ENTER MALAYSIA
-            </TextTitle>
-            <StyleButton>
-              <Button>Register</Button>
-            </StyleButton>
-          </StyleBox>
-        </StyleGrid>
-        <StyleGridMobile {...settings}>
-          <StyleBox>
-            <img src={imageOne} alt={""} />
-            <p>15 jan 2021</p>
-            <TextTitle>How to Test Ideas with No Money or Time</TextTitle>
-            <StyleButton>
-              <Button>Register</Button>
-            </StyleButton>
-          </StyleBox>
-          <StyleBox>
-            <img src={imageTwo} alt={""} />
-            <p>08 jun 2021</p>
-            <TextTitle>
-              CLEANTECH STARTUPS FROM FINLAND AND ESTONIA TO ENTER MALAYSIA
-            </TextTitle>
-            <StyleButton>
-              <Button>Register</Button>
-            </StyleButton>
-          </StyleBox>
-          <StyleBox>
-            <img src={imageThree} alt={""} />
-            <p>17 may 2021</p>
-            <TextTitle>
-              Yoga – first cass for beginer – feel free to sign up here.
-            </TextTitle>
-            <StyleButton>
-              <Button>Register</Button>
-            </StyleButton>
-          </StyleBox>
-          <StyleBox>
-            <img src={imageFour} alt={""} />
-            <p>15 jan 2021</p>
-            <TextTitle>How to Test Ideas with No Money or Time</TextTitle>
-            <StyleButton>
-              <Button>Register</Button>
-            </StyleButton>
-          </StyleBox>
-          <StyleBox>
-            <img src={imageFive} alt={""} />
-            <p>08 jun 2021</p>
-            <TextTitle>
-              CLEANTECH STARTUPS FROM FINLAND AND ESTONIA TO ENTER MALAYSIA
-            </TextTitle>
-            <StyleButton>
-              <Button>Register</Button>
-            </StyleButton>
-          </StyleBox>
-        </StyleGridMobile>
-        <StyledButtonMobile>
-          <ButtonMobile>See all upcoming events</ButtonMobile>
-        </StyledButtonMobile>
-      </Wrapper>
-    );
-  }
+      },
+    ],
+  };
+  return (
+    <Wrapper onClick={() => setOpen(false)}>
+      <StyleScroll></StyleScroll>
+      <StyleGrid>
+        <StyleBox>
+          <img src={imageOne} alt={""} />
+          <p>15 jan 2021</p>
+          <TextTitle>How to Test Ideas with No Money or Time</TextTitle>
+          <StyleButton>
+            <Button>Register</Button>
+          </StyleButton>
+        </StyleBox>
+        <StyleBox>
+          <img src={imageTwo} alt={""} />
+          <p>08 jun 2021</p>
+          <TextTitle>
+            CLEANTECH STARTUPS FROM FINLAND AND ESTONIA TO ENTER MALAYSIA
+          </TextTitle>
+          <StyleButton>
+            <Button>Register</Button>
+          </StyleButton>
+        </StyleBox>
+        <StyleBox>
+          <img src={imageThree} alt={""} />
+          <p>17 may 2021</p>
+          <TextTitle>
+            Yoga – first cass for beginer – feel free to sign up here.
+          </TextTitle>
+          <StyleButton>
+            <Button>Register</Button>
+          </StyleButton>
+        </StyleBox>
+        <StyleBox>
+          <img src={imageFour} alt={""} />
+          <p>15 jan 2021</p>
+          <TextTitle>How to Test Ideas with No Money or Time</TextTitle>
+          <StyleButton>
+            <Button>Register</Button>
+          </StyleButton>
+        </StyleBox>
+        <StyleBox>
+          <img src={imageFive} alt={""} />
+          <p>08 jun 2021</p>
+          <TextTitle>
+            CLEANTECH STARTUPS FROM FINLAND AND ESTONIA TO ENTER MALAYSIA
+          </TextTitle>
+          <StyleButton>
+            <Button>Register</Button>
+          </StyleButton>
+        </StyleBox>
+      </StyleGrid>
+      <StyleGridMobile {...settings}>
+        <StyleBox>
+          <img src={imageOne} alt={""} />
+          <p>15 jan 2021</p>
+          <TextTitle>How to Test Ideas with No Money or Time</TextTitle>
+          <StyleButton>
+            <Button>Register</Button>
+          </StyleButton>
+        </StyleBox>
+        <StyleBox>
+          <img src={imageTwo} alt={""} />
+          <p>08 jun 2021</p>
+          <TextTitle>
+            CLEANTECH STARTUPS FROM FINLAND AND ESTONIA TO ENTER MALAYSIA
+          </TextTitle>
+          <StyleButton>
+            <Button>Register</Button>
+          </StyleButton>
+        </StyleBox>
+        <StyleBox>
+          <img src={imageThree} alt={""} />
+          <p>17 may 2021</p>
+          <TextTitle>
+            Yoga – first cass for beginer – feel free to sign up here.
+          </TextTitle>
+          <StyleButton>
+            <Button>Register</Button>
+          </StyleButton>
+        </StyleBox>
+        <StyleBox>
+          <img src={imageFour} alt={""} />
+          <p>15 jan 2021</p>
+          <TextTitle>How to Test Ideas with No Money or Time</TextTitle>
+          <StyleButton>
+            <Button>Register</Button>
+          </StyleButton>
+        </StyleBox>
+        <StyleBox>
+          <img src={imageFive} alt={""} />
+          <p>08 jun 2021</p>
+          <TextTitle>
+            CLEANTECH STARTUPS FROM FINLAND AND ESTONIA TO ENTER MALAYSIA
+          </TextTitle>
+          <StyleButton>
+            <Button>Register</Button>
+          </StyleButton>
+        </StyleBox>
+      </StyleGridMobile>
+      <StyledButtonMobile>
+        <ButtonMobile>See all upcoming events</ButtonMobile>
+      </StyledButtonMobile>
+    </Wrapper>
+  );
 }
+export default ComponentNine;

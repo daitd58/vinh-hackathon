@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -50,46 +50,10 @@ const TextContent = styled.div`
   @media screen and (max-width: 376px) {
     text-align: left;
   }
-`;
-const StyledArrow = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  height: 40px;
-  gap: 5px;
-  & img {
-    width: 50%;
-    height: auto;
-  }
-  @media screen and (max-width: 1024px) {
-    & img {
-      width: 40%;
-    }
-  }
-  @media screen and (max-width: 769px) {
-    & img {
-      width: 30%;
-      height: auto;
-    }
-  }
-  @media screen and (max-width: 376px) {
-    display: none;
-  }
-`;
-const RightBlock = styled.div`
-  display: flex;
-  padding-top: 100px;
-  justify-content: space-between;
-  width: 100%;
-  @media screen and (max-width: 769px) {
-    padding-top: 30px;
-  }
-  @media screen and (max-width: 376px) {
-    display: none;
-  }
-`;
-const View = styled(Slider)`
+  `;
+const RightBlock = styled(Slider)`
   display: none;
-  @media screen and (max-width: 376px) {
+  @media screen and (max-width: 1280px) {
     display: flex;
     padding-top: 100px;
     flex-direction: column;
@@ -99,8 +63,14 @@ const View = styled(Slider)`
     & ul {
       bottom: -40px;
     }
+    .slick-prev:before {
+      content: none;
+    }
+    .slick-next:before {
+      content: none;
+    }
   }
-`;
+  `;
 const Box = styled.div`
   position: relative;
   display: flex;
@@ -280,6 +250,10 @@ const ButtonArrowLeft = styled.button`
   display: flex;
   align-items: center;
   padding: 0px 20px;
+  top: -20%;
+  left: 90%;
+  width: 50px;
+  height: 50px;
   background: url(${arrowLeft});
   background-size: 100%;
   background-position: center;
@@ -293,11 +267,24 @@ const ButtonArrowLeft = styled.button`
     background-position: center;
     background-repeat: no-repeat;
   }
+  @media screen and (max-width: 1024px) {
+    left: 89%;
+    width: 45px;
+    height: 45px;
+  }
+  @media screen and (max-width: 768px) {
+    top: -25%;
+    left: 86%;
+  }
 `;
 const ButtonArrowRight = styled.button`
   display: flex;
   align-items: center;
   padding: 0px 20px;
+  top: -20%;
+  right: 0;
+  width: 50px;
+  height: 50px;
   background: url(${arrowRight});
   background-size: 100%;
   background-position: center;
@@ -311,190 +298,205 @@ const ButtonArrowRight = styled.button`
     background-position: center;
     background-repeat: no-repeat;
   }
-`;
-export default class ComponentSix extends Component {
-  render() {
-    const settings = {
-      dots: true,
-      fade: true,
-      infinite: true,
-      speed: 1000,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-    };
-    return (
-      <Wrapper>
-        <Block>
-          <LeftBlock>
-            <TextContent>What PEOPLE ARE SAYING ABOUT DEN</TextContent>
-            <StyledArrow>
-              <ButtonArrowLeft></ButtonArrowLeft>
-              <ButtonArrowRight></ButtonArrowRight>
-            </StyledArrow>
-          </LeftBlock>
-          <RightBlock>
-            <Box>
-              <Avatar>
-                <img src={peopleOne} alt={""} />
-              </Avatar>
-              <Icon>
-                <img src={icon} alt={""} />
-              </Icon>
-              <Content>
-                <HeaderContent>
-                  <h1>Simon JD</h1>
-                  <p>Co-Founder and CEO, Travelio</p>
-                </HeaderContent>
-                <FooterContent>
-                  <p>
-                    Ornare massa eget egestas purus viverrasan in nisl. Sit amet
-                    luctus venenatis lectus magna fring ut venenatis tellus in
-                    metus vulputate eu scelerisque felis. Felis done.
-                  </p>
-                  <p>
-                    Felis donec et odio pellentesque di scelerisque felis.
-                    Ornare massa eget egest.
-                  </p>
-                  <a href="/">Learn more</a>
-                </FooterContent>
-              </Content>
-            </Box>
-            <Box>
-              <Avatar>
-                <img src={peopleTwo} alt={""} />
-              </Avatar>{" "}
-              <Icon>
-                <img src={icon} alt={""} />
-              </Icon>
-              <Content>
-                <HeaderContent>
-                  <h1>Jane Cooper</h1>
-                  <p>Co-Founder and CEO, Travelio</p>
-                </HeaderContent>
-                <FooterContent>
-                  <p>
-                    Ornare massa eget egestas purus viverrasan in nisl. Sit amet
-                    luctus venenatis lectus magna fring ut venenatis tellus in
-                    metus vulputate eu scelerisque felis. Felis done.
-                  </p>
-                  <p>
-                    Felis donec et odio pellentesque di scelerisque felis.
-                    Ornare massa eget egest.
-                  </p>
-                  <a href="/">Learn more</a>
-                </FooterContent>
-              </Content>
-            </Box>
-            <Box>
-              <Avatar>
-                <img src={peopleThree} alt={""} />
-              </Avatar>{" "}
-              <Icon>
-                <img src={icon} alt={""} />
-              </Icon>
-              <Content>
-                <HeaderContent>
-                  <h1>Albert Flores</h1>
-                  <p>Marketing Coordinator, Gillette </p>
-                </HeaderContent>
-                <FooterContent>
-                  <p>
-                    Ornare massa eget egestas purus viverrasan in nisl. Sit amet
-                    luctus venenatis lectus magna fring ut venenatis tellus in
-                    metus vulputate eu scelerisque felis. Felis done.
-                  </p>
-                  <p>
-                    Felis donec et odio pellentesque di scelerisque felis.
-                    Ornare massa eget egest.
-                  </p>
-                  <a href="/">Learn more</a>
-                </FooterContent>
-              </Content>
-            </Box>
-          </RightBlock>
-          <View {...settings}>
-            <Box>
-              <Avatar>
-                <img src={peopleOne} alt={""} />
-              </Avatar>
-              <Icon>
-                <img src={icon} alt={""} />
-              </Icon>
-              <Content>
-                <HeaderContent>
-                  <h1>Simon JD</h1>
-                  <p>Co-Founder and CEO, Travelio</p>
-                </HeaderContent>
-                <FooterContent>
-                  <p>
-                    Ornare massa eget egestas purus viverrasan in nisl. Sit amet
-                    luctus venenatis lectus magna fring ut venenatis tellus in
-                    metus vulputate eu scelerisque felis. Felis done.
-                  </p>
-                  <p>
-                    Felis donec et odio pellentesque di scelerisque felis.
-                    Ornare massa eget egest.
-                  </p>
-                  <a href="/">Learn more</a>
-                </FooterContent>
-              </Content>
-            </Box>
-            <Box>
-              <Avatar>
-                <img src={peopleTwo} alt={""} />
-              </Avatar>{" "}
-              <Icon>
-                <img src={icon} alt={""} />
-              </Icon>
-              <Content>
-                <HeaderContent>
-                  <h1>Jane Cooper</h1>
-                  <p>Co-Founder and CEO, Travelio</p>
-                </HeaderContent>
-                <FooterContent>
-                  <p>
-                    Ornare massa eget egestas purus viverrasan in nisl. Sit amet
-                    luctus venenatis lectus magna fring ut venenatis tellus in
-                    metus vulputate eu scelerisque felis. Felis done.
-                  </p>
-                  <p>
-                    Felis donec et odio pellentesque di scelerisque felis.
-                    Ornare massa eget egest.
-                  </p>
-                  <a href="/">Learn more</a>
-                </FooterContent>
-              </Content>
-            </Box>
-            <Box>
-              <Avatar>
-                <img src={peopleThree} alt={""} />
-              </Avatar>{" "}
-              <Icon>
-                <img src={icon} alt={""} />
-              </Icon>
-              <Content>
-                <HeaderContent>
-                  <h1>Albert Flores</h1>
-                  <p>Marketing Coordinator, Gillette </p>
-                </HeaderContent>
-                <FooterContent>
-                  <p>
-                    Ornare massa eget egestas purus viverrasan in nisl. Sit amet
-                    luctus venenatis lectus magna fring ut venenatis tellus in
-                    metus vulputate eu scelerisque felis. Felis done.
-                  </p>
-                  <p>
-                    Felis donec et odio pellentesque di scelerisque felis.
-                    Ornare massa eget egest.
-                  </p>
-                  <a href="/">Learn more</a>
-                </FooterContent>
-              </Content>
-            </Box>
-          </View>
-        </Block>
-      </Wrapper>
-    );
+  @media screen and (max-width: 1024px) {
+    width: 45px;
+    height: 45px;
   }
+  @media screen and (max-width: 768px) {
+    top: -25%;
+  }
+`;
+function ComponentSix({ setOpen }) {
+  const settings = {
+    dots: false,
+    infinite: 0,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    nextArrow: <ButtonArrowRight />,
+    prevArrow: <ButtonArrowLeft />,
+    responsive: [
+      {
+        breakpoint: 376,
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          infinite: false,
+          arrows: false,
+        },
+      },
+    ],
+  };
+  return (
+    <Wrapper onClick={() => setOpen(false)}>
+      <Block>
+        <LeftBlock>
+          <TextContent>What PEOPLE ARE SAYING ABOUT DEN</TextContent>
+        </LeftBlock>
+        <RightBlock {...settings}>
+          <Box>
+            <Avatar>
+              <img src={peopleOne} alt={""} />
+            </Avatar>
+            <Icon>
+              <img src={icon} alt={""} />
+            </Icon>
+            <Content>
+              <HeaderContent>
+                <h1>Simon JD</h1>
+                <p>Co-Founder and CEO, Travelio</p>
+              </HeaderContent>
+              <FooterContent>
+                <p>
+                  Ornare massa eget egestas purus viverrasan in nisl. Sit amet
+                  luctus venenatis lectus magna fring ut venenatis tellus in
+                  metus vulputate eu scelerisque felis. Felis done.
+                </p>
+                <p>
+                  Felis donec et odio pellentesque di scelerisque felis. Ornare
+                  massa eget egest.
+                </p>
+                <a href="/">Learn more</a>
+              </FooterContent>
+            </Content>
+          </Box>
+          <Box>
+            <Avatar>
+              <img src={peopleTwo} alt={""} />
+            </Avatar>{" "}
+            <Icon>
+              <img src={icon} alt={""} />
+            </Icon>
+            <Content>
+              <HeaderContent>
+                <h1>Jane Cooper</h1>
+                <p>Co-Founder and CEO, Travelio</p>
+              </HeaderContent>
+              <FooterContent>
+                <p>
+                  Ornare massa eget egestas purus viverrasan in nisl. Sit amet
+                  luctus venenatis lectus magna fring ut venenatis tellus in
+                  metus vulputate eu scelerisque felis. Felis done.
+                </p>
+                <p>
+                  Felis donec et odio pellentesque di scelerisque felis. Ornare
+                  massa eget egest.
+                </p>
+                <a href="/">Learn more</a>
+              </FooterContent>
+            </Content>
+          </Box>
+          <Box>
+            <Avatar>
+              <img src={peopleThree} alt={""} />
+            </Avatar>{" "}
+            <Icon>
+              <img src={icon} alt={""} />
+            </Icon>
+            <Content>
+              <HeaderContent>
+                <h1>Albert Flores</h1>
+                <p>Marketing Coordinator, Gillette </p>
+              </HeaderContent>
+              <FooterContent>
+                <p>
+                  Ornare massa eget egestas purus viverrasan in nisl. Sit amet
+                  luctus venenatis lectus magna fring ut venenatis tellus in
+                  metus vulputate eu scelerisque felis. Felis done.
+                </p>
+                <p>
+                  Felis donec et odio pellentesque di scelerisque felis. Ornare
+                  massa eget egest.
+                </p>
+                <a href="/">Learn more</a>
+              </FooterContent>
+            </Content>
+          </Box>
+          <Box>
+            <Avatar>
+              <img src={peopleOne} alt={""} />
+            </Avatar>
+            <Icon>
+              <img src={icon} alt={""} />
+            </Icon>
+            <Content>
+              <HeaderContent>
+                <h1>Simon JD</h1>
+                <p>Co-Founder and CEO, Travelio</p>
+              </HeaderContent>
+              <FooterContent>
+                <p>
+                  Ornare massa eget egestas purus viverrasan in nisl. Sit amet
+                  luctus venenatis lectus magna fring ut venenatis tellus in
+                  metus vulputate eu scelerisque felis. Felis done.
+                </p>
+                <p>
+                  Felis donec et odio pellentesque di scelerisque felis. Ornare
+                  massa eget egest.
+                </p>
+                <a href="/">Learn more</a>
+              </FooterContent>
+            </Content>
+          </Box>
+          <Box>
+            <Avatar>
+              <img src={peopleTwo} alt={""} />
+            </Avatar>{" "}
+            <Icon>
+              <img src={icon} alt={""} />
+            </Icon>
+            <Content>
+              <HeaderContent>
+                <h1>Jane Cooper</h1>
+                <p>Co-Founder and CEO, Travelio</p>
+              </HeaderContent>
+              <FooterContent>
+                <p>
+                  Ornare massa eget egestas purus viverrasan in nisl. Sit amet
+                  luctus venenatis lectus magna fring ut venenatis tellus in
+                  metus vulputate eu scelerisque felis. Felis done.
+                </p>
+                <p>
+                  Felis donec et odio pellentesque di scelerisque felis. Ornare
+                  massa eget egest.
+                </p>
+                <a href="/">Learn more</a>
+              </FooterContent>
+            </Content>
+          </Box>
+          <Box>
+            <Avatar>
+              <img src={peopleThree} alt={""} />
+            </Avatar>{" "}
+            <Icon>
+              <img src={icon} alt={""} />
+            </Icon>
+            <Content>
+              <HeaderContent>
+                <h1>Albert Flores</h1>
+                <p>Marketing Coordinator, Gillette </p>
+              </HeaderContent>
+              <FooterContent>
+                <p>
+                  Ornare massa eget egestas purus viverrasan in nisl. Sit amet
+                  luctus venenatis lectus magna fring ut venenatis tellus in
+                  metus vulputate eu scelerisque felis. Felis done.
+                </p>
+                <p>
+                  Felis donec et odio pellentesque di scelerisque felis. Ornare
+                  massa eget egest.
+                </p>
+                <a href="/">Learn more</a>
+              </FooterContent>
+            </Content>
+          </Box>
+        </RightBlock>
+      </Block>
+    </Wrapper>
+  );
 }
+export default ComponentSix;
