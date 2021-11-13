@@ -53,14 +53,9 @@ const ContentLeftCommunity = styled.div`
     padding: 0;
     width: 100%;
     & img {
-      width: 95%;
+      width: 90%;
       margin-left: 20px;
       box-shadow: -20px 20px 0 rgba(255, 204, 0, 1);
-    }
-  }
-  @media screen and (max-width: 375px) {
-    & img {
-      width: 90%;
     }
   }
 `;

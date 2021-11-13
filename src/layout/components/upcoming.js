@@ -42,9 +42,6 @@ const ViewContent = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 56px 36px;
   @media screen and (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media screen and (max-width: 376px) {
     display: none;
   }
 `;
@@ -173,9 +170,12 @@ const BtnTitleSeeAllMobile = styled.div`
 `;
 const SlideCarousel = styled(Slider)`
   display: none;
-  @media screen and (max-width: 376px) {
+  @media screen and (max-width: 768px) {
     display: block;
     margin-top: 46px;
+    .slick-slide > div {
+      margin: 0 5px;
+    }
   }
 `;
 
@@ -190,14 +190,28 @@ export default class Upcoming extends Component {
       dots: false,
       infinite: true,
       speed: 1000,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplaySpeed: 3000,
+      arrows: false,
+      autoplay: true,
+      cssEase: "linear",
+      responsive: [
+        {
+          breakpoint: 376,
+          settings: {
+            dots: false,
+      infinite: true,
+      speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplaySpeed: 3000,
+      arrows: false,
       autoplay: true,
       cssEase: "linear",
-      afterChange: () =>
-        this.setState((state) => ({ updateCount: state.updateCount + 1 })),
-      beforeChange: (current, next) => this.setState({ slideIndex: next }),
+          },
+        },
+      ],
     };
     return (
       <Container>

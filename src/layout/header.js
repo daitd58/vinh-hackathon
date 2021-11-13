@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import logo_dark from "../asset/img/logo-dark.png";
 import menu from "../asset/img/menu.png";
+import { NavBar } from "./sideBar";
+import close from "../asset/img/close.png";
 
 const Nav = styled.div`
   display: flex;
@@ -31,7 +33,6 @@ const Logo_Dark = styled.div`
 `;
 const Menu = styled.div`
   display: flex;
-  gap: 10px;
   @media screen and (max-width: 376px) {
     display: none;
   }
@@ -50,6 +51,7 @@ const MenuItem = styled.div`
   text-align: center;
   :hover {
     cursor: pointer;
+    background: #0d2538;
   }
   @media screen and (max-width: 1280px) {
     padding: 0 20px;
@@ -69,13 +71,16 @@ const MenuIcon = styled.img`
     padding-right: 28px;
   }
 `;
-const Search = styled.div`
-  padding-right: 30px;
-  @media screen and (max-width: 1024px) {
-    display: none;
-  }
+const CloseIcon = styled.img`
+  display: none;
   @media screen and (max-width: 768px) {
     display: block;
+    padding-right: 28px;
+  }
+`;
+const Search = styled.div`
+  padding-right: 30px;
+  @media screen and (max-width: 768px) {
     padding-right: 28px;
   }
   @media screen and (max-width: 376px) {
@@ -101,9 +106,15 @@ const SearchContent = styled.div`
   :hover {
     cursor: pointer;
   }
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+    line-height: 24px;
+  }
 `;
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <Nav>
       <Logo_Dark>
@@ -117,7 +128,18 @@ const Header = () => {
           <MenuItem href="#">ABOUT US</MenuItem>
         </Menu>
       </Logo_Dark>
-      <MenuIcon src={menu} alt={""} />
+      {open ? (
+        <CloseIcon onClick={() => setOpen(!open)} src={close} alt={""} />
+      ) : (
+        <MenuIcon
+          onClick={() => setOpen(!open)}
+          open={open}
+          src={menu}
+          alt={""}
+        />
+      )}
+
+      <NavBar open={open} />
       <Search>
         <SearchContent>Join our community</SearchContent>
       </Search>

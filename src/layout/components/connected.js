@@ -19,21 +19,17 @@ const TitleHeader = styled.div`
   text-align: center;
   padding: 80px 0 40px;
   width: 80%;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1024px) {
     font-size: 34px;
     line-height: 44px;
   }
-  @media screen and (max-width: 1020px) {
-    font-size: 28px;
-    line-height: 38px;
-  }
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 768px) {
     font-size: 24px;
     line-height: 34px;
   }
-  @media screen and (max-width: 720px) {
-    font-size: 20px;
-    line-height: 30px;
+  @media screen and (max-width: 376px) {
+    font-size: 16px;
+    line-height: 26px;
   }
 `;
 const BtnTitle = styled.div`

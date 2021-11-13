@@ -13,12 +13,12 @@ const FooterEnd = styled.div`
     padding: 35px 40px 40px 80px;
   }
   @media screen and (max-width: 1024px) {
-    flex-direction: column;
     padding: 35px 40px 40px 40px;
-    align-items: center;
   }
   @media screen and (max-width: 768px) {
+    flex-direction: column;
     padding: 30px 20px 50px;
+    align-items: center;
   }
 `;
 const TitleEnd = styled.div`
@@ -29,14 +29,11 @@ const TitleEnd = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: rgba(35, 35, 39, 0, 7);
-  @media screen and (max-width: 768px) {
-    display: block;
-  }
 `;
 const Menu = styled.div`
   display: flex;
   gap: 10px;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 768px) {
     padding: 18px 0 40px;
     justify-content: center;
   }
@@ -58,6 +55,9 @@ const MenuItem = styled.div`
   :hover {
     cursor: pointer;
   }
+  @media screen and (max-width: 1024px) {
+    padding: 0 10px;
+  }
 `;
 const HomeMenuItem = styled.div`
   font-size: 14px;
@@ -71,6 +71,9 @@ const HomeMenuItem = styled.div`
   :hover {
     cursor: pointer;
   }  
+  @media screen and (max-width: 1024px) {
+    padding: 0 20px;
+  }
   @media screen and (max-width: 376px) {
     padding-left: 0;
   }
@@ -88,6 +91,9 @@ const ContactMenuItem = styled.div`
   :hover {
     cursor: pointer;
   }
+  @media screen and (max-width: 1024px) {
+    padding: 0 10px;
+  }
   @media screen and (max-width: 376px) {
     border: none;
   }
@@ -104,6 +110,9 @@ const StoriesMenuItem = styled.div`
   padding: 0 24px;
   :hover {
     cursor: pointer;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 0 10px;
   }
   @media screen and (max-width: 376px) {
     padding-right: 0;

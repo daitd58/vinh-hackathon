@@ -3,6 +3,7 @@ import styled from "styled-components";
 import D from "../../asset/img/D.png";
 import Connected from "./connected";
 import End from "./footerEnd";
+import FooterResponsive from "./footerResponsive";
 
 const Container = styled.div`
   padding: 80px 0 0;
@@ -13,20 +14,33 @@ const ViewFooter = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     padding: 60px 0 22px;
+    align-items: center;
   }
 `;
 const LeftViewFooter = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 30px;
+  width: 40%;
+  @media screen and (max-width: 1024px) {
+    width: 50%;
+  }
   @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    gap: 23px;
   }
 `;
 const RightViewFooter = styled.div`
   display: flex;
   flex-direction: column;
+  width: 60%;
+  @media screen and (max-width: 1024px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const Logo = styled.img`
   position: absolute;
@@ -38,6 +52,10 @@ const ViewAddress = styled.div`
   padding-left: 90px;
   @media screen and (max-width: 768px) {
     padding: 0 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 `;
 const Title = styled.div`
@@ -54,17 +72,33 @@ const Title = styled.div`
   @media screen and (max-width: 768px) {
     width: 100%;
     text-align: center;
+    padding-bottom: 20px;
   }
 `;
 const Border = styled.div`
   border-bottom: 3px solid rgba(35, 35, 39, 0.1);
   width: 15%;
   @media screen and (max-width: 768px) {
-    display: none;
   }
 `;
 const Address = styled.div`
   padding-top: 8px;
+  @media screen and (max-width: 768px) {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 32px;
+  }
+`;
+const AddressLast = styled.div`
+  padding-top: 8px;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 40px;
+  }
 `;
 const TitleAddress = styled.div`
   font-family: "Oxygen", sans-serif;
@@ -91,8 +125,14 @@ const NameAddress = styled.div`
   width: 40%;
   padding: 8px 0;
   @media screen and (max-width: 768px) {
-    width: 70%;
+    width: auto;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 95px;
+  }
+  @media screen and (max-width: 376px) {
+    padding: 0 40px;
   }
 `;
 const EmailAddress = styled.a`
@@ -106,7 +146,8 @@ const EmailAddress = styled.a`
   color: rgba(76, 143, 204, 1);
   text-decoration: none;
   @media screen and (max-width: 768px) {
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 `;
 const TopViewRight = styled.div`
@@ -120,7 +161,7 @@ const TitleRight = styled.div`
   font-family: "Gothic A1", sans-serif;
   font-size: 36px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 36px;
   letter-spacing: -0.015em;
   text-align: left;
@@ -130,6 +171,10 @@ const TitleRight = styled.div`
 const ListTitleRightOne = styled.div`
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    gap: 40px;
+  }
 `;
 const ListItemRightOne = styled.div`
   font-family: "Oxygen", sans-serif;
@@ -140,15 +185,13 @@ const ListItemRightOne = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: rgba(23, 41, 64, 0, 9);
-  width: 100%;
 `;
 const ListItemOne = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
 `;
 const ListTitleRightTwo = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, auto);
+  display: flex;
 `;
 const ListItemRightTwo = styled.div`
   font-family: "Oxygen", sans-serif;
@@ -159,8 +202,13 @@ const ListItemRightTwo = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: rgba(23, 41, 64, 0, 9);
-  width: 100%;
   padding-left: 53px;
+  @media screen and (max-width: 1280px) {
+    padding-left: 43px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding-left: 0;
+  }
 `;
 const ListItemRightThree = styled.div`
   font-family: "Oxygen", sans-serif;
@@ -171,8 +219,13 @@ const ListItemRightThree = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: rgba(23, 41, 64, 0, 9);
-  width: 100%;
-  padding-left: 105px;
+  padding-left: 100px;
+  @media screen and (max-width: 1280px) {
+    padding-left: 90px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding-left: 0;
+  }
 `;
 const ListItemRightFour = styled.div`
   font-family: "Oxygen", sans-serif;
@@ -183,8 +236,13 @@ const ListItemRightFour = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: rgba(23, 41, 64, 0, 9);
-  width: 100%;
   padding-left: 87px;
+  @media screen and (max-width: 1280px) {
+    padding-left: 77px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding-left: 30px;
+  }
 `;
 const ListItemRightFive = styled.div`
   font-family: "Oxygen", sans-serif;
@@ -195,8 +253,13 @@ const ListItemRightFive = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: rgba(23, 41, 64, 0, 9);
-  width: 100%;
-  padding-left: 76px;
+  padding-left: 65px;
+  @media screen and (max-width: 1280px) {
+    padding-left: 55px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding-left: 30px;
+  }
 `;
 const ListItemRightSix = styled.div`
   font-family: "Oxygen", sans-serif;
@@ -207,8 +270,13 @@ const ListItemRightSix = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: rgba(23, 41, 64, 0, 9);
-  width: 100%;
   padding-left: 76px;
+  @media screen and (max-width: 1280px) {
+    padding-left: 66px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding-left: 30px;
+  }
 `;
 const ListItemRightSeven = styled.div`
   font-family: "Oxygen", sans-serif;
@@ -219,12 +287,19 @@ const ListItemRightSeven = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: rgba(23, 41, 64, 0, 9);
-  width: 100%;
-  padding-left: 95px;
+  padding-left: 76px;
+  @media screen and (max-width: 1280px) {
+    padding-left: 66px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding-left: 30px;
+  }
 `;
 const Search = styled.div`
-  position: absolute;
-  right: 40px;
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    justify-content: flex-start;
+  }
 `;
 const SearchContent = styled.div`
   font-family: "Oxygen", sans-serif;
@@ -250,6 +325,9 @@ const SearchContent = styled.div`
 `;
 const BorderFooter = styled.div`
   padding: 0 40px 0 130px;
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 const BorderEnd = styled.div`
   border-bottom: 1px solid rgba(35, 35, 39, 0.1);
@@ -258,8 +336,8 @@ const BorderEnd = styled.div`
 const Footer = () => {
   return (
     <Container>
-      {/* <Connected /> */}
-      {/* <ViewFooter>
+      <Connected />
+      <ViewFooter>
         <LeftViewFooter>
           <Logo src={D} alt={""} />
           <ViewAddress>
@@ -276,11 +354,11 @@ const Footer = () => {
                 austin@draperstartuphouse.com
               </EmailAddress>
             </Address>
-            <Address>
+            <AddressLast>
               <TitleAddress>International Headquarters</TitleAddress>
               <NameAddress>39 Ann Siang Road Singapore 069716</NameAddress>
               <EmailAddress href="#">hello@draperstartuphouse.com</EmailAddress>
-            </Address>
+            </AddressLast>
           </ViewAddress>
         </LeftViewFooter>
         <RightViewFooter>
@@ -366,9 +444,10 @@ const Footer = () => {
           </BottomViewRight>
         </RightViewFooter>
       </ViewFooter>
+      <FooterResponsive />
       <BorderFooter>
         <BorderEnd />
-      </BorderFooter> */}
+      </BorderFooter>
       <End />
     </Container>
   );
