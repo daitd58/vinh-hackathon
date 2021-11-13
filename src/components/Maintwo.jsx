@@ -1,62 +1,54 @@
 import React from "react";
 import styled from "styled-components";
-import Rectangle from "../img/Rectangle.png";
+import Rectangle from "../img/Rectangleone.png";
 
-const MainOne = styled.div`
-  padding: 60px 0 60px 0;
-  background: #f4f6f8;
+const MainTwo = styled.div`
+  padding: 80px 0 50px 0;
   width: 100%;
+  background: #f4f6f8;
   @media screen and (max-width: 376px) {
-    padding: 60px 0 0 0;
+    padding: 0;
   }
 `;
 
-const TextContent = styled.div`
-  text-align: center;
-  color: #204370;
-  font-size: 50px;
-  font-weight: 700;
-  font-family: "Pathway Gothic One", sans-serif;
-`;
-
 const Block = styled.div`
-  padding-top: 80px;
   display: flex;
   justify-content: space-between;
   width: 100%;
   @media screen and (max-width: 376px) {
-    padding-top: 60px;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column-reverse;
   }
 `;
 
 const LeftBlock = styled.div`
   display: flex;
-  padding-left: 30px;
+  flex-direction: column;
+  width: 50%;
+  padding: 0 40px;
+  @media screen and (max-width: 376px) {
+    padding-top: 80px;
+    padding-left: 30px;
+  }
+`;
+const RightBlock = styled.div`
+  display: flex;
+  padding-right: 30px;
   width: 50%;
   & img {
     width: 100%;
     height: auto;
     display: inline-block;
-    box-shadow: -45px 45px 0 rgb(41, 97, 161);
+    box-shadow: 45px 45px 0 rgb(101, 168, 101);
   }
   @media screen and (max-width: 376px) {
     width: 80%;
+    padding-left: 45px;
     & img {
-      box-shadow: -45px 30px 0 rgb(41, 97, 161);
+      box-shadow: 30px 30px 0 rgb(101, 168, 101);
     }
   }
 `;
 
-const RightBlock = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  @media screen and (max-width: 376px) {
-    padding-top: 80px;
-  }
-`;
 const TextTitle = styled.div`
   font-weight: 600;
   font-size: 30px;
@@ -66,15 +58,12 @@ const TextTitle = styled.div`
   white-space: nowrap;
   color: #232327;
   margin-bottom: 24px;
-  padding-left: 100px;
   font-family: "Pathway Gothic One", sans-serif;
   @media screen and (max-width: 768px) {
     font-size: 20px;
-    padding-left: 60px;
   }
   @media screen and (max-width: 376px) {
     font-size: 30px;
-    padding-left: 30px;
   }
 `;
 
@@ -85,16 +74,13 @@ const TextDescription = styled.div`
   width: 360px;
   font-size: 14px;
   line-height: 25px;
-  padding-left: 100px;
   color: rgba(35, 35, 39, 0.7);
   @media screen and (max-width: 768px) {
     width: 320px;
     font-size: 12px;
-    padding-left: 60px;
   }
   @media screen and (max-width: 376px) {
     font-size: 16px;
-    padding-left: 30px;
   }
 `;
 
@@ -110,7 +96,6 @@ const TextLi = styled.li`
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
-  padding-left: 100px;
   color: #232327;
   margin-bottom: 16px;
   &::marker {
@@ -119,36 +104,35 @@ const TextLi = styled.li`
   @media screen and (max-width: 768px) {
     width: 320px;
     font-size: 12px;
-    padding-left: 60px;
   }
   @media screen and (max-width: 376px) {
-    padding-left: 30px;
     margin-bottom: 10px;
   }
 `;
-const Mainone = () => {
+const Maintwo = () => {
   return (
-    <MainOne>
-      <TextContent>JOIN THE DRAPER ENTREPRENEUR NETWORK</TextContent>
+    <MainTwo>
       <Block>
         <LeftBlock>
-          <img src={Rectangle} alt={""} />
-        </LeftBlock>
-        <RightBlock>
-          <TextTitle>Connect with a global network</TextTitle>
+          <TextTitle>GET INSPIRed By PEERS AND EXPERTS </TextTitle>
           <TextDescription>
-            DEN membership connects you with inspiring people and ideas to
-            empower your entrepreneurial or fundraising journey.
+            Becoming a successful entrepreneur means surrounding yourself with
+            an inspiring ecosystem like DEN.
           </TextDescription>
           <TextUl>
-            <TextLi>Discover useful resources, and perks</TextLi>
-            <TextLi>Find the best events and training programs</TextLi>
-            <TextLi>Meet co-founders, advisors, and partners</TextLi>
-            <TextLi>Search and discover trending topics and insights</TextLi>
+            <TextLi>Get constructive feedback from industry experts</TextLi>
+            <TextLi>Read startup stories, successes, and failures</TextLi>
+            <TextLi>
+              Get help on investor relations topics like term sheets
+            </TextLi>
+            <TextLi>Find best practices and professional templates</TextLi>
           </TextUl>
+        </LeftBlock>
+        <RightBlock>
+          <img src={Rectangle} alt={""} />
         </RightBlock>
       </Block>
-    </MainOne>
+    </MainTwo>
   );
 };
-export default Mainone;
+export default Maintwo;

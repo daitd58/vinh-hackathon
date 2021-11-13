@@ -1,31 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import Rectangle from "../img/Rectangle.png";
+import Rectangle from "../img/Rectangleone.png";
 
-const MainOne = styled.div`
-  padding: 60px 0 60px 0;
+const MainThree = styled.div`
+  padding: 80px 0 80px 0;
   background: #f4f6f8;
   width: 100%;
   @media screen and (max-width: 376px) {
-    padding: 60px 0 0 0;
+    padding: 0 0 50px 0;
   }
 `;
 
-const TextContent = styled.div`
-  text-align: center;
-  color: #204370;
-  font-size: 50px;
-  font-weight: 700;
-  font-family: "Pathway Gothic One", sans-serif;
-`;
-
 const Block = styled.div`
-  padding-top: 80px;
   display: flex;
   justify-content: space-between;
   width: 100%;
   @media screen and (max-width: 376px) {
-    padding-top: 60px;
     flex-direction: column;
     justify-content: center;
   }
@@ -33,8 +23,8 @@ const Block = styled.div`
 
 const LeftBlock = styled.div`
   display: flex;
-  padding-left: 30px;
   width: 50%;
+  padding-left: 30px;
   & img {
     width: 100%;
     height: auto;
@@ -63,7 +53,6 @@ const TextTitle = styled.div`
   line-height: 36px;
   letter-spacing: -0.015em;
   text-transform: uppercase;
-  white-space: nowrap;
   color: #232327;
   margin-bottom: 24px;
   padding-left: 100px;
@@ -73,6 +62,7 @@ const TextTitle = styled.div`
     padding-left: 60px;
   }
   @media screen and (max-width: 376px) {
+    width: 265px;
     font-size: 30px;
     padding-left: 30px;
   }
@@ -86,69 +76,67 @@ const TextDescription = styled.div`
   font-size: 14px;
   line-height: 25px;
   padding-left: 100px;
-  color: rgba(35, 35, 39, 0.7);
+  color: #232327;
   @media screen and (max-width: 768px) {
     width: 320px;
     font-size: 12px;
     padding-left: 60px;
   }
   @media screen and (max-width: 376px) {
-    font-size: 16px;
+    font-size: 15px;
     padding-left: 30px;
+    padding-bottom: 15px;
+  }
+`;
+const StyleButton = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  @media screen and (max-width: 376px) {
+    margin-top: 10px;
   }
 `;
 
-const TextUl = styled.ul`
-  list-style: inside;
-  color: #a6b4c6;
-  padding: 0;
-`;
-
-const TextLi = styled.li`
+const Button = styled.button`
+  max-width: max-content;
+  height: 65px;
+  background: #204370;
+  border-radius: 40px;
   font-family: "Oxygen", sans-serif;
   font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 22px;
-  padding-left: 100px;
-  color: #232327;
-  margin-bottom: 16px;
-  &::marker {
-    color: #a6b4c6;
-  }
-  @media screen and (max-width: 768px) {
-    width: 320px;
-    font-size: 12px;
-    padding-left: 60px;
-  }
-  @media screen and (max-width: 376px) {
-    padding-left: 30px;
-    margin-bottom: 10px;
-  }
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  padding: 0 45px;
+  z-index: 1;
+  border: none;
 `;
-const Mainone = () => {
+
+const Mainthree = () => {
   return (
-    <MainOne>
-      <TextContent>JOIN THE DRAPER ENTREPRENEUR NETWORK</TextContent>
+    <MainThree>
       <Block>
         <LeftBlock>
           <img src={Rectangle} alt={""} />
         </LeftBlock>
         <RightBlock>
-          <TextTitle>Connect with a global network</TextTitle>
+          <TextTitle>ENTREPRENEURS JOIN THE DEN COMMUNITY</TextTitle>
           <TextDescription>
-            DEN membership connects you with inspiring people and ideas to
-            empower your entrepreneurial or fundraising journey.
+            Our members and their supporters include: founders and teams;
+            mentors and advisors; remote workers and service providers; and
+            angel investors and venture capitalists from around the world.
           </TextDescription>
-          <TextUl>
-            <TextLi>Discover useful resources, and perks</TextLi>
-            <TextLi>Find the best events and training programs</TextLi>
-            <TextLi>Meet co-founders, advisors, and partners</TextLi>
-            <TextLi>Search and discover trending topics and insights</TextLi>
-          </TextUl>
+          <TextDescription>
+            As a DEN member, you can build a market-ready company much faster
+            than ever before.
+          </TextDescription>
         </RightBlock>
       </Block>
-    </MainOne>
+      <StyleButton>
+        <Button>join DEN</Button>
+      </StyleButton>
+    </MainThree>
   );
 };
-export default Mainone;
+export default Mainthree;
