@@ -98,7 +98,7 @@ function Banner({setOpen}) {
           Get all the support and education you need to achieve full potential
           as an entrepreneur.
         </TextDescription>
-        <Button>join DEN</Button>
+        <Button>Join DEN</Button>
       </Content>
     </Wrapper>
   );

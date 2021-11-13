@@ -159,7 +159,7 @@ function ComponentNine({setOpen}) {
           initialSlide: 0,
           autoplay: true,
           autoplaySpeed: 2000,
-          infinite: false,
+          infinite: true,
           dots: false,
         },
       },

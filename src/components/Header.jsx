@@ -51,32 +51,31 @@ const Logo = styled.div`
 const Menu = styled.div`
   display: flex;
   padding-left: 40px;
-  gap: 5px;
+  align-items: center;
+  & p {
+    font-style: normal;
+    white-space: nowrap;
+    font-family: "Oxygen", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    padding: 0 15px;
+    border-left: 1.5px solid #d2d9e2;
+  }
   @media screen and (max-width: 1024px) {
     padding-left: 30px;
+    & p {
+      font-size: 10px;
+    }
   }
   @media screen and (max-width: 769px) {
     padding-left: 20px;
+    & p {
+      font-size: 7px;
+    }
   }
   @media screen and (max-width: 376px) {
     display: none;
-  }
-`;
-const TextTitle = styled.div`
-  color: #ffffff;
-  font-size: 15px;
-  white-space: nowrap;
-  font-style: normal;
-  font-family: "Oxygen", sans-serif;
-  font-weight: 500;
-  border-left: 1px solid #ffffff;
-  padding: 0 10px;
-  line-height: 8px;
-  @media screen and (max-width: 1024px) {
-    font-size: 10px;
-  }
-  @media screen and (max-width: 769px) {
-    font-size: 8px;
   }
 `;
 const StyledButton = styled.button`
@@ -120,12 +119,12 @@ function Header({open, setOpen}) {
             <img src={logo} alt={""} />
           </Logo>
           <Menu>
-            <TextTitle>CITIES</TextTitle>
-            <TextTitle>VENTURES</TextTitle>
-            <TextTitle>ACADEMY</TextTitle>
-            <TextTitle>SERVICES</TextTitle>
-            <TextTitle>ACCELERATOR</TextTitle>
-            <TextTitle>ABOUT US</TextTitle>
+            <p>CITIES</p>
+            <p>VENTURES</p>
+            <p>ACADEMY</p>
+            <p>SERVICES</p>
+            <p>ACCELERATOR</p>
+            <p>ABOUT US</p>
           </Menu>
         </LeftBlock>
         <RightBlock>
