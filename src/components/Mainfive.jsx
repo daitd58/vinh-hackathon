@@ -74,7 +74,7 @@ const RightBlcok = styled.div`
 `;
 const TextContent = styled.div`
   font-weight: 700;
-  font-size: 60px;
+  font-size: 90px;
   line-height: 70px;
   letter-spacing: -0.015em;
   text-transform: uppercase;

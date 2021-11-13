@@ -14,7 +14,7 @@ const MainOne = styled.div`
 const TextContent = styled.div`
   text-align: center;
   color: #204370;
-  font-size: 50px;
+  font-size: 90px;
   font-weight: 700;
   font-family: "Pathway Gothic One", sans-serif;
 `;
@@ -59,7 +59,7 @@ const RightBlock = styled.div`
 `;
 const TextTitle = styled.div`
   font-weight: 600;
-  font-size: 30px;
+  font-size: 36px;
   line-height: 36px;
   letter-spacing: -0.015em;
   text-transform: uppercase;
