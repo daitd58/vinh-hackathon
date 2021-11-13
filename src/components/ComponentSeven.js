@@ -208,7 +208,7 @@ const ComponentSeven = ({ setOpen }) => {
           autoplay: true,
           autoplaySpeed: 2000,
           infinite: false,
-          dots: true,
+          dots: false,
         },
       },
     ],
