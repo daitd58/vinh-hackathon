@@ -265,9 +265,9 @@ const TextLi = styled.li`
   }
 `;
 
-const ComponentOne = () => {
+const ComponentOne = ({ setOpen }) => {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <TextContent>JOIN THE DRAPER ENTREPRENEUR NETWORK</TextContent>
       <Block>
         <LeftBlock>

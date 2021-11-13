@@ -200,9 +200,9 @@ const TextLi = styled.li`
     font-size: 13px;
   }
 `;
-const ComponentTwo = () => {
+const ComponentTwo = ({ setOpen }) => {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <Block>
         <LeftBlock>
           <TextTitle>GET INSPIRed By PEERS AND EXPERTS </TextTitle>

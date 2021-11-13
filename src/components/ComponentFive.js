@@ -355,7 +355,7 @@ const StyleGridMobile = styled(Slider)`
   }
 `;
 
-const ComponentFive = () => {
+const ComponentFive = ({ setOpen }) => {
   const settings = {
     dots: true,
     fade: true,
@@ -363,11 +363,27 @@ const ComponentFive = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 376,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          infinite: false,
+          dots: true,
+        },
+      },
+    ],
   };
   return (
     <>
-      <Wrapper>
+      <Wrapper onClick={() => setOpen(false)}>
         <Block>
           <LeftBlock>
             <TextContent>What PEOPLE ARE SAYING ABOUT DEN</TextContent>

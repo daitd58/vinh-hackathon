@@ -368,10 +368,10 @@ const BoxCover = styled.div`
     text-align: center;
   }
 `;
-const ComponentFour = () => {
+const ComponentFour = ({ setOpen }) => {
   return (
     <>
-      <Wrapper>
+      <Wrapper onClick={() => setOpen(false)}>
         <Title>HOW DEN WORKS</Title>
         <List>
           <ListItem>

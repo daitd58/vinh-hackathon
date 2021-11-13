@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     padding: 0 40px 130px 40px;
   }
   @media screen and (max-width: 480px) {
-    padding: 0 20px 90px 20px;
+    padding: 0 20px 10px 20px;
   }
 `;
 
@@ -188,19 +188,34 @@ const ButtonMobile = styled.button`
   border-radius: 35px;
 `;
 
-const ComponentSeven = () => {
+const ComponentSeven = ({ setOpen }) => {
   const settings = {
-    dots: true,
-    fade: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 376,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          infinite: false,
+          dots: true,
+        },
+      },
+    ],
   };
   return (
     <>
-      <Wrapper>
+      <Wrapper onClick={() => setOpen(false)}>
         <StyleGrid>
           <StyleBox>
             <img src={picnic} alt={""} />

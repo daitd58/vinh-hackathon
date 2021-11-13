@@ -167,10 +167,10 @@ const Line = styled.hr`
   }
 `;
 
-const ComponentSix = () => {
+const ComponentSix = ({ setOpen }) => {
   return (
     <>
-      <Wrapper>
+      <Wrapper onClick={() => setOpen(false)}>
         <Container>
           <TitleLeft>
             <span>upcoming events</span>

@@ -259,10 +259,10 @@ const Img = styled.img`
     margin-top: -9px;
   }
 `;
-const Background = () => {
+const Background = ({ setOpen }) => {
   return (
     <>
-      <Wrapper>
+      <Wrapper onClick={() => setOpen(false)}>
         <Content>
           <Img src={Den} />
           <h1>GLOBAL NETWORK FOR MENTORSHIP AND SUPPORT</h1>

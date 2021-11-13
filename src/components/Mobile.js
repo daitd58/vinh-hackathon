@@ -411,10 +411,10 @@ const BoxLeftRightMobile1 = styled.div`
     display: none;
   }
 `;
-const Mobile = () => {
+const Mobile = ({ setOpen }) => {
   return (
     <>
-      <Wrapper>
+      <Wrapper onClick={() => setOpen(false)}>
         <Box>
           <BoxContainer>
             <img src={circle} alt={""} />

@@ -176,9 +176,9 @@ const Button = styled.button`
   z-index: 1;
   border: none;
 `;
-const ComponentThree = () => {
+const ComponentThree = ({ setOpen }) => {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <Block>
         <LeftBlock>
           <img src={laugh} alt={""} />

@@ -80,10 +80,10 @@ const Button = styled.button`
   font-size: 16px;
   line-height: 26px;
 `;
-const ComponentEight = () => {
+const ComponentEight = ({ setOpen }) => {
   return (
     <>
-      <Wrapper>
+      <Wrapper onClick={() => setOpen(false)}>
         <BackGroundSecond>
           <Title>
             WHERE ENTREPRENEURS AROUND THE WORLD GET CONNECTED, INSPIRED, AND

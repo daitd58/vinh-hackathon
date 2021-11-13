@@ -77,10 +77,10 @@ const BoxList = styled.div`
     gap: 13px;
   }
 `;
-const ComponentTen = () => {
+const ComponentTen = ({ setOpen }) => {
   return (
     <>
-      <Wrapper>
+      <Wrapper onClick={() => setOpen(false)}>
         <Box>
           <span>Copyright © Draper Startup House 2021</span>
           <ul>

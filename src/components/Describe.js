@@ -125,9 +125,9 @@ const TextTitleThree = styled.div`
     font-style: normal;
   }
 `;
-const Describe = () => {
+const Describe = ({ setOpen }) => {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <Container>
         <BackGround>
           <TextTitleOne>

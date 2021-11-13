@@ -273,9 +273,9 @@ const BorderEnd = styled.div`
   border-bottom: 1px solid rgba(35, 35, 39, 0.1);
 `;
 
-const ComponentNine = () => {
+const ComponentNine = ({ setOpen }) => {
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(false)}>
       <ViewFooter>
         <LeftViewFooter>
           <Logo src={circle} alt="" />
