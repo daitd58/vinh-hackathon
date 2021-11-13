@@ -12,7 +12,7 @@ const ViewFooter = styled.div`
   display: flex;
   padding: 100px 40px 40px;
   @media screen and (max-width: 1024px) {
-    padding: 100px 20px 36px;
+    padding: 100px 27px 36px;
   }
   @media screen and (max-width: 768px) {
     display: none;
