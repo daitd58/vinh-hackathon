@@ -1,18 +1,25 @@
 import './App.css';
 import Header from './layout/header/header';
-import MainOne from './layout/main/main'
-import MainTwo from './layout/main/mainTwo';
-import MainThree from './layout/main/Mainthree';
-import MainFouth from './layout/main/Main4';
+import ComponentOne from './layout/component/Component1';
+import ComponentTwo from './layout/component/component2/Component2';
+import ComponentThree from './layout/component/Component3';
+import ComponentFour from './layout/component/Component4';
+import ComponentFive from './layout/component/Component5';
+import ComponentSix from './layout/component/Component6';
+import ComponentSeven from './layout/component/Component7';
+
 
 function App() {
   return (
     <div className="App">
-      <Header></Header>
-      <MainOne></MainOne>
-      <MainTwo></MainTwo>
-      <MainThree></MainThree>
-      <MainFouth></MainFouth>
+      <Header />
+      <ComponentOne />
+      <ComponentTwo/>
+      <ComponentThree/>
+      <ComponentFour/>
+      <ComponentFive/>
+      <ComponentSix/>
+      <ComponentSeven/>
     </div>
   );
 }
