@@ -127,6 +127,7 @@ const TextLeft = styled.div`
     border: 0;
     width: 335px;
     box-sizing: border-box;
+    padding: 0 0;
   }
 `;
 

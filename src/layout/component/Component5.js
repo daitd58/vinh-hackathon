@@ -259,6 +259,9 @@ const ArrowRight = styled.div`
   ::before {
     display: none;
   }
+  @media screen and (max-width: 1366px) {
+    right: 76px;
+  }
   @media screen and (max-width: 1280px) {
     right: 75px;
   }
@@ -276,6 +279,9 @@ const ArrowLeft = styled.div`
   }
   ::before {
     display: none;
+  }
+  @media screen and (max-width: 1366px) {
+    left: 1030px;
   }
   @media screen and (max-width: 1280px) {
     left: 1110px;
