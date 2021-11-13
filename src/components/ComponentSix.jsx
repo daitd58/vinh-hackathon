@@ -50,15 +50,12 @@ const TextContent = styled.div`
   @media screen and (max-width: 376px) {
     text-align: left;
   }
-  `;
+`;
 const RightBlock = styled(Slider)`
   display: none;
   @media screen and (max-width: 1280px) {
-    display: flex;
+    display: inline-block;
     padding-top: 100px;
-    flex-direction: column;
-    padding-top: 30px;
-    justify-content: space-between;
     width: 100%;
     & ul {
       bottom: -40px;
@@ -69,8 +66,11 @@ const RightBlock = styled(Slider)`
     .slick-next:before {
       content: none;
     }
+    .slick-slide > div {
+      margin-right: 10px;
+    }
   }
-  `;
+`;
 const Box = styled.div`
   position: relative;
   display: flex;
@@ -309,7 +309,7 @@ const ButtonArrowRight = styled.button`
 function ComponentSix({ setOpen }) {
   const settings = {
     dots: false,
-    infinite: 0,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -325,7 +325,7 @@ function ComponentSix({ setOpen }) {
           initialSlide: 0,
           autoplay: true,
           autoplaySpeed: 2000,
-          infinite: false,
+          infinite: true,
           arrows: false,
         },
       },

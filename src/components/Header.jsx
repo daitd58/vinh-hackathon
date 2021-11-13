@@ -70,7 +70,7 @@ const TextTitle = styled.div`
   font-family: "Oxygen", sans-serif;
   font-weight: 500;
   border-left: 1px solid #ffffff;
-  padding: 5px;
+  padding: 0 10px;
   line-height: 8px;
   @media screen and (max-width: 1024px) {
     font-size: 10px;
